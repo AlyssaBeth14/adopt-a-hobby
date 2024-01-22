@@ -39,7 +39,8 @@ Hobby.init (
         },
         hobbyName: {
             type: DataTypes.STRING(50),
-            unique: true
+            unique: true,
+            allowNull: false
         },
         hobbyImg: {
             type: DataTypes.TEXT
@@ -100,8 +101,7 @@ Tutorial.init (
         },
         tutorialName: {
             type: DataTypes.STRING(50),
-            allowNull: false,
-            defaultValue: 1
+            allowNull: false
         },
         tutorialLink: {
             type: DataTypes.TEXT,
