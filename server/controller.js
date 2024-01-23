@@ -3,7 +3,15 @@ import { Hobby, Supply, Tutorial, Admin } from './db/models.js'
 const handlerFunctions = {
 
     getHobbies: async (req, res) => {
-        const hobbies = await Hobby.findAll()
+        const {category} = req.query
+
+        const query = {}
+        if (category) {
+            query.category = category
+        }
+        const hobbies = await Hobby.findAll({
+            where: query
+        })
 
         res.send(hobbies)
     },
