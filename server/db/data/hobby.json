@@ -21,42 +21,42 @@
     },
     {
         "hobbyName": "Soccer",
-        "hobbyImg": "",
+        "hobbyImg": "https://www.iese.edu/insight/wp-content/uploads/sites/3/1970/01/Futbol-penaltis-ventaja.jpg",
         "category": "Athletics"
     },
     {
         "hobbyName": "Bobbin Lacemaking",
-        "hobbyImg": "",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/0012/8299/8385/files/rg_1_3ad16c4c-be58-4d0f-a5e4-9ed23f364443_600x600.jpg?v=1652126524",
         "category": "Crafts"
     },
     {
         "hobbyName": "Origami",
-        "hobbyImg": "",
+        "hobbyImg": "https://www.redballoonlearner.org/wp-content/uploads/2020/04/Website-image-hero-5e8c7242c66ba-1127x605-c-center.png",
         "category": "Crafts"
     },
     {
         "hobbyName": "Draping",
-        "hobbyImg": "",
+        "hobbyImg": "https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/2016/05/DSC_0075-1024x680.jpg",
         "category": "Fashion"
     },
     {
         "hobbyName": "Artisan Breadmaking",
-        "hobbyImg": "",
+        "hobbyImg": "https://www.farmhouseonboone.com/wp-content/uploads/2023/04/sourdough-for-beginners-27-scaled.jpg",
         "category": "Food"
     },
     {
         "hobbyName": "Cake Decorating",
-        "hobbyImg": "",
+        "hobbyImg": "https://cakebycourtney.com/wp-content/uploads/2016/09/IMG_3344.jpg",
         "category": "Food"
     },
     {
         "hobbyName": "Hunting",
-        "hobbyImg": "",
+        "hobbyImg": "https://cnr.ncsu.edu/news/wp-content/uploads/sites/10/2021/01/ncsu.cnr_.hunting.istock.featured.jpg",
         "category": "Outdoors"
     },
     {
         "hobbyName": "Fishing",
-        "hobbyImg": "",
+        "hobbyImg": "https://www.onthewater.com/wp-content/uploads/2022/04/sunset-striper-barnegat-bay-800x600.jpg",
         "category": "Outdoors"
     }
 ]

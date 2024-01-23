@@ -125,4 +125,4 @@ if (process.argv[1] === url.fileURLToPath(import.meta.url)) {
     console.log('Finished syncing database!');
 }
 
-export {Hobby, Supply, Tutorial, Admin}
+export {Hobby, Supply, Tutorial, Admin, db}
