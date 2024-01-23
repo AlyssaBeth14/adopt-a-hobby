@@ -1,5 +1,4 @@
 import { Modal, Button } from 'react-bootstrap'
-import { useState } from 'react'
 
 const HobbySuggestion = (props) => {
 
@@ -47,6 +46,8 @@ const HobbySuggestion = (props) => {
                             className='form-control'
                         />
                     </label>
+                    <br/>
+                    <button type='submit' className='btn btn-dark'>Submit</button>
                 </form>
             </Modal.Body>
         </Modal>

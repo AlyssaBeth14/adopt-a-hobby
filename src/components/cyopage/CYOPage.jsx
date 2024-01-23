@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import axios from 'axios'
 import HobbySuggestion from './HobbySuggestion.jsx'
@@ -29,6 +30,7 @@ const CYOPage = () => {
             <div class="full-width-line-top"></div>
             <div>{artsHobbyList}</div>
         </>
+
     )
 }
 
