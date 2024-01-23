@@ -1,0 +1,62 @@
+[
+    {
+        "hobbyId": "1",
+        "tutorialName": "Oil Painting Tutorial For Beginners",
+        "tutorialLink": "https://www.youtube.com/watch?v=GMT0hJR700Y"
+    },
+    {
+        "hobbyId": "2",
+        "tutorialName": "How to Crochet for Beginners",
+        "tutorialLink": "https://sarahmaker.com/how-to-crochet/"
+    },
+    {
+        "hobbyId": "3",
+        "tutorialName": "10 Steps for Wood Burning By Hand",
+        "tutorialLink": "https://www.woodburncorner.com/burnblog/guide-to-wood-burning"
+    },
+    {
+        "hobbyId": "4",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "5",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "6",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "7",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "8",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "9",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "10",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "11",
+        "tutorialName": "",
+        "tutorialLink": ""
+    },
+    {
+        "hobbyId": "12",
+        "tutorialName": "",
+        "tutorialLink": ""
+    }
+]

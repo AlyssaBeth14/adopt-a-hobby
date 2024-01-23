@@ -1,0 +1,62 @@
+[
+    {
+        "hobbyName": "Oil Painting",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088",
+        "category": "Arts"
+    },
+    {
+        "hobbyName": "Crocheting",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088",
+        "category": "Fashion"
+    },
+    {
+        "hobbyName": "Pyrography",
+        "hobbyImg": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F49%2F2019%2F12%2F20%2FfishOpener_0.jpg&q=60",
+        "category": "Arts"
+    },
+    {
+        "hobbyName": "Aerial Lyra",
+        "hobbyImg": "https://i.ebayimg.com/images/g/CycAAOSw2atkDnob/s-l1200.webp",
+        "category": "Athletics"
+    },
+    {
+        "hobbyName": "Soccer",
+        "hobbyImg": "",
+        "category": "Athletics"
+    },
+    {
+        "hobbyName": "Bobbin Lacemaking",
+        "hobbyImg": "",
+        "category": "Crafts"
+    },
+    {
+        "hobbyName": "Origami",
+        "hobbyImg": "",
+        "category": "Crafts"
+    },
+    {
+        "hobbyName": "Draping",
+        "hobbyImg": "",
+        "category": "Fashion"
+    },
+    {
+        "hobbyName": "Artisan Breadmaking",
+        "hobbyImg": "",
+        "category": "Food"
+    },
+    {
+        "hobbyName": "Cake Decorating",
+        "hobbyImg": "",
+        "category": "Food"
+    },
+    {
+        "hobbyName": "Hunting",
+        "hobbyImg": "",
+        "category": "Outdoors"
+    },
+    {
+        "hobbyName": "Fishing",
+        "hobbyImg": "",
+        "category": "Outdoors"
+    }
+]
