@@ -1,7 +1,6 @@
 
 import { useState } from 'react'
 import axios from 'axios'
-import HobbySuggestion from './HobbySuggestion.jsx'
 import HobbyCard from './HobbyCard.jsx'
 
 const CYOPage = () => {
