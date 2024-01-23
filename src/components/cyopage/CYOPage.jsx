@@ -1,24 +1,34 @@
-import HobbySuggestion from './HobbySuggestion.jsx'
 import { useState } from 'react'
+import axios from 'axios'
+import HobbySuggestion from './HobbySuggestion.jsx'
+import HobbyCard from './HobbyCard.jsx'
 
 const CYOPage = () => {
 
-    const [showModal, setShowModal] = useState(false)
+    const [currentData, setCurrentData] = useState([])
 
-    const handleClick = () => {
-        setShowModal(true)
-    }
+    useEffect(() => {
+        axios.get('/hobbies/?category=arts')
+            .then((res) => { setCurrentData(res.data) })
+    }, [])
+
+
+    const artsHobbyList = currentData.map((hobby) => (
+        <HobbyCard
+            key={hobby.hobbyId}
+            hobbyName={hobby.hobbyName}
+            hobbyImg={hobby.hobbyImg}
+            id={hobby.hobbyId}
+        />
+    ))
+
 
     return (
-        <div>
-            <h1>This is the CYO page</h1>
-
-            <button onClick={handleClick}>Show Modal</button>
-            <HobbySuggestion
-                showModal={showModal}
-                setShowModal={setShowModal}
-            />
-        </div>
+        <>
+            <p>Arts</p>
+            <div class="full-width-line-top"></div>
+            <div>{artsHobbyList}</div>
+        </>
     )
 }
 
