@@ -1,0 +1,536 @@
+[
+    {
+        "hobbyId": "1",
+        "supplyName": "Oil Paints"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Paint Solvent"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Paintbrushes"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Canvas"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Paint Palette"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Oil Paint Brush Cleaner"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Easel",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Linseed Oil",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "1",
+        "supplyName": "Palette Knives",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Crochet Hook"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Yarn"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Yarn Needle"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Scissors"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Stitch Markers"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Measuring Tape"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Yarn Bowl",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Row Counter",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Blocking Mats & Pins",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Ball Winder",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Yarn Swift",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "2",
+        "supplyName": "Yarn Bowl"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Wood Burning Pen"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Wood"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Safety Gear"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Pliers",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Sandpaper",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "3",
+        "supplyName": "Stencil",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Rig"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Lyra"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Safety Mat"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Carabiners(2)"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Swivel"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Tape",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Chalk",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "4",
+        "supplyName": "Spanset",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Workout Clothes"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Soccer Cleats"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Shin Guards"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Soccer Socks"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Soccerball"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Water Bottle"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Uniform",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Goalkeeper Gloves",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "5",
+        "supplyName": "Gear Bag",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Lacemaking Pillow"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Bobbins"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Pins"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Prickings"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Thread"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Small (0.40mm) Crochet Hook",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Pin Cushion",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Pattern",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Bobbin Holder",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Pin Lifter",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Divider Pin",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Wooden Roller",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "6",
+        "supplyName": "Bobbin Winder",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Paper"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Scissors"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Ruler"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Scoring Tool",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Bone Folder",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "7",
+        "supplyName": "Glue",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Sewing Machine & Supplies"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Pins"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Measuring Tape"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Fabric Scissors"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Paper Scissors"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Pencil"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Tracing Wheel"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Wax Tracing Paper"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Pinnable Dress Form"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Muslin"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Gridded Sewing Ruler"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "French Curve Ruler"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "L-Square Ruler"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "1/8in or 1/4in Twill Tape"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Pin Cushion",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Hip Curve Ruler",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Draping Tape",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Rotary Cutter",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "8",
+        "supplyName": "Cutting Mat",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Mixing Bowl"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Bench Scraper"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Food Thermometer"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Kitchen Scale"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Proofing Basket"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Loaf Pan"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Bread Lame"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Dutch Oven",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Danish Dough Whisk",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "9",
+        "supplyName": "Bread Baker",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Cake Scraper"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Icing Spatula"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Cake Pan"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Piping Bag"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Rotating Cake Stand",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Cake Leveler",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Cake Lifter",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "10",
+        "supplyName": "Drip Bottle",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Knife"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "GPS"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Firearm"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Ammo"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Binoculars"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Scent Control",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Paracord",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "11",
+        "supplyName": "Game Bags",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Fishing License"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Spinning Rod & Reel"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Monofilament Fishing Line"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Hooks"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Bait"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Pliers"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Sinkers",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Split-Shots",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Bobbers",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Lures",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Tackle Box",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Ice Chest",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "12",
+        "supplyName": "Landing Net",
+        "optional": "true"
+    }
+]

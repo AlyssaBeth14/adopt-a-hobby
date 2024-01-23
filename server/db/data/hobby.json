@@ -1,0 +1,62 @@
+[
+    {
+        "hobbyName": "Oil Painting",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088",
+        "category": "Arts"
+    },
+    {
+        "hobbyName": "Crocheting",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088",
+        "category": "Fashion"
+    },
+    {
+        "hobbyName": "Pyrography",
+        "hobbyImg": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F49%2F2019%2F12%2F20%2FfishOpener_0.jpg&q=60",
+        "category": "Arts"
+    },
+    {
+        "hobbyName": "Aerial Lyra",
+        "hobbyImg": "https://i.ebayimg.com/images/g/CycAAOSw2atkDnob/s-l1200.webp",
+        "category": "Athletics"
+    },
+    {
+        "hobbyName": "Soccer",
+        "hobbyImg": "https://www.iese.edu/insight/wp-content/uploads/sites/3/1970/01/Futbol-penaltis-ventaja.jpg",
+        "category": "Athletics"
+    },
+    {
+        "hobbyName": "Bobbin Lacemaking",
+        "hobbyImg": "https://cdn.shopify.com/s/files/1/0012/8299/8385/files/rg_1_3ad16c4c-be58-4d0f-a5e4-9ed23f364443_600x600.jpg?v=1652126524",
+        "category": "Crafts"
+    },
+    {
+        "hobbyName": "Origami",
+        "hobbyImg": "https://www.redballoonlearner.org/wp-content/uploads/2020/04/Website-image-hero-5e8c7242c66ba-1127x605-c-center.png",
+        "category": "Crafts"
+    },
+    {
+        "hobbyName": "Draping",
+        "hobbyImg": "https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/2016/05/DSC_0075-1024x680.jpg",
+        "category": "Fashion"
+    },
+    {
+        "hobbyName": "Artisan Breadmaking",
+        "hobbyImg": "https://www.farmhouseonboone.com/wp-content/uploads/2023/04/sourdough-for-beginners-27-scaled.jpg",
+        "category": "Food"
+    },
+    {
+        "hobbyName": "Cake Decorating",
+        "hobbyImg": "https://cakebycourtney.com/wp-content/uploads/2016/09/IMG_3344.jpg",
+        "category": "Food"
+    },
+    {
+        "hobbyName": "Hunting",
+        "hobbyImg": "https://cnr.ncsu.edu/news/wp-content/uploads/sites/10/2021/01/ncsu.cnr_.hunting.istock.featured.jpg",
+        "category": "Outdoors"
+    },
+    {
+        "hobbyName": "Fishing",
+        "hobbyImg": "https://www.onthewater.com/wp-content/uploads/2022/04/sunset-striper-barnegat-bay-800x600.jpg",
+        "category": "Outdoors"
+    }
+]
