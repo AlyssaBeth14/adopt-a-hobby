@@ -3,7 +3,16 @@ import { Hobby, Supply, Tutorial, Admin } from './db/models.js'
 const handlerFunctions = {
 
     getHobbies: async (req, res) => {
-        const hobbies = await Hobby.findAll()
+        const {category} = req.query
+
+        const query = {}
+        if (category) {
+            query.category = category
+        }
+        const hobbies = await Hobby.findAll({
+            where: query,
+            include: [{model: Supply}, {model: Tutorial}]
+        })
 
         res.send(hobbies)
     },
@@ -11,7 +20,7 @@ const handlerFunctions = {
     getHobby: async (req, res) => {
         const {hobbyId} = req.params
 
-        const hobby = await Hobby.findByPk(hobbyId)
+        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
         
         res.send(hobby)
     },
