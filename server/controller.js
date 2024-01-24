@@ -19,7 +19,7 @@ const handlerFunctions = {
     getHobby: async (req, res) => {
         const {hobbyId} = req.params
 
-        const hobby = await Hobby.findByPk(hobbyId)
+        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
         
         res.send(hobby)
     },
