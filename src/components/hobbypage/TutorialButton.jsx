@@ -5,13 +5,13 @@ const {tutorialImg, tutorialLink, tutorialName} = props
 
   return (
     <div>
-        {/* <a href={tutorialLink} target='_blank'>
+        <a href={tutorialLink} target='_blank'>
             <button>
                 <img src={tutorialImg}/>
                 <br/>
                 {tutorialName}
             </button>
-        </a> */}
+        </a>
     </div>
   )
 }
