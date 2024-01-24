@@ -3,13 +3,18 @@ import React from 'react'
 import Supplies from './Supplies.jsx'
 import TutorialCard from './TutorialCard.jsx'
 import Map from './Map.jsx'
+import { useLocation } from 'react-router-dom'
 
 const HobbyPage = () => {
+
+// const location = useLocation()
+// const {hobbyId, hobbyName, hobbyImg, category, mapQuery, supplyId, supplyName, optional, tutorialId, tutorialImg, tutorialName, tutorialLink, paid} = location.state
+
   return (
     <div>
-        <img src="https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088"/>
+        {/* <img src={hobbyImg}/> */}
 
-        <h1>Hobby Name</h1>
+        {/* <h1>{hobbyName}</h1> */}
         <Supplies />
 
         <h2>Tutorials</h2>
