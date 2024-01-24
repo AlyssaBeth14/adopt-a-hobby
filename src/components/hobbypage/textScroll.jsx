@@ -3,15 +3,6 @@ import { Link, animateScroll as scroll } from 'react-scroll';
 
 const MyComponent = () => {
 
-    // const scrollToSection = (sectionId) => {
-    //     scroll.scrollTo(sectionId, {
-    //         duration: 800,
-    //         smooth: 'easeInOutQuart',
-    //     });
-    // };
-
-
-
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
@@ -23,9 +14,6 @@ const MyComponent = () => {
         }
     };
 
-
-
-
     return (
         <div>
             <nav style={{
@@ -36,36 +24,17 @@ const MyComponent = () => {
                 justifyContent: 'center',
                 flexDirection: 'row'
             }}>
-                <button onClick={() => scrollToSection('Arts')}>
-                    Arts
-                </button>
-
-                <button onClick={() => scrollToSection('Athletics')}>
-                    Athletics
-                </button>
-
-                <button onClick={() => scrollToSection('Crafts')}>
-                    Crafts
-                </button>
+                <button onClick={() => scrollToSection('Arts')}>Arts</button>
+                <button onClick={() => scrollToSection('Athletics')}>Athletics</button>
+                <button onClick={() => scrollToSection('Crafts')}>Crafts</button>
             </nav>
 
 
-            <div id="Arts" style={{ height: '600px', backgroundColor: 'lightred' }}>
-                Art Section
-            </div>
-
-            <div id="Athletics" style={{ height: '400px', backgroundColor: 'lightgreen' }}>
-                Athletics Section
-            </div>
-
-
-            <div id="Crafts" style={{ height: '1500px', backgroundColor: 'purple' }}>
-                Craft Section
-            </div>
-
+            <div id="Arts" style={{ height: '600px', backgroundColor: 'lightred' }}>Art Section</div>
+            <div id="Athletics" style={{ height: '400px', backgroundColor: 'lightgreen' }}>Athletics Section</div>
+            <div id="Crafts" style={{ height: '1500px', backgroundColor: 'purple' }}>Craft Section</div>
 
         </div>
-
     );
 };
 
