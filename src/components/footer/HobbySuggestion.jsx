@@ -46,6 +46,8 @@ const HobbySuggestion = (props) => {
                             className='form-control'
                         />
                     </label>
+                    <br/>
+                    <button type='submit' className='btn btn-dark'>Submit</button>
                 </form>
             </Modal.Body>
         </Modal>

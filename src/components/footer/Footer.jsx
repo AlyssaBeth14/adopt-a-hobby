@@ -6,10 +6,8 @@ const Footer = () => {
     const [showModal, setShowModal] = useState(false)
 
     return (
-        <footer>
-            <button
-                onClick={() => setShowModal(true)}
-            >Suggestion</button>
+        <footer className='bg-dark text-light text-center py-3'>
+            <a href='#' onClick={() => setShowModal(true)}>Suggestion</a>
             <HobbySuggestion 
                 showModal={showModal}
                 setShowModal={setShowModal}
