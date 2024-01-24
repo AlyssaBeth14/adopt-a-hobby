@@ -7,7 +7,7 @@ const HobbyCard = (props) => {
             <Card.Img variant="top" src={props.hobbyImg} className="doctor-card-img" />
             <Card.Body>
                 <Card.Title className='title'>{props.hobbyName}</Card.Title>
-                <Button  className='viewButton' href={`/hobby/${props.id}`}>View Hobby</Button>
+                <Button  className='viewButton' href={`/hobby/${props.hobbyId}`}>View Hobby</Button>
             </Card.Body>
         </Card>
 
