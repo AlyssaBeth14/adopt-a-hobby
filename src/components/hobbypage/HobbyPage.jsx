@@ -2,6 +2,7 @@ import React from 'react'
 // import Map from 'Map.jsx'
 import Supplies from './Supplies.jsx'
 import TutorialCard from './TutorialCard.jsx'
+import Map from './Map.jsx'
 
 const HobbyPage = () => {
   return (
@@ -15,7 +16,7 @@ const HobbyPage = () => {
         <TutorialCard />
 
         <h2>Classes Near You</h2>
-
+        <Map />
 
     </div>
   )
