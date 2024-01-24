@@ -1,5 +1,6 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import axios from 'axios'
 import HobbyPage from './components/hobbypage/HobbyPage'
 import CYOPage from './components/cyopage/CYOPage'
 import Footer from './components/footer/Footer.jsx'
@@ -12,9 +13,9 @@ function App() {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/testing-scroll' element={<MyComponent />} />
-        <Route path='/hobby' element={<HobbyPage />} />
+        <Route path='/hobby/:id' element={<HobbyPage />}                />
         <Route path='/cyo-hobby' element={<CYOPage />} />
-      </Routes>
+      </Routes>a
       <Footer />
     </Router>
   )

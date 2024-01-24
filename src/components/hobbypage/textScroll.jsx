@@ -29,7 +29,6 @@ const MyComponent = () => {
                 <button onClick={() => scrollToSection('Crafts')}>Crafts</button>
             </nav>
 
-
             <div id="Arts" style={{ height: '600px', backgroundColor: 'lightred' }}>Art Section</div>
             <div id="Athletics" style={{ height: '400px', backgroundColor: 'lightgreen' }}>Athletics Section</div>
             <div id="Crafts" style={{ height: '1500px', backgroundColor: 'purple' }}>Craft Section</div>
