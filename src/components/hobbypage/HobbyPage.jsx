@@ -9,10 +9,10 @@ const HobbyPage = () => {
         <img src="https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088"/>
 
         <h1>Hobby Name</h1>
-        {/* <Supplies /> */}
+        <Supplies />
 
         <h2>Tutorials</h2>
-        <TutorialButton />
+        <TutorialCard />
 
         <h2>Classes Near You</h2>
 

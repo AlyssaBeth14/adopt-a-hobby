@@ -1,36 +1,26 @@
 import React from 'react'
-import { useEffect, useState } from 'react'
-import axios from 'axios'
-import TutorialButton from './TutorialButton.jsx'
+// import { useEffect, useState } from 'react'
+// import axios from 'axios'
+// import TutorialButton from './TutorialButton.jsx'
 
-const TutorialCard = () => {
+const TutorialCard = (props) => {
 
-const [currentData, setCurrentData] = useState([])
-const [tutorialName, setTutorialName] = useState()
-const [tutorialImg, setTutorialImg] = useState()
-const [tutorialLink, setTutorialLink] = useState()
+// const {currentData, setCurrentData} = props
 
-useEffect(() => {
-    axios.get('/tutorials')
-    .then((res) => {
-        console.log(res.data);
-        setCurrentData(res.data)
-    })
-    .catch((err) => {
-        console.log(err);
-    })
-}, [])
-
-const freeTutorials = currentData.map((el) => 
-<TutorialButton 
-key={el.hobbyId}
-currentData={currentData}
-setCurrentData={setCurrentData}
-/>
-)
+// const freeTutorials = currentData.map((el) => 
+// <TutorialButton 
+// key={el.hobbyId}
+// currentData={currentData}
+// setCurrentData={setCurrentData}
+// />
+// )
 
 // const paidTutorials = currentData.map((el) =>
-// <TutorialButton />
+// <TutorialButton 
+// key={el.hobbyId}
+// currentData={currentData}
+// setCurrentData={setCurrentData}
+// />
 // )
 
   return (
@@ -43,7 +33,7 @@ setCurrentData={setCurrentData}
     //get 
     <div>
         <h4>Free</h4>
-        {freeTutorials}
+        {/* {freeTutorials} */}
 
         <h4>Paid</h4>
         {/* {paidTutorials} */}

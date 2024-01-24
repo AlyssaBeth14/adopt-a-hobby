@@ -2,20 +2,9 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 
-const Supplies = () => {
+const Supplies = (props) => {
 
-    const [currentData, setCurrentData] = useState([])
-
-    useEffect(() => {
-        axios.get('/supply')
-        .then((res) => {
-            console.log(res.data);
-            setCurrentData(res.data)
-        })
-        .catch((err) => {
-            console.log(err);
-        })
-    }, [])
+// const {currentData, setCurrentData} = props
 
 // get supplies from table where hobbyid matches and optional is false
 //get request?
@@ -25,24 +14,28 @@ const Supplies = () => {
 //get request?
 //map through table that has been gotten and find where optional is true
 
-const basicSupplies = setCurrentData.map((el) => {
+// const basicSupplies = setCurrentData.map((el) => {
+    // key={el.hobbyId}
+    // currentData={currentData}
+    // setCurrentData={setCurrentData}
+// })
 
-})
-
-const optionalSupplies = setCurrentData.map((el) => {
-
-})
+// const optionalSupplies = setCurrentData.map((el) => {
+    // key={el.hobbyId}
+    // currentData={currentData}
+    // setCurrentData={setCurrentData}
+// })
 
 
   return (
     <div>
         <div>
             <h4>Basic Supplies Needed:</h4>
-            {basicSupplies}
+            {/* {basicSupplies} */}
         </div>
         <div>
             <h4>Optional Supplies:</h4>
-            {optionalSupplies}
+            {/* {optionalSupplies} */}
         </div>
     </div>
   )
