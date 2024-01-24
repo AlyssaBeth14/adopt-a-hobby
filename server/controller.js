@@ -10,7 +10,8 @@ const handlerFunctions = {
             query.category = category
         }
         const hobbies = await Hobby.findAll({
-            where: query
+            where: query,
+            include: [{model: Supply}, {model: Tutorial}]
         })
 
         res.send(hobbies)
