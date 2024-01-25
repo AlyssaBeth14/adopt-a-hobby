@@ -1,47 +1,42 @@
 import React from 'react'
-import {useState} from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router';
 import './searchBar.css'
 import data from '../../../server/db/data/search.json'
+import axios from 'axios';
 
 function SearchBar() {
-
-    const [value, setValue] = useState('')
-    
-    const onChange = (event) => {
+    const [value, setValue] = useState('')                                  // Creating value and setValue useStates
+    const onChange = (event) => {                                           // Defining onChange function
         setValue(event.target.value)
     }
-    const navigate = useNavigate()
-
-    const onSearch = (searchTerm) => {
-        axios.get(`/api/hobby/?hobbyName=${searchTerm}`)
-        .then((res) => {
-            console.log(res.data)
-            const hobby = res.data
-            navigate(`/hobby/${props.hobbyId}`, {state:{hobby}})
-        }
-        )
-        setValue(searchTerm)
-        console.log(searchTerm);
+    const navigate = useNavigate()                                          // Bringing in useNavigate                              
+    const onSearch = (searchTerm) => {                                      // Defining on Search function w/ 'searchTerm' parameter
+        axios.get(`/api/hobby/?hobbyName=${searchTerm}`)                    // Axios get to pull in data from endpoint
+            .then((res) => {    
+                console.log(res.data)                                      
+                const hobby = res.data                                      // Creating 'hobby' variable that is the data results (res.data)
+                navigate(`/hobby/${hobby.hobbyId}`, { state: { hobby } })   // Utilizing navigate to send to....
+            }
+            )
     }
-
 
     return (
         <>
-            <h1>Search bar</h1>
-            <input type="text" value={value} onChange={onChange}/>
+            <h1 id="search">Search Hobby</h1>
+            <input type="text" value={value} onChange={onChange} />
             <button onClick={() => onSearch(value)}>Search</button>
             <div className="dropdown">
                 {data.filter(item => {
                     const searchTerm = value.toLowerCase()
                     const fullName = item.hobbyName.toLowerCase()
-                    return searchTerm && fullName.startsWith(searchTerm) && fullName !==searchTerm
+                    return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm
                 })
-                .map((item)=> (
-                    <div onClick={() => onSearch(item.hobbyName)} searchclassName="dropdown-row"  key={item.hobbyName}>
-                        {item.hobbyName}
-                    </div>
-                )) }
+                    .map((item) => (
+                        <div onClick={() => setValue(item.hobbyName)} searchclassName="dropdown-row" key={item.hobbyName}>
+                            {item.hobbyName}
+                        </div>
+                    ))}
             </div>
         </>
     )

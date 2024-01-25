@@ -17,7 +17,7 @@ function App() {
         <Route path='/hobby/:id' element={<HobbyPage />} />
         <Route path='/cyo-hobby' element={<CYOPage />} />
         <Route path='/test-searchbar' element={<SearchBar />} />
-      </Routes>a
+      </Routes>
       <Footer />
     </Router>
   )
