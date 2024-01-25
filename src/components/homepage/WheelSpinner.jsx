@@ -12,7 +12,7 @@ const WheelSpinner = () => {
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
-        axios.get('/hobbies')
+        axios.get('/api/hobbies')
         .then((res) => {
             setHobbies(res.data)
         })
