@@ -1,26 +1,19 @@
 import React from 'react'
+import axios from 'axios'
 import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
-import axios from 'axios'
-
-
-
-
 
 const HobbyCard = (props) => {
-    // console.log(props);
     const navigate = useNavigate()
-
     const handleClick = () => {
-    
         axios.get(`/api/hobby/${props.hobbyId}`)
         .then((res) => {
             console.log(res.data)
-            navigate(`/hobby/${props.hobbyId}`)
+            const hobby = res.data
+            navigate(`/hobby/${props.hobbyId}`, {state:{hobby}})
         }
         )
     }
-   
    
     return (
         <Card style={{ width: '18rem' }}>
@@ -30,7 +23,6 @@ const HobbyCard = (props) => {
                 <Button  className='viewButton' onClick={handleClick} >View Hobby</Button>
             </Card.Body>
         </Card>
-
     );
 }
 export default HobbyCard
