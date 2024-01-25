@@ -1,22 +1,23 @@
-import { useState } from 'react'
+import { React, useState, useEffect } from 'react'
 import axios from 'axios'
-import { useEffect } from 'react'
-import './CYOPage.css'
-import HobbyCard from './HobbyCard.jsx'
-import React from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import { useNavigate } from 'react-router-dom'
+import HobbyCard from './HobbyCard.jsx'
+import './CYOPage.css'
+
 
 const CYOPage = () => {
 
-    // Creating different useStates
+    // Creating useStates
+    const [currentData, setCurrentData] = useState([])          // Creating 'currentData' useState
+
+    // Creating different category useStates
     const [artList, setArtList] = useState([])                  // Creating useState for Art category    
     const [athleticsList, setAthleticsList] = useState([])      // Creating useState for Athletics category
     const [craftsList, setCraftsList] = useState([])            // Creating useState for Crafts category
     const [fashionList, setFashionList] = useState([])          // Creating useState for Fashion category
     const [foodList, setFoodList] = useState([])                // Creating useState for Food category
     const [outdoorsList, setOutdoorsList] = useState([])        // Creating useState for Outdoors category
-    const [currentData, setCurrentData] = useState([])          // Creating 'currentData' useState
+
 
     // Utilizing useEffect to execute artlist, fashionlist and other functions when page is loaded
     // Each of those functions renders a HobbyCard component(setArtList & setFashionList)
@@ -25,17 +26,18 @@ const CYOPage = () => {
             .then((res) => {
                 setCurrentData(res.data)
                 setArtList([])                                   // Executes the setArtList when the page loads (using useEffect)
-                setAthleticsList([])  
+                setAthleticsList([])
                 setCraftsList([])
-                setFashionList([]) 
-                setFoodList([])   
-                setOutdoorsList([])                               
+                setFashionList([])
+                setFoodList([])
+                setOutdoorsList([])
             })
     }, [])
 
     // This useEffect executes 'categoryMap' function           // Why does this useEffect run while there is an other useEffect ?????
     useEffect(() => {
-        categoryMap()}, [currentData])
+        categoryMap()
+    }, [currentData])
 
     // categoryMap function that conducts different if statements. 
     const categoryMap = () => {
@@ -53,70 +55,70 @@ const CYOPage = () => {
             if (hobby.category === 'Arts') {                    // If statement, that checks if the 'category' property is 'Arts'
                 artCopy.push(                                   // Adds(pushes) additional HobbyCards to 'artCopy' variable'
                     <HobbyCard                                  // HobbyCard from HobbyCard component
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-            else if (hobby.category === 'Athletics') {            
-                athleticsCopy.push(                               
-                    <HobbyCard                                  
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+            else if (hobby.category === 'Athletics') {
+                athleticsCopy.push(
+                    <HobbyCard
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-            else if (hobby.category === 'Crafts') {            
-                craftsCopy.push(                               
-                    <HobbyCard                                  
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+            else if (hobby.category === 'Crafts') {
+                craftsCopy.push(
+                    <HobbyCard
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-            else if (hobby.category === 'Fashion') {            
-                fashionCopy.push(                               
-                    <HobbyCard                                  
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+            else if (hobby.category === 'Fashion') {
+                fashionCopy.push(
+                    <HobbyCard
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-            else if (hobby.category === 'Food') {            
-                foodCopy.push(                               
-                    <HobbyCard                                  
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+            else if (hobby.category === 'Food') {
+                foodCopy.push(
+                    <HobbyCard
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-            else if (hobby.category === 'Outdoors') {            
-                outdoorsCopy.push(                               
-                    <HobbyCard                                  
-                        key = { hobby.hobbyId }
-                        hobbyId = { hobby.hobbyId }
-                        hobbyImg = { hobby.hobbyImg }
-                        hobbyName = { hobby.hobbyName }
-                        />
+            else if (hobby.category === 'Outdoors') {
+                outdoorsCopy.push(
+                    <HobbyCard
+                        key={hobby.hobbyId}
+                        hobbyId={hobby.hobbyId}
+                        hobbyImg={hobby.hobbyImg}
+                        hobbyName={hobby.hobbyName}
+                    />
                 )
             }
-    })
-    setArtList(artCopy)                                         // Executes 'setArtlist' function with artCopy variable (variable has all 'Art' HobbyCards)  ?????
-    setAthleticsList(athleticsCopy)                             // ...
-    setCraftsList(craftsCopy)                                   // ...
-    setFashionList(fashionCopy)                                 // ...
-    setFoodList(foodCopy)                                       // ...
-    setOutdoorsList(outdoorsCopy)                               // ...         
+        })
+        setArtList(artCopy)                                         // Executes 'setArtlist' function with artCopy variable (variable has all 'Art' HobbyCards)  ?????
+        setAthleticsList(athleticsCopy)                             // ...
+        setCraftsList(craftsCopy)                                   // ...
+        setFashionList(fashionCopy)                                 // ...
+        setFoodList(foodCopy)                                       // ...
+        setOutdoorsList(outdoorsCopy)                               // ...         
     }
 
     const scrollToSection = (sectionId) => {
@@ -133,7 +135,6 @@ const CYOPage = () => {
 
     return (
         <>
-
             <nav style={{
                 position: 'fixed',
                 top: '0',
@@ -151,27 +152,30 @@ const CYOPage = () => {
             </nav>
 
             <br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <div id="Arts" style={{ height: '40px', backgroundColor: 'lightred' }}>Art Section</div>
             <div class="full-width-line-top"></div>
             <div>{artList}</div>
 
-            <div id="Athletics" style={{ height: '40px' }}>Athletics Section</div>          
+            <div id="Athletics" style={{ height: '40px' }}>Athletics Section</div>
             <div class="full-width-line-top"></div>
             <div>{athleticsList}</div>
-   
-            <div id="Crafts" style={{ height: '40px' }}>Crafts Section</div>        
+
+            <div id="Crafts" style={{ height: '40px' }}>Crafts Section</div>
             <div class="full-width-line-top"></div>
             <div>{craftsList}</div>
 
-            <div id="Fashion" style={{ height: '40px' }}>Fashion Section</div> 
+            <div id="Fashion" style={{ height: '40px' }}>Fashion Section</div>
             <div class="full-width-line-top"></div>
             <div>{fashionList}</div>
-                 
-            <div id="Food" style={{ height: '40px' }}>Food Section</div> 
+
+            <div id="Food" style={{ height: '40px' }}>Food Section</div>
             <div class="full-width-line-top"></div>
             <div>{foodList}</div>
- 
-            <div id="Outdoors" style={{ height: '40px' }}>Outdoors Section</div>   
+
+            <div id="Outdoors" style={{ height: '40px' }}>Outdoors Section</div>
             <div class="full-width-line-top"></div>
             <div>{outdoorsList}</div>
 
