@@ -32,5 +32,17 @@ app.post('/tutorial', addTutorial)
 app.delete('/hobby/:hobbyId', deleteHobby)
 app.delete('/supply/:supplyId', deleteSupply)
 app.delete('/tutorial/:tutorialId', deleteTutorial)
+=======
+app.get('/api/hobbies', getHobbies)
+app.get('/api/hobby/:hobbyId', getHobby)
+app.get('/api/supply', getSupply)
+app.get('/api/tutorials', getTutorials)
+app.post('/api/hobby', addHobby)
+app.post('/api/supply', addSupply)
+app.post('/api/tutorial', addTutorial)
+app.delete('/api/hobby/:hobbyId', deleteHobby)
+app.delete('/api/supply/:supplyId', deleteSupply)
+app.delete('/api/tutorial/:tutorialId', deleteTutorial)
+
 
 ViteExpress.listen(app, 8000, () => console.log('server is running on 8000'))

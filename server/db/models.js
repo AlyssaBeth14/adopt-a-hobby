@@ -26,6 +26,33 @@ Admin.init (
         sequelize: db
     }
 )
+class Suggestion extends Model {}
+
+Suggestion.init (
+    {
+        suggestionId: {
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            allowNull: false
+        },
+        hobbyName: {
+            type: DataTypes.TEXT,
+            unique: true
+        },
+        basicSupplies: {
+            type: DataTypes.TEXT
+        },
+        optionalSupplies: {
+            type: DataTypes.TEXT
+        },
+        tutorialLinks: {
+            type: DataTypes.TEXT
+        }
+    }, {
+        sequelize: db
+    }
+)
 
 class Hobby extends Model {} 
 
@@ -47,6 +74,9 @@ Hobby.init (
         },
         category: {
             type: DataTypes.STRING(30)
+        },
+        mapQuery: {
+            type: DataTypes.TEXT
         }
     }, {
         sequelize: db
@@ -125,4 +155,4 @@ if (process.argv[1] === url.fileURLToPath(import.meta.url)) {
     console.log('Finished syncing database!');
 }
 
-export {Hobby, Supply, Tutorial, Admin, db}
+export {Hobby, Supply, Tutorial, Admin, Suggestion, db}

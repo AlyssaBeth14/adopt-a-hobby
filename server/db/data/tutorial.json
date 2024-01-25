@@ -59,5 +59,21 @@
         "hobbyId": "12",
         "tutorialName": "How To Start Fishing",
         "tutorialLink": "https://www.youtube.com/watch?v=atd28n7CB-c"
+    },
+    {
+        "hobbyId": "13",
+        "tutorialName": "Learn Throwing a Basic Pot",
+        "tutorialLink": "https://www.lakesidepottery.com/Pages/Pottery-tips/Throwing-a-pot-Lakeside-Pottery-Tutorial.htm"
+    },
+    {
+        "hobbyId": "13",
+        "tutorialName": "Pottery Wheel Clay Art Class",
+        "tutorialLink": "https://outschool.com/classes/pottery-wheel-clay-art-class-flex-schedule-gWexn8Ot?utm_source=google&utm_medium=ads_pmax&utm_campaign=UCAN_LS_Performance-Max_CAC&gad_source=1&gclid=Cj0KCQiAqsitBhDlARIsAGMR1Rh3yudX2mB7QRdL4_ImTvUbclwkK-yk7V_ripQPkBiKdN_Otjn9kJEaAhsgEALw_wcB",
+        "paid": "true"
+    },
+    {
+        "hobbyId": "14",
+        "tutorialName": "Basic Embroidery Techniques",
+        "tutorialLink": "https://www.youtube.com/watch?v=4tboUqTV41U"
     }
 ]

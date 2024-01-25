@@ -9,11 +9,12 @@ console.log('Seeding database');
 
 const hobbiesInDB = await Promise.all(
     hobbyData.map(async (hobby) => {
-        const {hobbyName, hobbyImg, category} = hobby
+        const {hobbyName, hobbyImg, category, mapQuery} = hobby
         const newHobby = await Hobby.create({
             hobbyName,
             hobbyImg,
-            category
+            category,
+            mapQuery
         })
         return newHobby
     })

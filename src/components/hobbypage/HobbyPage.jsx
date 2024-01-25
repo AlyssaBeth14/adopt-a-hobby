@@ -1,38 +1,31 @@
+import React from 'react'
+// import Map from 'Map.jsx'
+import Supplies from './Supplies.jsx'
+import TutorialCard from './TutorialCard.jsx'
+import Map from './Map.jsx'
+import { useLocation } from 'react-router-dom'
+
 const HobbyPage = () => {
 
-    const [categoryID, setCategoryID] = useState(1)                   // Setting up useState variable & function (categoryId, setCategoryId) 
+// const location = useLocation()
+// const {hobbyId, hobbyName, hobbyImg, category, mapQuery, supplyId, supplyName, optional, tutorialId, tutorialImg, tutorialName, tutorialLink, paid} = location.state
 
-    const scrollToSection = (sectionId) => {
-        scroll.scrollTo(sectionId, {
-          duration: 800,
-          smooth: 'easeInOutQuart',
-        });
-      };
+  return (
+    <div>
+        {/* <img src={hobbyImg}/> */}
 
+        {/* <h1>{hobbyName}</h1> */}
+        <Supplies />
 
+        <h2>Tutorials</h2>
+        <TutorialCard />
 
+        <h2>Classes Near You</h2>
+        <Map />
 
+    </div>
+  )
 
-
-
-    return (
-        <>
-
-            <div>
-                <h1>This is the hobby page</h1>
-            </div>
-
-            <button onClick={() => scrollToSection(1)}>Arts</button>
-            <button onClick={() => scrollToSection(2)}>Athletics</button>
-            <button onClick={() => scrollToSection(3)}>Fashion</button>
-
-            <br></br>
-
-            <div>{categoriesListSections}</div>
-
-        </>
-
-    )
 }
 
 export default HobbyPage
