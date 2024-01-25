@@ -11,7 +11,7 @@ const {hobbyImg, hobbyName} = location.state.hobby
 
   return (
     <div>
-        <img src={hobbyImg}/>
+        <img src={hobbyImg} style={{width: '60%'}}/>
 
         <h1>{hobbyName}</h1>
         <Supplies />
