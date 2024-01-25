@@ -70,5 +70,17 @@
         "hobbyImg": "https://www.onthewater.com/wp-content/uploads/2022/04/sunset-striper-barnegat-bay-800x600.jpg",
         "category": "Outdoors",
         "mapQuery": "fishing+classes"
+    },
+    {
+        "hobbyName": "Wheel Thrown Pottery",
+        "hobbyImg": "https://www.jumpintoart.com/uploads/1/0/6/2/10628591/s902277773334188845_p140_i5_w6000.jpeg?width=2560",
+        "category": "Arts",
+        "mapQuery": "wheel+throwing+classes"
+    },
+    {
+        "hobbyName": "Embroidery",
+        "hobbyImg": "https://sarahmaker.com/wp-content/uploads/2020/03/il_570xN.1530330715_34de.jpg.webp",
+        "category": "Arts",
+        "mapQuery": "embroidery+classes"
     }
 ]
