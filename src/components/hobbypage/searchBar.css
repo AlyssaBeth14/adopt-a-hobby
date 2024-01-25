@@ -1,0 +1,21 @@
+
+
+
+.dropdown {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid grey;
+}
+
+.dropdown:empty {
+    border: none;
+}
+
+
+.dropwdown-row {
+    cursor: pointer;
+    text-align: start;
+    margin: 2px 0;
+}
+
