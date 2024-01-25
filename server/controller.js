@@ -18,9 +18,19 @@ const handlerFunctions = {
     },
 
     getHobby: async (req, res) => {
-        const {hobbyId} = req.params
+        const {hobbyId, hobbyName} = req.query
 
-        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
+        const query = {}
+        if (hobbyId) {
+            query.hobbyId = hobbyId
+        }
+        if (hobbyName) {
+            query.hobbyName = hobbyName
+        }
+        const hobby = await Hobby.findOne({
+            where: query,
+            include: [{model: Supply}, {model: Tutorial}]
+        })
         
         res.send(hobby)
     },
