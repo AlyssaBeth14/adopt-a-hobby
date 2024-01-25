@@ -532,5 +532,91 @@
         "hobbyId": "12",
         "supplyName": "Landing Net",
         "optional": "true"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Pottery Wheel"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Kiln"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Pottery Clay"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Cut Off Wire"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Sponge"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Wooden Rib",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Pin Tools",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Throwing Stick",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Trimming Tool",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "13",
+        "supplyName": "Glaze",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Needle"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Fabric"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Embroidery Hoop"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Scissors"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Thimble",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Needleminder",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Iron On Transfer Pen",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Heat Erasable Marker",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "14",
+        "supplyName": "Water Erasable Marker",
+        "optional": "true"
     }
 ]
