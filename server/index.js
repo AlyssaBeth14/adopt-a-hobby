@@ -23,7 +23,7 @@ const {
 } = handlerFunctions
 
 app.get('/api/hobbies', getHobbies)
-app.get('/api/hobby/', getHobby)
+app.get('/api/hobby', getHobby)
 app.get('/api/supply', getSupply)
 app.get('/api/tutorials', getTutorials)
 app.post('/api/hobby', addHobby)

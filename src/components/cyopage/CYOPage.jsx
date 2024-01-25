@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import HobbyCard from './HobbyCard.jsx'
 import './CYOPage.css'
-
+import SearchBar from '../hobbypage/searchBar.jsx';
 
 const CYOPage = () => {
 
@@ -17,7 +17,6 @@ const CYOPage = () => {
     const [fashionList, setFashionList] = useState([])          // Creating useState for Fashion category
     const [foodList, setFoodList] = useState([])                // Creating useState for Food category
     const [outdoorsList, setOutdoorsList] = useState([])        // Creating useState for Outdoors category
-
 
     // Utilizing useEffect to execute artlist, fashionlist and other functions when page is loaded
     // Each of those functions renders a HobbyCard component(setArtList & setFashionList)
@@ -153,6 +152,10 @@ const CYOPage = () => {
 
             <br></br>
             <br></br>
+
+            <SearchBar/>
+
+
             <br></br>
             <br></br>
             <div id="Arts" style={{ height: '40px', backgroundColor: 'lightred' }}>Art Section</div>
