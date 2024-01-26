@@ -22,7 +22,7 @@ const handlerFunctions = {
 
         const query = {}
         if (hobbyId) {
-            query.hobbyId = hobbyId
+            query.hobbyId = +hobbyId
         }
         if (hobbyName) {
             query.hobbyName = hobbyName

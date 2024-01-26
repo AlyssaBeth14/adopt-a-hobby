@@ -8,6 +8,7 @@ const TutorialCard = () => {
 
         const location = useLocation()
 const {hobbyId, Tutorials} = location.state.hobby
+console.log(location.state);
 
 const [freeTutorials, setFreeTutorials] = useState([])
 const [paidTutorials, setPaidTutorials] = useState([])
@@ -29,7 +30,7 @@ const tutorialMap = () => {
                 tutorialId={el.tutorialId}
                 tutorialName={el.tutorialName}
                 tutorialLink={el.tutorialLink}
-                tutorialImg={el.tutorialImg}
+                 tutorialImg={el.tutorialImg}
                 />
             )
         }

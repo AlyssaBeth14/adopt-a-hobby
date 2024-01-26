@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router';
 const HobbyCard = (props) => {
     const navigate = useNavigate()
     const handleClick = () => {
-        axios.get(`/api/hobby/${props.hobbyId}`)
+        axios.get(`/api/hobby?hobbyId=${props.hobbyId}`)
         .then((res) => {
             console.log(res.data)
             const hobby = res.data
