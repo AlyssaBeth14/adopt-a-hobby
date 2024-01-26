@@ -1,30 +1,24 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Map = (props) => {
 
- const {query} = props
+const location = useLocation()
+const {mapQuery} = location.state.hobby
 
-// const [location, setLocation] = useState([])
-// const [query, setQuery] =useState([])
-//useeffect needs to include query from table
+const src = `https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEysNg0NZvSVoq7026t7alc&q=${mapQuery}+near+me`
 
-// const query = setCurrentData.map((el) => {
-    // key={el.hobbyId}
-    // currentData={currentData}
-    // setCurrentData={setCurrentData}
-// })
 
   return (
-    <div>Map
+    <div style={{marginBottom:'60px'}}>
         <iframe
         width="600"
         height="450"
-        src="https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEysNg0NZvSVoq7026t7alc&q=oil+painting+classes+near+me" allowFullScreen
+        src={src} allowFullScreen
         >
         </iframe>
-
     </div>
+    
   )
 }
 

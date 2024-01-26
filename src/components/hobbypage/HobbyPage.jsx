@@ -1,5 +1,4 @@
 import React from 'react'
-// import Map from 'Map.jsx'
 import Supplies from './Supplies.jsx'
 import TutorialCard from './TutorialCard.jsx'
 import Map from './Map.jsx'
@@ -7,22 +6,24 @@ import { useLocation } from 'react-router-dom'
 
 const HobbyPage = () => {
 
-// const location = useLocation()
-// const {hobbyId, hobbyName, hobbyImg, category, mapQuery, supplyId, supplyName, optional, tutorialId, tutorialImg, tutorialName, tutorialLink, paid} = location.state
+const location = useLocation()
+const {hobbyImg, hobbyName} = location.state.hobby
 
   return (
     <div>
-        {/* <img src={hobbyImg}/> */}
+        <img src={hobbyImg} style={{width: '60%'}}/>
 
-        {/* <h1>{hobbyName}</h1> */}
+        <h1>{hobbyName}</h1>
+        <hr />
         <Supplies />
 
         <h2>Tutorials</h2>
+        <hr />
         <TutorialCard />
 
         <h2>Classes Near You</h2>
+        <hr />
         <Map />
-
     </div>
   )
 

@@ -1,7 +1,7 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 
-const TutorialButton = (props) => {
-const {tutorialImg, tutorialLink, tutorialName} = props
+const TutorialButton = ({tutorialLink, tutorialImg, tutorialName}) => {
 
   return (
     <div>

@@ -1,42 +1,64 @@
 import React from 'react'
-// import { useEffect, useState } from 'react'
-// import axios from 'axios'
-// import TutorialButton from './TutorialButton.jsx'
+import { useEffect, useState } from 'react'
+import axios from 'axios'
+import TutorialButton from './TutorialButton.jsx'
+import { useLocation } from 'react-router-dom'
 
-const TutorialCard = (props) => {
+const TutorialCard = () => {
 
-// const {currentData, setCurrentData} = props
+        const location = useLocation()
+const {hobbyId, Tutorials} = location.state.hobby
 
-// const freeTutorials = currentData.map((el) => 
-// <TutorialButton 
-// key={el.hobbyId}
-// currentData={currentData}
-// setCurrentData={setCurrentData}
-// />
-// )
+const [freeTutorials, setFreeTutorials] = useState([])
+const [paidTutorials, setPaidTutorials] = useState([])
+const [currentData, setCurrentData] = useState(Tutorials)
 
-// const paidTutorials = currentData.map((el) =>
-// <TutorialButton 
-// key={el.hobbyId}
-// currentData={currentData}
-// setCurrentData={setCurrentData}
-// />
-// )
+useEffect(() => {
+    tutorialMap()}, [currentData])
+
+const tutorialMap = () => {
+    const freeCopy = []
+    const paidCopy = []
+
+    currentData.forEach((el) => {
+        if(el.paid === false){
+            freeCopy.push(
+                <TutorialButton 
+                key={el.hobbyId}
+                hobbyId={el.hobbyId}
+                tutorialId={el.tutorialId}
+                tutorialName={el.tutorialName}
+                tutorialLink={el.tutorialLink}
+                tutorialImg={el.tutorialImg}
+                />
+            )
+        }
+        else if(el.paid === true){
+            paidCopy.push(
+                <TutorialButton
+                key={el.hobbyId}
+                hobbyId={el.hobbyId}
+                tutorialId={el.tutorialId}
+                tutorialName={el.tutorialName}
+                tutorialLink={el.tutorialLink}
+                tutorialImg={el.tutorialImg}
+                />  
+            )
+        }
+    })
+    setFreeTutorials(freeCopy)
+    setPaidTutorials(paidCopy)
+}
+
+
 
   return (
-    //map get tutorials with matching hobby id where paid is false
-    //get name, image, link
-
-    //map get tutorials with matching hobby id where paid is true
-    //get name, image, link
-
-    //get 
     <div>
         <h4>Free</h4>
-        {/* {freeTutorials} */}
+        {freeTutorials}
 
         <h4>Paid</h4>
-        {/* {paidTutorials} */}
+        {paidTutorials}
      </div>
   )
 }
