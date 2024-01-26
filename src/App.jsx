@@ -1,6 +1,5 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import axios from 'axios'
 import HobbyPage from './components/hobbypage/HobbyPage'
 import CYOPage from './components/cyopage/CYOPage'
 import Footer from './components/footer/Footer.jsx'

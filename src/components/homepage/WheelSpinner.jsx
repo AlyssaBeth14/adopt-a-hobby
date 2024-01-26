@@ -2,6 +2,10 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Wheel } from 'react-custom-roulette'
 import { Modal } from 'react-bootstrap'
+import CYOButton from './CYOButton.jsx'
+import SpinAgainButton from './SpinAgainButton.jsx'
+import SelectButton from './SelectButton.jsx'
+import { useNavigate } from 'react-router'
 
 const WheelSpinner = () => {
     
@@ -10,6 +14,8 @@ const WheelSpinner = () => {
     const [spinResult, setSpinResult] = useState('')
     const [hobbies, setHobbies] = useState([])
     const [loading, setLoading] = useState(true)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
         axios.get('/api/hobbies')
@@ -24,6 +30,7 @@ const WheelSpinner = () => {
     const handleSpin = () => {
         if (!mustSpin) {
             setMustSpin(true)
+            setShowModal(false)
         }
     }
 
@@ -40,6 +47,8 @@ const WheelSpinner = () => {
                 <h1>Loading...</h1>
             ) : (
                 <>
+                    <CYOButton />
+                    <h3>Or</h3>
                     <div>
                         <Wheel
                             mustStartSpinning={mustSpin}
@@ -58,7 +67,7 @@ const WheelSpinner = () => {
                             }}
                         />
                     </div>
-                    <button onClick={handleSpin} disabled={mustSpin}>
+                    <button className='btn btn-primary' onClick={handleSpin} disabled={mustSpin}>
                         {mustSpin ? 'Spinning...' : 'Spin the Wheel'}
                     </button>
 
@@ -70,6 +79,14 @@ const WheelSpinner = () => {
                             <h4>{spinResult.hobbyName}</h4>
                             <img src={spinResult.hobbyImg} className='img-fluid'/>
                         </Modal.Body>
+                        <Modal.Footer>
+                            <SelectButton
+                                hobbyName={spinResult.hobbyName}
+                            />
+                            <SpinAgainButton
+                                handleSpin={handleSpin}
+                            />
+                        </Modal.Footer>
                     </Modal>
                 </>
             )}
