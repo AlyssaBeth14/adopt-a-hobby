@@ -77,6 +77,9 @@ Hobby.init (
         },
         mapQuery: {
             type: DataTypes.TEXT
+        },
+        cost: {
+            type: DataTypes.STRING(5)
         }
     }, {
         sequelize: db

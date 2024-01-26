@@ -6,7 +6,7 @@ import { useLocation } from 'react-router-dom'
 
 const TutorialCard = () => {
 
-        const location = useLocation()
+const location = useLocation()
 const {hobbyId, Tutorials} = location.state.hobby
 console.log(location.state);
 
@@ -30,7 +30,7 @@ const tutorialMap = () => {
                 tutorialId={el.tutorialId}
                 tutorialName={el.tutorialName}
                 tutorialLink={el.tutorialLink}
-                 tutorialImg={el.tutorialImg}
+                tutorialImg={el.tutorialImg}
                 />
             )
         }

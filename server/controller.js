@@ -1,4 +1,4 @@
-import { Hobby, Supply, Tutorial, Admin } from './db/models.js'
+import { Hobby, Supply, Tutorial, Buy, Admin } from './db/models.js'
 
 const handlerFunctions = {
 
@@ -11,7 +11,7 @@ const handlerFunctions = {
         }
         const hobbies = await Hobby.findAll({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
 
         res.send(hobbies)
@@ -29,7 +29,7 @@ const handlerFunctions = {
         }
         const hobby = await Hobby.findOne({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
         
         res.send(hobby)
