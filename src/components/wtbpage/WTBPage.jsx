@@ -1,8 +1,12 @@
 import WTBCard from "./WTBCard.jsx";
 import React from 'react'
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router";
 
 const WTBPage = () => {
+
+const location = useLocation()
+const {hobbyId, Buys} = location.state
 
 const [wtbCards, setWtbCards] = useState([])
 const [currentData, setCurrentData] = useState(Buys)
@@ -29,7 +33,11 @@ const wtbMap = () => {
 }
 
   return (
-    <div>{wtbCards}</div>
+    <div>
+    <h3>Where to Buy:</h3>
+    <hr />
+    {wtbCards}
+    </div>
   )
 }
 

@@ -5,12 +5,16 @@ import Map from './Map.jsx'
 import { useLocation, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 
-const HobbyPage = (props) => {
+const HobbyPage = () => {
 
 const location = useLocation()
-const {hobbyImg, hobbyName, cost} = location.state.hobby
+const {hobbyId, hobbyImg, hobbyName, cost, Buys} = location.state.hobby
 
-const navigation = useNavigate()
+const navigate = useNavigate()
+const handleClick = () => {
+  navigate(`/hobby/${hobbyId}/where-to-buy`, {state: {Buys, hobbyId}})
+}
+
 
   return (
     <div>
@@ -20,7 +24,7 @@ const navigation = useNavigate()
         <h5>Cost: {cost}</h5>
         <hr />
         <Supplies />
-        <button className='btn btn-link' onClick={() => navigation.navigate()}>Where to Buy</button>
+        <button className='btn btn-link' onClick={handleClick}>Where to Buy</button>
         <h2>Tutorials</h2>
         <hr />
         <TutorialCard />
