@@ -14,14 +14,16 @@ const {hobbyImg, hobbyName} = location.state.hobby
         <img src={hobbyImg} style={{width: '60%'}}/>
 
         <h1>{hobbyName}</h1>
+        <hr />
         <Supplies />
 
         <h2>Tutorials</h2>
+        <hr />
         <TutorialCard />
 
         <h2>Classes Near You</h2>
+        <hr />
         <Map />
-
     </div>
   )
 

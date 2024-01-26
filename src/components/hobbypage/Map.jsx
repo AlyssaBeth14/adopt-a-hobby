@@ -10,7 +10,7 @@ const src = `https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEy
 
 
   return (
-    <div>
+    <div style={{marginBottom:'60px'}}>
         <iframe
         width="600"
         height="450"
@@ -18,6 +18,7 @@ const src = `https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEy
         >
         </iframe>
     </div>
+    
   )
 }
 

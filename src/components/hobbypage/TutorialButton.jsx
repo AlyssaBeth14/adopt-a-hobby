@@ -1,10 +1,7 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 
-const TutorialButton = () => {
-
-    const location = useLocation()
-    const {tutorialImg, tutorialLink, tutorialName} = location.state.hobby
+const TutorialButton = ({tutorialLink, tutorialImg, tutorialName}) => {
 
   return (
     <div>
