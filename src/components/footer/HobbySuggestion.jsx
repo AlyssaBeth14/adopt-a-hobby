@@ -10,7 +10,7 @@ const HobbySuggestion = (props) => {
 
     return (
         <Modal show={showModal} onHide={() => setShowModal(false)}>
-            <Modal.Header>
+            <Modal.Header closeButton>
                 <Modal.Title>Hobby Suggestion</Modal.Title>
             </Modal.Header>
             <Modal.Body>
