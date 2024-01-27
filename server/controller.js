@@ -121,9 +121,9 @@ const handlerFunctions = {
     deleteHobby: async (req, res) => {
         const {hobbyId} = req.params
 
-        const hobby = await Hobby.findByPk(hobbyId)
+        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
         await hobby.destroy()
-        const hobbies = await Hobby.findAll()
+        const hobbies = await Hobby.findAll({include: [{model: Supply}, {model: Supply}]})
 
         res.send(hobbies)
     },

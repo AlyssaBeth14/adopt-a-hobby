@@ -5,7 +5,6 @@ import { Modal } from 'react-bootstrap'
 import CYOButton from './CYOButton.jsx'
 import SpinAgainButton from './SpinAgainButton.jsx'
 import SelectButton from './SelectButton.jsx'
-import { useNavigate } from 'react-router'
 
 const WheelSpinner = () => {
     
@@ -15,12 +14,14 @@ const WheelSpinner = () => {
     const [hobbies, setHobbies] = useState([])
     const [loading, setLoading] = useState(true)
 
-    const navigate = useNavigate()
-
     useEffect(() => {
         axios.get('/api/hobbies')
         .then((res) => {
-            setHobbies(res.data)
+            const shuffledHobbies = [...res.data].sort(() => Math.random() - 0.5)
+
+            const randomSubset = shuffledHobbies.slice(0, 8)
+            console.log(randomSubset)
+            setHobbies(randomSubset)
         })
         .finally(() => {
             setLoading(false)
@@ -58,6 +59,13 @@ const WheelSpinner = () => {
                             backgroundColors={['#0066ff', '#33ccff']}
                             textColors={['black']}
                             fontSize={15}
+                            pointerProps={{
+                                src: '\Paint-Brush-PNG.png',
+                                style: {
+                                    width: '25%',
+                                    height: '25%',
+                                }
+                            }}
                             onStopSpinning={() => {
                                 setMustSpin(false)
                                 setShowModal(true)
