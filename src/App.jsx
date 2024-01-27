@@ -7,6 +7,7 @@ import Footer from './components/footer/Footer.jsx'
 import Homepage from './components/homepage/Homepage.jsx'
 import MyComponent from './components/hobbypage/textScroll.jsx'
 import SearchBar from './components/hobbypage/searchBar.jsx'
+import Admin from './components/admin/admin.jsx'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path='/hobby/:id' element={<HobbyPage />} />
         <Route path='/cyo-hobby' element={<CYOPage />} />
         <Route path='/test-searchbar' element={<SearchBar />} />
+        <Route path='/admin' element={<Admin />} />
       </Routes>
       <Footer />
     </Router>
