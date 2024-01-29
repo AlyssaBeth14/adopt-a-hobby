@@ -18,9 +18,7 @@ const WheelSpinner = () => {
         axios.get('/api/hobbies')
         .then((res) => {
             const shuffledHobbies = [...res.data].sort(() => Math.random() - 0.5)
-
             const randomSubset = shuffledHobbies.slice(0, 8)
-            console.log(randomSubset)
             setHobbies(randomSubset)
         })
         .finally(() => {
@@ -36,8 +34,7 @@ const WheelSpinner = () => {
     }
 
     const data = hobbies.map(hobby => ({
-        option: hobby.hobbyName,
-        style: {backgroundColors: 'green'}
+        option: hobby.hobbyName
     }))
 
     const prizeNumber = mustSpin ? Math.floor(Math.random() * data.length) : null

@@ -123,7 +123,7 @@ const handlerFunctions = {
 
         const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
         await hobby.destroy()
-        const hobbies = await Hobby.findAll({include: [{model: Supply}, {model: Supply}]})
+        const hobbies = await Hobby.findAll({include: [{model: Supply}, {model: Tutorial}]})
 
         res.send(hobbies)
     },
@@ -146,6 +146,23 @@ const handlerFunctions = {
         const tutorials = await Tutorial.findAll()
 
         res.send(tutorials)
+    },
+
+    editHobby: async (req, res) => {
+        const {hobbyId} = req.params
+        const {hobbyName, hobbyImg, category, mapQuery} = req.body
+
+        const editHobby = await Hobby.findByPk(hobbyId)
+
+        editHobby.hobbyName = hobbyName
+        editHobby.hobbyImg = hobbyImg
+        editHobby.category = category
+        editHobby.mapQuery = mapQuery
+
+        await editHobby.save()
+
+        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
+        res.send(hobby)
     }
 }
 
