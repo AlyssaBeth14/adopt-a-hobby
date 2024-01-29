@@ -8,10 +8,6 @@ const deleteSupply = () => {
   const confirmDelete = window.confirm('Sure want to delete supply?')
   if (confirmDelete) {
 
-    // const hobbyWork = {
-    //   hobbyId: props.hobbyId
-    // }
-
     axios.delete(`/api/supply/${props.supplyId}?hobbyId=${props.hobbyId}`)
       .then((res) => {
         props.setSupplies(res.data)
@@ -35,24 +31,3 @@ const deleteSupply = () => {
 }
 
 export default SuppliesCard
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
