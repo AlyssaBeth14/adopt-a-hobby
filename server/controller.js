@@ -130,20 +130,22 @@ const handlerFunctions = {
 
     deleteSupply: async (req, res) => {
         const {supplyId} = req.params
+        const {hobbyId} = req.body
 
         const supply = await Supply.findByPk(supplyId)
         await supply.destroy()
-        const supplies = await Supply.findAll()
+        const supplies = await Supply.findAll({where: {hobbyId: hobbyId}})
 
         res.send(supplies)
     },
 
     deleteTutorial: async (req, res) => {
         const {tutorialId} = req.params
+        const {hobbyId} = req.body
 
         const tutorial = await Tutorial.findByPk(tutorialId)
         await tutorial.destroy()
-        const tutorials = await Tutorial.findAll()
+        const tutorials = await Tutorial.findAll({where: {hobbyId: hobbyId}})
 
         res.send(tutorials)
     },
