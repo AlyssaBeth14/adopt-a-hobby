@@ -14,6 +14,10 @@ const Admin = () => {
             })
     }, [])
 
+
+
+
+
     const hobbies = hobbyData.map((hobby) => {
         return <AdminHobbyCard
             key={hobby.hobbyId}
