@@ -1,4 +1,4 @@
-import { Hobby, Supply, Tutorial, Admin } from './db/models.js'
+import { Hobby, Supply, Tutorial, Suggestion, Admin } from './db/models.js'
 
 const handlerFunctions = {
 
@@ -71,6 +71,12 @@ const handlerFunctions = {
         res.send(tutorials)
     },
 
+    getSuggestions: async (req, res) => {
+        const suggestions = await Suggestion.findAll()
+
+        res.send(suggestions)
+    },
+
     addHobby: async (req, res) => {
         const {hobbyName, hobbyImg, category} = req.body
 
@@ -117,11 +123,27 @@ const handlerFunctions = {
 
         res.send(tutorials)
     },
+
+    addSuggestion: async (req, res) => {
+        const {hobbyName, basicSupplies, optionalSupplies, tutorialLinks} = req.body
+
+        const newSuggestion = {
+            hobbyName,
+            basicSupplies,
+            optionalSupplies,
+            tutorialLinks
+        }
+
+        await Suggestion.create(newSuggestion)
+        const suggestions = await Suggestion.findAll()
+
+        res.send(suggestions)
+    },
     
     deleteHobby: async (req, res) => {
         const {hobbyId} = req.params
 
-        const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
+        const hobby = await Hobby.findByPk(hobbyId)
         await hobby.destroy()
         const hobbies = await Hobby.findAll({include: [{model: Supply}, {model: Tutorial}]})
 
@@ -148,6 +170,16 @@ const handlerFunctions = {
         const tutorials = await Tutorial.findAll({where: {hobbyId: hobbyId}})
 
         res.send(tutorials)
+    },
+
+    deleteSuggestion: async (req, res) => {
+        const {suggestionId} = req.params
+
+        const suggestion = await Suggestion.findByPk(suggestionId)
+        await suggestion.destroy()
+        const suggestions = await Suggestion.findAll()
+
+        res.send(suggestions)
     },
 
     editHobby: async (req, res) => {
