@@ -13,13 +13,10 @@ function AdminHobbyCard(props) {
   const [hobbyMapQuery, setHobbyMapQuery] = useState(props.hobbyMapQuery)
   const [supplies, setSupplies] = useState(props.supplies)
   const [tutorials, setTutorials] = useState(props.tutorials)
-
   const [newSupply, setNewSupply] = useState("");
   const [allSupplies, setAllSupplies] = useState(supplies); 
-
   const [newTutorial, setNewTutorial] = useState("");
   const [allTutorials, setAllTutorials] = useState(tutorials); 
-
 
   // Save hobby function
   const saveFunction = () => {
@@ -28,8 +25,8 @@ function AdminHobbyCard(props) {
       category: hobbyCategory,
       hobbyImg: hobbyImg,
       map: hobbyMapQuery,
-
     }
+
     // Axios put request to insert hobby data into database
     axios.put(`/api/hobby/${hobbyId}`, bodyObj)
       .then((res) => {
@@ -53,12 +50,9 @@ function AdminHobbyCard(props) {
     }
   }
 
-
-
-
-
 // Delete tutorial function
 // ...
+
 
 
   const addSupply = () => {
@@ -68,15 +62,14 @@ function AdminHobbyCard(props) {
     }
   };
 
+
+  
   const addTutorial = () => {
     if (newTutorial.trim() !== "") {
       setAllTutorials([...allTutorials, { tutorialName: newTutorial, optional: false }]);
       setNewTutorial("");
     }
   };
-
-
-
 
   const supply = supplies.map((sup) => {
     return <SuppliesCard
@@ -86,21 +79,19 @@ function AdminHobbyCard(props) {
       supplyName={sup.supplyName}
       optional={sup.optional}
       setSupplies={setSupplies}
+      hobbyId = {hobbyId}
     />
   })
 
   const tutorial = tutorials.map((tur) => {
     return <TutorialsCard
-      key={tur.turtorialId}
+      key={tur.tutorialId}
       isEditing={isEditing}
       tutorialName={tur.tutorialName}
       tutorialLink={tur.tutorialLink}
       paid={tur.paid}
     />
   })
-
-
-
 
   return (isEditing) ? (
     <>
@@ -137,10 +128,8 @@ function AdminHobbyCard(props) {
         />
       </div>
 
-
       <p>Supplies</p>
       {supply}
-
 
       <div className='textAndInput'>
         <input
@@ -151,8 +140,6 @@ function AdminHobbyCard(props) {
         />
         <button onClick={addSupply}>Add Supply</button>
       </div>
-
-
 
       <p>Turtorials</p>
       {tutorial}
@@ -197,43 +184,3 @@ function AdminHobbyCard(props) {
 }
 
 export default AdminHobbyCard
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Delete doctor function
-// const deleteHobby = () => {
-//   const confirmDelete = window.confirm('Sure want to delete Hobby?')
-//   if (confirmDelete) {
-//     axios.delete(`/api/hobby/${hobbyId}`)
-//       .then((res) => {
-//         setCurrentData(res.data)
-//         console.log(res.data);
-//       })
-//       .catch((error) => {
-//         console.error('Error deleting hobby:', error);
-//       })
-//   }
-// }

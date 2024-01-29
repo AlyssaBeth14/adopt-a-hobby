@@ -10,17 +10,13 @@ const Admin = () => {
         axios.get(`/api/hobbies`)
             .then((res) => {
                 setHobbyData(res.data)
-                console.log(res.data);
             })
     }, [])
-
-
-
-
 
     const hobbies = hobbyData.map((hobby) => {
         return <AdminHobbyCard
             key={hobby.hobbyId}
+            hobbyId={hobby.hobbyId}
             hobbyImg={hobby.hobbyImg}
             hobbyName={hobby.hobbyName}
             category={hobby.category}
