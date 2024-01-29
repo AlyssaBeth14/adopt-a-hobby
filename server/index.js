@@ -18,7 +18,8 @@ const {
     addTutorial,
     deleteHobby,
     deleteSupply,
-    deleteTutorial
+    deleteTutorial,
+    editHobby
 
 } = handlerFunctions
 
@@ -32,6 +33,7 @@ app.post('/api/tutorial', addTutorial)
 app.delete('/api/hobby/:hobbyId', deleteHobby)
 app.delete('/api/supply/:supplyId', deleteSupply)
 app.delete('/api/tutorial/:tutorialId', deleteTutorial)
+app.put('/api/hobby/:hobbyId', editHobby)
 
 
 ViteExpress.listen(app, 8000, () => console.log('server is running on 8000'))
