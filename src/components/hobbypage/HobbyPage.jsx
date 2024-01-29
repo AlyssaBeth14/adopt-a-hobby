@@ -23,8 +23,10 @@ const handleClick = () => {
         <h1>{hobbyName}</h1>
         <h5>Cost: {cost}</h5>
         <hr />
+        
         <Supplies />
         <button className='btn btn-link' onClick={handleClick}>Where to Buy</button>
+
         <h2>Tutorials</h2>
         <hr />
         <TutorialCard />

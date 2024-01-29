@@ -2,7 +2,7 @@ import React from 'react'
 
 const WTBCard = ({buyLink, buyName, buyImg, owned}) => {
   return (
-    <div>
+<div>
     <a href={buyLink} target='_blank'>
         <button>
             <img src={buyImg}/>

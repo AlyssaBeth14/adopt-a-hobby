@@ -34,9 +34,9 @@ const wtbMap = () => {
 
   return (
     <div>
-    <h3>Where to Buy:</h3>
-    <hr />
-    {wtbCards}
+        <h3>Where to Buy:</h3>
+        <hr />
+        {wtbCards}
     </div>
   )
 }
