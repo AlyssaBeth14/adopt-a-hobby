@@ -1,11 +1,31 @@
-import { Modal, Button } from 'react-bootstrap'
+import axios from 'axios'
+import { Modal } from 'react-bootstrap'
+import { useState } from 'react'
 
 const HobbySuggestion = (props) => {
 
     const {showModal, setShowModal} = props
 
+    const [hobbyName, setHobbyName] = useState('')
+    const [basicSupplies, setBasicSupplies] = useState('')
+    const [optionalSupplies, setOptionalSupplies] = useState('')
+    const [tutorials, setTutorials] = useState('')
+
     const handleSubmit = (e) => {
         e.preventDefault()
+
+        const newSuggestion = {
+            hobbyName: hobbyName,
+            basicSupplies: basicSupplies,
+            optionalSupplies: optionalSupplies,
+            tutorials: tutorials
+        }
+
+        axios.post('/api/suggestion', newSuggestion)
+        .then((res) => {
+            console.log(res.data)
+            setShowModal(false)
+        })
     }
 
     return (
@@ -20,6 +40,7 @@ const HobbySuggestion = (props) => {
                         <input
                             type='text'
                             className='form-control'
+                            onChange={(e) => setHobbyName(e.target.value)}
                         />
                     </label>
                     <br/>
@@ -28,6 +49,7 @@ const HobbySuggestion = (props) => {
                         <input
                             type='text'
                             className='form-control'
+                            onChange={(e) => setBasicSupplies(e.target.value)}
                         />
                     </label>
                     <br/>
@@ -36,6 +58,7 @@ const HobbySuggestion = (props) => {
                         <input
                             type='text'
                             className='form-control'
+                            onChange={(e) => setOptionalSupplies(e.target.value)}
                         />
                     </label>
                     <br/>
@@ -44,6 +67,7 @@ const HobbySuggestion = (props) => {
                         <input
                             type='text'
                             className='form-control'
+                            onChange={(e) => setTutorials(e.target.value)}
                         />
                     </label>
                     <br/>
