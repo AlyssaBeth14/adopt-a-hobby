@@ -78,16 +78,17 @@ const handlerFunctions = {
     },
 
     addHobby: async (req, res) => {
-        const {hobbyName, hobbyImg, category} = req.body
+        const {hobbyName, hobbyImg, category, mapQuery} = req.body
 
         const newHobby = {
             hobbyName,
             hobbyImg,
-            category
+            category,
+            mapQuery
         }
 
         await Hobby.create(newHobby)
-        const hobbies = await Hobby.findAll()
+        const hobbies = await Hobby.findAll({include: [{model: Supply}, {model: Tutorial}]})
 
         res.send(hobbies)
     },
