@@ -6,33 +6,22 @@ import TutorialsCard from './tutorialsCard.jsx'
 
 function AdminHobbyCard(props) {
 
-  const [isEditing, setIsEditing] = useState(false)
-  
-  const [hobbyId, setHobbyId] = useState(props.hobbyId)
-  const [hobbyImg, setHobbyImg] = useState(props.hobbyImg)
-  const [hobbyName, setHobbyName] = useState(props.hobbyName)
-
-  const [supplyName, setSupplyName] = useState('')
-
-
-
-// console.log(supplyName);
-
-  const [optional, setOptional] = useState(props.supplies.optional)
-
-  const [hobbyCategory, setHobbyCategory] = useState(props.category)
-  const [hobbyMapQuery, setHobbyMapQuery] = useState(props.hobbyMapQuery)
-  const [supplies, setSupplies] = useState(props.supplies)
-  const [tutorials, setTutorials] = useState(props.tutorials)
-  // const [newSupply, setNewSupply] = useState("");
-  const [allSupplies, setAllSupplies] = useState(supplies); 
-  const [newTutorial, setNewTutorial] = useState("");
-  const [allTutorials, setAllTutorials] = useState(tutorials); 
-
+  const {setHobbyData} = props
+  const [isEditing, setIsEditing] = useState(false)                         // Edit mode
+  const [hobbyId, setHobbyId] = useState(props.hobbyId)                     // Hobby: hobbyId field
+  const [hobbyImg, setHobbyImg] = useState(props.hobbyImg)                  // Hobby: hobbyImg field
+  const [hobbyName, setHobbyName] = useState(props.hobbyName)               // Hobby: hobbyName field
+  const [hobbyCategory, setHobbyCategory] = useState(props.category)        // Hobby: hobbyCategory field
+  const [hobbyMapQuery, setHobbyMapQuery] = useState(props.hobbyMapQuery)   // Hobby: hobbyMapQuery field
+  const [supplyName, setSupplyName] = useState('')                          // Supply: optional field
+  const [optional, setOptional] = useState(props.supplies.optional)         // Tutorial: tutorialName field
+  const [tutorialImg, setTutorialImg] = useState('')                        // Tutorial: tutorialImg field    (not being used)
+  const [tutorialName, setTutorialName] = useState('')                      // Tutorial: tutorialName field
+  const [tutorialLink, setTutorialLink] = useState('')                      // Tutorial: tutorialLink field
+  const [paid, setPaid] = useState('')                                      // Tutorial: paid field           (not being used)
   const [currentHobby, setCurrentHobby] = useState()
-  const [currentSupply, setCurrentSupply] = useState()
-  const [currentTutorial, setCurrentTutorial] = useState()
-
+  const [supplies, setSupplies] = useState(props.supplies)                  // Add supply
+  const [tutorials, setTutorials] = useState(props.tutorials)               // Add tutorial
 
   // Save hobby function
   const saveFunction = () => {
@@ -51,17 +40,14 @@ function AdminHobbyCard(props) {
       })
   }
 
-
-
-
-
   // Delete hobby function
   const deleteHobby = () => {
     const confirmDelete = window.confirm('Sure want to delete Hobby?')
     if (confirmDelete) {
       axios.delete(`/api/hobby/${hobbyId}`)
         .then((res) => {
-          setCurrentData(res.data)
+          setHobbyData(res.data)
+          console.log(res.data)
         })
         .catch((error) => {
           console.error('Error deleting hobby:', error);
@@ -70,13 +56,8 @@ function AdminHobbyCard(props) {
   }
 
 
-  // Add Supply function
+ // Add Supply function: bodyObj & axios post request
   const addSupply = () => {
-    // if (newSupply.trim() !== "") {
-    //   setAllSupplies([...allSupplies, { supplyName: newSupply, optional: false }]);
-    //   setNewSupply("");
-    // }
-
     const bodyObj = {
       hobbyId: hobbyId,
       supplyName: supplyName,
@@ -87,38 +68,29 @@ function AdminHobbyCard(props) {
     axios.post(`/api/supply`, bodyObj)
       .then((res) => {
         setSupplies(res.data)
-        console.log(res.data);
+        // console.log(res.data);
       })
   };
 
-
-
-
-// Add Turtorial function
+// Add Tutorial function: bodyObj & axios post request
   const addTutorial = () => {
-    // if (newTutorial.trim() !== "") {
-    //   setAllTutorials([...allTutorials, { tutorialName: newTutorial, optional: false }]);
-    //   setNewTutorial("");
-    // }
-
     const bodyObj = {
       hobbyId: hobbyId,
       tutorialImg: tutorialImg,
       tutorialName: tutorialName,
       tutorialLink: tutorialLink,
-      paid: paid
+      paid: true
     }
 
     // Axios put request to insert turorial data into database
-    axios.put(`/api/tutorial/${hobbyId}`, bodyObj)
+    axios.post(`/api/tutorial`, bodyObj)
       .then((res) => {
-        setCurrentTutorial(res.data)
-        setIsEditing(false)
+        setTutorials(res.data)
+      // console.log(res.data);
       })
   };
 
-
-
+  // Mapping over supply array for supply component
   const supply = supplies.map((sup) => {
     return <SuppliesCard
       key={sup.supplyId}
@@ -131,6 +103,7 @@ function AdminHobbyCard(props) {
     />
   })
 
+  // Mapping over tutorial array for supply component
   const tutorial = tutorials.map((tur) => {
     return <TutorialsCard
       key={tur.tutorialId}
@@ -141,6 +114,8 @@ function AdminHobbyCard(props) {
     />
   })
 
+
+  // Return statement
   return (isEditing) ? (
     <>
       <img src={hobbyImg} alt={hobbyName} />
@@ -182,7 +157,7 @@ function AdminHobbyCard(props) {
       <div className='textAndInput'>
         <input
           type="text"
-          value={supplyName}
+
           onChange={(e) => setSupplyName(e.target.value)}
           placeholder="New Supply"
         />
@@ -195,8 +170,8 @@ function AdminHobbyCard(props) {
       <div className='textAndInput'>
         <input
           type="text"
-          value={newTutorial}
-          onChange={(e) => setNewTutorial(e.target.value)}
+          value={tutorialName}
+          onChange={(e) => setTutorialName(e.target.value)}
           placeholder="New Tutorial"
         />
         <button onClick={addTutorial}>Add Tutorial</button>
@@ -206,6 +181,7 @@ function AdminHobbyCard(props) {
     </>
   ) : (
     <>
+
       <br></br>
       <div class="full-width-line-top"></div>
       <button class="ADCbutton" onClick={() => { setIsEditing(true) }}>Edit</button>
@@ -232,3 +208,25 @@ function AdminHobbyCard(props) {
 }
 
 export default AdminHobbyCard
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
