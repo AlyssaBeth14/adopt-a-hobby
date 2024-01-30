@@ -111,6 +111,7 @@ function AdminHobbyCard(props) {
       tutorialName={tur.tutorialName}
       tutorialLink={tur.tutorialLink}
       paid={tur.paid}
+      setTutorials={setTutorials}
     />
   })
 
