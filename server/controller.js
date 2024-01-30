@@ -102,7 +102,7 @@ const handlerFunctions = {
         }
 
         await Supply.create(newSupply)
-        const supplies = await Supply.findAll()
+        const supplies = await Supply.findAll({where: {hobbyId: hobbyId}})
 
         res.send(supplies)
     },
@@ -119,7 +119,7 @@ const handlerFunctions = {
         }
 
         await Tutorial.create(newTutorial)
-        const tutorials = await Tutorial.findAll()
+        const tutorials = await Tutorial.findAll({where: {hobbyId: hobbyId}})
 
         res.send(tutorials)
     },
