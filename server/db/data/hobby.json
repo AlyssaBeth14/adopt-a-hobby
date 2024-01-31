@@ -96,5 +96,19 @@
         "category": "Arts",
         "mapQuery": "embroidery+classes",
         "cost": "$"
+    },
+    {
+        "hobbyName": "Kitesurfing",
+        "hobbyImg": "https://mediap.flypgs.com/awh/1175/893//files/Ekstrem_Sporlar/kitesurfing-malzemeleri.jpg",
+        "category": "Outdoors",
+        "mapQuery": "kitesurfing+lessons",
+        "cost": "$$$"
+    },
+    {
+        "hobbyName": "Ice Climbing",
+        "hobbyImg": "https://i0.wp.com/www.northwestalpineguides.com/wp-content/uploads/2021/09/alpine-ice-climbing.jpg?fit=800%2C600&ssl=1",
+        "category": "Outdoors",
+        "mapQuery": "ice+climbing",
+        "cost": "$$$"
     }
 ]

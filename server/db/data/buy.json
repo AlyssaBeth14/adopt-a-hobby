@@ -308,6 +308,510 @@
         "owned": ""
     },
     {
+        "hobbyId": "8",
+        "buyName": "The Shop Company",
+        "buyLink": "https://theshopcompany.com/dress-forms/professionals.html",
+        "buyImg": "https://theshopcompany.com/static/version1700152507/frontend/MB/TSC2/en_US/images/blog/squares/dress_form_anatomy_davinci_square.jpg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "French European, Inc",
+        "buyLink": "https://www.frencheuropeaninc.com/store",
+        "buyImg": "https://d2j6dbq0eux0bg.cloudfront.net/images/17636793/1139041451.jpg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "Sewing Machines Plus",
+        "buyLink": "https://www.sewingmachinesplus.com/ava-medium.php?gad_source=1&gclid=CjwKCAiAtt2tBhBDEiwALZuhACjHVRGhfCdrhJoUgUCcpbRIaFF91900rGP_vpy1ZXE2V-boXqFmGBoCD_YQAvD_BwE",
+        "buyImg": "https://imagecdn.sewingmachinesplus.com/AE/images/logo.png",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "BootstrapFashion",
+        "buyLink": "https://patterns.bootstrapfashion.com/diy-dress-form-sewing-pattern.html?limit=all",
+        "buyImg": "https://patterns.bootstrapfashion.com/media/megatron/websites/1/store-logo.png",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "Beatrice Forms",
+        "buyLink": "https://beatriceforms.com/",
+        "buyImg": "https://freight.cargo.site/w/300/i/199240c16d39a2c45e1b5b875f7d2cd963c4c1888124e1a78f53ef8ae9836cda/beatrice.png",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "Mood Designer Fabrics",
+        "buyLink": "https://www.moodfabrics.com/notions/dress-forms",
+        "buyImg": "https://www.moodfabrics.com/media/wysiwyg/curated-by/homepage-october-2023-assets-to-export-fashion-395x395.webp",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "8",
+        "buyName": "Dress Forms USA",
+        "buyLink": "https://dressformsusa.com/collections/professional-dress-forms",
+        "buyImg": "https://dressformsusa.com/cdn/shop/files/Dress_Forms_and_Sewing_Mannequins_In_The_USA_For_Sale_Logo_410x.jpg?v=1645087061",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Breadtopia",
+        "buyLink": "https://breadtopia.com/store/",
+        "buyImg": "https://breadtopia.com/wp-content/uploads/2016/04/logo-400@2x.png",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Dough Dealer",
+        "buyLink": "https://doughdealer.com/collections/all",
+        "buyImg": "https://doughdealer.com/cdn/shop/files/Asset_3_x80.png?v=1614931004",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Everything Kitchens",
+        "buyLink": "https://www.everythingkitchens.com/bread-making-shop.html",
+        "buyImg": "https://cdn.everythingkitchens.com/media/logo/stores/1/logo.svg",
+        "owned": "Woman-Owned, Family-Owned"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Elmendorf Baking Supplies",
+        "buyLink": "https://www.elmendorfbaking.com/collections/bread-making",
+        "buyImg": "https://www.elmendorfbaking.com/cdn/shop/files/Elmendorf-Baking-Cafe_2000x.jpg?v=1669048080",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Bucket of Bread",
+        "buyLink": "https://bucketofbread.com/shop-entrance/buy-buckets/",
+        "buyImg": "https://bucketofbread.com/wp-content/uploads/2020/02/Buy-the-Best-Baking-Kits-from-a-Veteran-Owned-Business-Fighting-Food-Insecurity.png",
+        "owned": "Veteran-Owned & Operated"
+    },
+    {
+        "hobbyId": "9",
+        "buyName": "Sunrise Flour Mill",
+        "buyLink": "https://sunriseflourmill.com/collections/all",
+        "buyImg": "https://sunriseflourmill.com/cdn/shop/files/Logo-theme-retina-350X292--normal_180x.jpg?v=1652719836",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "10",
+        "buyName": "Art is in Cakes",
+        "buyLink": "https://artisincakes.com/collections/cake-decorating-supplies",
+        "buyImg": "https://artisincakes.com/cdn/shop/files/image_2022_06_23T19_02_01_832Z_bf6fe395-a597-4276-8f97-21d7d4cfcced_200x.png?v=1658237671",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "10",
+        "buyName": "Crummy's Cake Supply & Studio",
+        "buyLink": "https://www.crummys.com/s/order",
+        "buyImg": "https://6372d8e4032978b18ee9.cdn6.editmysite.com/uploads/b/6372d8e4032978b18ee944e6218c74e97d71113d619926c2388e6d48e24cbbff/IMG_9969_1644939409.PNG?width=2400&optimize=medium",
+        "owned": "Black-Owned, Family-Owned"
+    },
+    {
+        "hobbyId": "10",
+        "buyName": "Faire",
+        "buyLink": "https://www.faire.com/category/Food%20&%20Drink/subcategory/Baking/Cake%20Decorations?adgroupid=&adid=&campaignid=16930965521&device=c&gad_source=1&gclid=CjwKCAiAtt2tBhBDEiwALZuhADrnH-SZyjixlBMIwxHaaQotPpLrQPAUHSMwBn_XxQSfhJgsBgT7XxoC4uYQAvD_BwE&gclsrc=aw.ds&keyword=&matchtype=&utm_campaign=AW_AMER_USA_EN_RTL_PRO_PMAX_X_X_X&utm_medium=cpc&utm_source=google",
+        "buyImg": "https://cdn.faire.com/static/logo.svg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "10",
+        "buyName": "Cake Carousel",
+        "buyLink": "https://cakecarousel.com/",
+        "buyImg": "https://cakecarousel.com/product_images/logo_1447707948__96300.png",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "First Lite",
+        "buyLink": "https://www.firstlite.com/collections/firstlite-hunting-clothes/?lang=en_US",
+        "buyImg": "https://www.firstlite.com/on/demandware.static/Sites-meateater-US-Site/-/default/dw4f12b6ad/images/firstlite_logo-color.svg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "Whitney's",
+        "buyLink": "https://www.whitneyshuntingsupply.com/collection/",
+        "buyImg": "https://cdn.shoplightspeed.com/shops/644787/themes/13676/v/211965/assets/logo.png?20210928194234",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "Natchez Shooting & Outdoors",
+        "buyLink": "https://www.natchezss.com/",
+        "buyImg": "https://media.natchezss.com/images/uncategorized/True_North_Logo_Header.png",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "Stone Creek",
+        "buyLink": "https://www.stonecreekhounds.com/",
+        "buyImg": "https://static.wixstatic.com/media/481c86_0e23231c3a0c4a97b472730660ac3473~mv2.png/v1/crop/x_62,y_295,w_870,h_412/fill/w_172,h_82,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Green%20logo%20-%20no%20background.png",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "Frank's Great Outdoors",
+        "buyLink": "https://www.franksgreatoutdoors.com/hunting",
+        "buyImg": "https://images.franksgreatoutdoors.com/media/logo/stores/1/logo.png",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "11",
+        "buyName": "Simons Hunting Supply",
+        "buyLink": "https://simonshuntingsupply.com/collections/all",
+        "buyImg": "https://simonshuntingsupply.com/cdn/shop/files/simons-hunting-supply-logo_160x.png?v=1683225267",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Custom Tackle Supply",
+        "buyLink": "https://customtacklesupply.com/",
+        "buyImg": "https://customtacklesupply.com/cdn/shop/files/CTSBASSf1send_592_f88cb5ab-d32a-4e67-b40e-bdec3d8c55a1_180x.jpg?v=1644634050",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Mule Fishing Supply Co",
+        "buyLink": "https://www.mulefishing.com/",
+        "buyImg": "https://www.mulefishing.com/cdn/shop/files/Mule_Final_180x.png?v=1613743920",
+        "owned": ""
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Susquehanna Fishing Tackle Inc",
+        "buyLink": "https://sfttackle.com/",
+        "buyImg": "",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Dark Horse Tackle",
+        "buyLink": "https://darkhorsetackle.com/",
+        "buyImg": "https://darkhorsetackle.com/cdn/shop/files/IMG_1494.png?v=1697642177&width=240",
+        "owned": ""
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Old Skool Tackle Company",
+        "buyLink": "https://www.fisholdskool.com/",
+        "buyImg": "https://cdn.shopify.com/s/files/1/0085/1732/0751/files/OldSkoolFinalTEXT_480x480.png?v=1649980262",
+        "owned": ""
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Tackle Room Fishing Supply",
+        "buyLink": "https://thetackleroom.com/",
+        "buyImg": "https://thetackleroom.com/cdn/shop/files/tackleroom_logo150px_100x.png?v=1703728855",
+        "owned": ""
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Rubber Baits",
+        "buyLink": "https://rubberbaits.com/pages/collections",
+        "buyImg": "https://rubberbaits.com/cdn/shop/files/rubberbaits_established_1024x1024.png?v=1683065880",
+        "owned": ""
+    },
+    {
+        "hobbyId": "12",
+        "buyName": "Tailored Tackle",
+        "buyLink": "https://tailoredtackle.com/shop-fishing-gear/",
+        "buyImg": "https://tailoredtackle.com/wp-content/uploads/2018/09/tailored-tackle-fishing-kit-logo-default-e1537834359356.webp",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Bailey Pottery Equipment",
+        "buyLink": "https://www.baileypottery.com/",
+        "buyImg": "https://eadn-wc03-468262.nxedge.io/cdn/media/logo/stores/1/Bailey_Pottery_Logo_8-4-23_1_.png",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Mid-South Ceramic",
+        "buyLink": "https://www.midsouthceramics.com/shop/",
+        "buyImg": "https://www.midsouthceramics.com/wp-content/uploads/2021/11/mid-south-logo.png",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Sheffield Pottery",
+        "buyLink": "https://www.sheffield-pottery.com/default.asp",
+        "buyImg": "https://www.sheffield-pottery.com/v/vspfiles/templates/sheffield/images/template/header_bg.jpg",
+        "owned": "Family-Owned"
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Soul Ceramics",
+        "buyLink": "https://www.soulceramics.com/collections/all",
+        "buyImg": "https://www.soulceramics.com/cdn/shop/files/test-logo-2_copy_550x.png?v=1613154756",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Roadrunner Ceramics",
+        "buyLink": "https://roadrunnerceramics-2.myshopify.com/collections",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "High Fire Hawaii",
+        "buyLink": "https://www.highfirehawaii.com/ceramics-supplies",
+        "buyImg": "https://e55919b3cbc652d829a1.cdn6.editmysite.com/uploads/b/f37809e0-95f7-11e9-ace1-cb1b5b6d4a94/HFH%20Logo_MjA0Mz.jpg?width=2400&optimize=medium",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Penguin Pottery Supplies",
+        "buyLink": "https://www.penguinpottery.com/",
+        "buyImg": "https://www.penguinpottery.com/cdn/shop/files/Penguin_Pottery_LLC_Logo_1.png?v=1699050090&width=150",
+        "owned": "Employee-Owned"
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "The Sounding Stone",
+        "buyLink": "https://www.soundingstone.com/",
+        "buyImg": "https://www.soundingstone.com/cdn/shop/files/logo_0a645a65-1bd1-465f-b982-8d3ae2626ddc.png?v=1671400316&width=1200",
+        "owned": ""
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Little Chip Tools",
+        "buyLink": "https://littlechiptools.com/",
+        "buyImg": "https://littlechiptools.com/cdn/shop/files/LCT_Logo_with_Name_-_Large2.png?v=1703539363&width=180",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "13",
+        "buyName": "Miami Ceramics and Clay Supplies",
+        "buyLink": "https://miaceramicsandclaysupplies.com/",
+        "buyImg": "https://cdn11.bigcommerce.com/s-vyl4jovkd8/product_images/uploaded_images/about-us.jpg",
+        "owned": "Latinx-Owned, Family-Owned"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "Snuggly Monkey",
+        "buyLink": "https://www.snugglymonkey.com/",
+        "buyImg": "https://www.snugglymonkey.com/cdn/shop/files/logo_header.png?v=1687799054&width=200",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "The Art of Home",
+        "buyLink": "https://jacquelynnesteves-shop.com/collections/hand-embroidery-supplies",
+        "buyImg": "https://jacquelynnesteves-shop.com/cdn/shop/t/5/assets/logo.png?v=69960763596636907431618266524",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "The Little Green Bean",
+        "buyLink": "https://thelittlegreenbean.com/collections/embroidery-stands-and-accessories",
+        "buyImg": "https://thelittlegreenbean.com/cdn/shop/files/Pink_Handmade_With_Love_Round_Sticker_720x.jpg?v=1644590868",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "Harvest Goods Co.",
+        "buyLink": "https://www.harvestgoods.co/embroidery-kits-and-patterns",
+        "buyImg": "https://images.squarespace-cdn.com/content/v1/5bf880a3506fbeeca9e7955d/1610577553607-GUCJ63977ZGM8AK22S5I/HGC_Secondary_Logo.png?format=1500w",
+        "owned": "Family-Owned & Operated"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "Haley Hamilton Art",
+        "buyLink": "https://haleyhamiltonart.com/collections/kits",
+        "buyImg": "https://haleyhamiltonart.com/cdn/shop/files/Logo_PNG_70x.png?v=1647886155",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "Faire",
+        "buyLink": "https://www.faire.com/discover/embroidery-supplies",
+        "buyImg": "https://cdn.faire.com/static/logo.svg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "The French Needle",
+        "buyLink": "https://www.frenchneedle.com/",
+        "buyImg": "https://www.frenchneedle.com/cdn/shop/files/FrenchNeedleLogo-2_210x@2x.png?v=1613711815",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "14",
+        "buyName": "Mindful Mantra Embroidery",
+        "buyLink": "https://mindfulmantraembroidery.com/",
+        "buyImg": "https://mindfulmantraembroidery.com/cdn/shop/files/Transparent_logo_1_75eb6741-77df-434d-a8a8-93876ed74264_290x179.png?v=1657716880",
+        "owned": "Woman-Owned"
+    },
+    {
+        "hobbyId": "15",
+        "buyName": "Kiteboarding.com",
+        "buyLink": "https://kiteboarding.com/categories.asp?cat=Kiteboarding+Shop",
+        "buyImg": "https://d18jusv6cmas2k.cloudfront.net/images/logo.png",
+        "owned": ""
+    },
+    {
+        "hobbyId": "15",
+        "buyName": "Force Kite and Wake",
+        "buyLink": "https://forcekiteandwake.com/collections/kiteboarding",
+        "buyImg": "https://forcekiteandwake.com/cdn/shop/files/force-kite-logo-2023_910x200.png?v=1677624222",
+        "owned": ""
+    },
+    {
+        "hobbyId": "15",
+        "buyName": "Kite Paddle Surf",
+        "buyLink": "https://www.kitepaddlesurf.com/",
+        "buyImg": "https://www.kitepaddlesurf.com/cdn/shop/t/26/assets/logo.png?v=51424484985693321671692755115",
+        "owned": ""
+    },
+    {
+        "hobbyId": "16",
+        "buyName": "Rock & Snow",
+        "buyLink": "https://www.rockandsnow.com/33/Ice-Climbing/",
+        "buyImg": "https://cdn.powered-by-nitrosell.com/public_html/4/809/images/ice-climbing-gear-clothing-rock-and-snow-newpaltz-ny.jpg",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
+        "hobbyId": "",
+        "buyName": "",
+        "buyLink": "",
+        "buyImg": "",
+        "owned": ""
+    },
+    {
         "hobbyId": "",
         "buyName": "",
         "buyLink": "",

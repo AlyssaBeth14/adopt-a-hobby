@@ -5,11 +5,11 @@ const WTBCard = ({buyLink, buyName, buyImg, owned}) => {
 <div>
     <a href={buyLink} target='_blank'>
         <button>
-            <img src={buyImg}/>
+            <img src={buyImg} style={{ width: '18rem' }}/>
             <br/>
             {buyName}
             {owned}
-        </button>
+        </button> 
     </a>
 </div>
   )

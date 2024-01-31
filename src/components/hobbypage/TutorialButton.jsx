@@ -6,7 +6,7 @@ const TutorialButton = ({tutorialLink, tutorialImg, tutorialName}) => {
     <div>
         <a href={tutorialLink} target='_blank'>
             <button>
-                <img src={tutorialImg}/>
+                <img src={tutorialImg} style={{ width: '18rem' }}/>
                 <br/>
                 {tutorialName}
             </button>

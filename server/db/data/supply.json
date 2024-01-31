@@ -601,7 +601,7 @@
     },
     {
         "hobbyId": "14",
-        "supplyName": "Needleminder",
+        "supplyName": "Needle Minder",
         "optional": "true"
     },
     {
@@ -617,6 +617,130 @@
     {
         "hobbyId": "14",
         "supplyName": "Water Erasable Marker",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Kite"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Harness"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Safety Leash"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Control Bar & Lines"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Kite Pump"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Kitesurfing Board"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Helmet"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Life Jacket"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Water Shoes"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Wetsuit"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Surf Camera",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Repair Kit",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "15",
+        "supplyName": "Storage Bag",
+        "optional": "true"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Mountaineering Boots"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Crampons"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Ice Axes"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Helmet"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Harness"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Ice Clippers"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Backpack"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Belay Device"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Locking Carabiner"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Rope"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Personal Bail Kit"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Ice Screws and Draws"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Avalanche Gear"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Headlamp"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "First Aid Kit"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Emergency Communication Device"
+    },
+    {
+        "hobbyId": "16",
+        "supplyName": "Eye Protection",
         "optional": "true"
     }
 ]
