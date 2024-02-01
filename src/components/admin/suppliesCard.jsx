@@ -5,6 +5,9 @@ import './adminHobbyCard.css'
 
 const SuppliesCard = (props) => {
 
+  const [optional, setOptional] = useState(props.optional)
+
+
   // Delete supply function
   const deleteSupply = () => {
     const confirmDelete = window.confirm('Sure want to delete supply?')
@@ -20,12 +23,28 @@ const SuppliesCard = (props) => {
     }
   }
 
+  const handleChecked = () => {
+    axios.put(`/api/supply/${props.supplyId}`, { optional: !optional })
+      .then((res) => {
+        const newSupply = [...props.supplies]
+        for (let supply of newSupply) {
+          if (supply.supplyId === res.data.supplyId) {
+            supply.optional = res.data.optional
+            break
+          }
+        }
+        props.setSupplies(newSupply)
+        setOptional(!optional)
+      })
+  }
+
   return (
     <>
       <div>
         {props.supplyName}
-        {props.optional ? ": Optional" : ""}
-        {props.isEditing && <button class="D-button" onClick={deleteSupply} >Delete</button>}
+        {optional ? ": Optional" : ""}
+        {props.isEditing && <input type='checkbox' value={optional} checked={optional} onChange={handleChecked} />}
+        {props.isEditing && <button className="D-button" onClick={deleteSupply} >Delete</button>}
       </div>
     </>
   )

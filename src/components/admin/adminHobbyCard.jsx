@@ -98,7 +98,8 @@ function AdminHobbyCard(props) {
       supplyName={sup.supplyName}
       optional={sup.optional}
       setSupplies={setSupplies}
-      hobbyId={hobbyId}
+      supplies={supplies}
+      hobbyId = {hobbyId}
     />
   })
 
@@ -106,11 +107,14 @@ function AdminHobbyCard(props) {
   const tutorial = tutorials.map((tur) => {
     return <TutorialsCard
       key={tur.tutorialId}
+      tutorialId={tur.tutorialId}
       isEditing={isEditing}
       tutorialName={tur.tutorialName}
       tutorialLink={tur.tutorialLink}
       paid={tur.paid}
       setTutorials={setTutorials}
+      tutorials={tutorials}
+      hobbyId = {hobbyId}
     />
   })
 
