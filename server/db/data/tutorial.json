@@ -90,5 +90,17 @@
         "tutorialName": "Basic Embroidery Techniques",
         "tutorialLink": "https://www.youtube.com/watch?v=4tboUqTV41U",
         "tutorialImg": ""
+    },
+    {
+        "hobbyId": "15",
+        "tutorialName": "MACkiteboarding",
+        "tutorialLink": "https://www.youtube.com/@MACkiteboarding",
+        "tutorialImg": ""
+    },
+    {
+        "hobbyId": "15",
+        "tutorialName": "Jake Kelsick",
+        "tutorialLink": "https://www.youtube.com/@JakeKelsick",
+        "tutorialImg": "https://i.ytimg.com/vi/HP_Th5a6PQI/oar2.jpg?sqp=-oaymwEdCJUDENAFSFWQAgHyq4qpAwwIARUAAIhCcAHAAQY=&rs=AOn4CLDept0BeKdIfs3Nl35kBuGiWXgMaQ"
     }
 ]

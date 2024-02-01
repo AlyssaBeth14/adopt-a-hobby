@@ -77,6 +77,9 @@ Hobby.init (
         },
         mapQuery: {
             type: DataTypes.TEXT
+        },
+        cost: {
+            type: DataTypes.STRING(5)
         }
     }, {
         sequelize: db
@@ -145,8 +148,42 @@ Tutorial.init (
     }
 )
 
+class Buy extends Model {} 
+
+Buy.init (
+    {
+        hobbyId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            foreignKey: true
+        },
+        buyId: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            autoIncrement: true,
+            primaryKey: true
+        },
+        buyImg: {
+            type: DataTypes.TEXT
+        },
+        buyName: {
+            type: DataTypes.STRING(50),
+            allowNull: false
+        },
+       buyLink: {
+            type: DataTypes.TEXT
+        },
+        owned: {
+            type: DataTypes.STRING(50)
+        }
+    }, {
+        sequelize: db
+    }
+)
+
 Hobby.hasMany(Supply, {foreignKey: 'hobbyId'})
 Hobby.hasMany(Tutorial, {foreignKey: 'hobbyId'})
+Hobby.hasMany(Buy, {foreignKey: 'hobbyId'})
 
 
 if (process.argv[1] === url.fileURLToPath(import.meta.url)) {
@@ -155,4 +192,4 @@ if (process.argv[1] === url.fileURLToPath(import.meta.url)) {
     console.log('Finished syncing database!');
 }
 
-export {Hobby, Supply, Tutorial, Admin, Suggestion, db}
+export {Hobby, Supply, Tutorial, Admin, Suggestion, Buy, db}

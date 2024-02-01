@@ -11,7 +11,7 @@ const handlerFunctions = {
         }
         const hobbies = await Hobby.findAll({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
 
         res.send(hobbies)
@@ -22,14 +22,14 @@ const handlerFunctions = {
 
         const query = {}
         if (hobbyId) {
-            query.hobbyId = hobbyId
+            query.hobbyId = +hobbyId
         }
         if (hobbyName) {
             query.hobbyName = hobbyName
         }
         const hobby = await Hobby.findOne({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
         
         res.send(hobby)

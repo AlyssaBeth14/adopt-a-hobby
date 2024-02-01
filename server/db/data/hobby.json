@@ -3,84 +3,112 @@
         "hobbyName": "Oil Painting",
         "hobbyImg": "https://cdn.shopify.com/s/files/1/1130/7582/files/acrylic_paint_or_oil_paint_600x600.webp?v=1692107088",
         "category": "Arts",
-        "mapQuery": "oil+painting+classes"
+        "mapQuery": "oil+painting+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Crocheting",
         "hobbyImg": "https://www.wikihow.com/images/thumb/3/3f/Bind-Off-%28Crocheting%29-Step-1-Version-4.jpg/550px-nowatermark-Bind-Off-%28Crocheting%29-Step-1-Version-4.jpg",
         "category": "Fashion",
-        "mapQuery": "crocheting+classes"
+        "mapQuery": "crocheting+classes",
+        "cost": "$"
     },
     {
         "hobbyName": "Pyrography",
         "hobbyImg": "https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F49%2F2019%2F12%2F20%2FfishOpener_0.jpg&q=60",
         "category": "Arts",
-        "mapQuery": "wood+burning+classes"
+        "mapQuery": "wood+burning+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Aerial Lyra",
         "hobbyImg": "https://i.ebayimg.com/images/g/CycAAOSw2atkDnob/s-l1200.webp",
         "category": "Athletics",
-        "mapQuery": "aerial+lyra+classes"
+        "mapQuery": "aerial+lyra+classes",
+        "cost": "$$$"
     },
     {
         "hobbyName": "Soccer",
         "hobbyImg": "Futbol-penaltis-ventaja.jpg",
         "category": "Athletics",
-        "mapQuery": "soccer+classes"
+        "mapQuery": "soccer+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Bobbin Lacemaking",
         "hobbyImg": "https://cdn.shopify.com/s/files/1/0012/8299/8385/files/rg_1_3ad16c4c-be58-4d0f-a5e4-9ed23f364443_600x600.jpg?v=1652126524",
         "category": "Crafts",
-        "mapQuery": "bobbin+lacemaking+classes"
+        "mapQuery": "bobbin+lacemaking+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Origami",
         "hobbyImg": "https://www.redballoonlearner.org/wp-content/uploads/2020/04/Website-image-hero-5e8c7242c66ba-1127x605-c-center.png",
         "category": "Crafts",
-        "mapQuery": "origami+classes"
+        "mapQuery": "origami+classes",
+        "cost": "$"
     },
     {
         "hobbyName": "Draping",
         "hobbyImg": "https://fabrics-media.moodfabrics.com/blog/wp-content/uploads/2016/05/DSC_0075-1024x680.jpg",
         "category": "Fashion",
-        "mapQuery": "draping+classes"
+        "mapQuery": "draping+classes",
+        "cost": "$$$"
     },
     {
         "hobbyName": "Artisan Breadmaking",
         "hobbyImg": "https://www.farmhouseonboone.com/wp-content/uploads/2023/04/sourdough-for-beginners-27-scaled.jpg",
         "category": "Food",
-        "mapQuery": "bread+making+classes"
+        "mapQuery": "bread+making+classes",
+        "cost": "$"
     },
     {
         "hobbyName": "Cake Decorating",
         "hobbyImg": "https://cakebycourtney.com/wp-content/uploads/2016/09/IMG_3344.jpg",
         "category": "Food",
-        "mapQuery": "cake+decorating+classes"
+        "mapQuery": "cake+decorating+classes",
+        "cost": "$"
     },
     {
         "hobbyName": "Hunting",
         "hobbyImg": "https://cnr.ncsu.edu/news/wp-content/uploads/sites/10/2021/01/ncsu.cnr_.hunting.istock.featured.jpg",
         "category": "Outdoors",
-        "mapQuery": "hunting+classes"
+        "mapQuery": "hunting+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Fishing",
         "hobbyImg": "https://www.onthewater.com/wp-content/uploads/2022/04/sunset-striper-barnegat-bay-800x600.jpg",
         "category": "Outdoors",
-        "mapQuery": "fishing+classes"
+        "mapQuery": "fishing+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Wheel Thrown Pottery",
         "hobbyImg": "https://www.jumpintoart.com/uploads/1/0/6/2/10628591/s902277773334188845_p140_i5_w6000.jpeg?width=2560",
         "category": "Arts",
-        "mapQuery": "wheel+throwing+classes"
+        "mapQuery": "wheel+throwing+classes",
+        "cost": "$$"
     },
     {
         "hobbyName": "Embroidery",
         "hobbyImg": "https://sarahmaker.com/wp-content/uploads/2020/03/il_570xN.1530330715_34de.jpg.webp",
         "category": "Arts",
-        "mapQuery": "embroidery+classes"
+        "mapQuery": "embroidery+classes",
+        "cost": "$"
+    },
+    {
+        "hobbyName": "Kitesurfing",
+        "hobbyImg": "https://mediap.flypgs.com/awh/1175/893//files/Ekstrem_Sporlar/kitesurfing-malzemeleri.jpg",
+        "category": "Outdoors",
+        "mapQuery": "kitesurfing+lessons",
+        "cost": "$$$"
+    },
+    {
+        "hobbyName": "Ice Climbing",
+        "hobbyImg": "https://i0.wp.com/www.northwestalpineguides.com/wp-content/uploads/2021/09/alpine-ice-climbing.jpg?fit=800%2C600&ssl=1",
+        "category": "Outdoors",
+        "mapQuery": "ice+climbing",
+        "cost": "$$$"
     }
 ]

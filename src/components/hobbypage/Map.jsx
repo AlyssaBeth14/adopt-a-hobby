@@ -7,9 +7,11 @@ const Map = (props) => {
   const src = `https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEysNg0NZvSVoq7026t7alc&q=${mapQuery}+near+me`
 
   return (
-    <div style={{ marginBottom: '60px' }}>
-      <iframe
-        width="600"
+
+    <div style={{marginBottom:'80px', marginTop: '7px'}}>
+        <iframe
+        width="50%"
+
         height="450"
         src={src} allowFullScreen
       >
