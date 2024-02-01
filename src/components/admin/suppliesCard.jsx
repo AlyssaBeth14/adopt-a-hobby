@@ -3,28 +3,46 @@ import axios from 'axios'
 
 const SuppliesCard = (props) => {
 
-// Delete supply function
-const deleteSupply = () => {
-  const confirmDelete = window.confirm('Sure want to delete supply?')
-  if (confirmDelete) {
+  const [optional, setOptional] = useState(props.optional)
 
-    axios.delete(`/api/supply/${props.supplyId}?hobbyId=${props.hobbyId}`)
+  // Delete supply function
+  const deleteSupply = () => {
+    const confirmDelete = window.confirm('Sure want to delete supply?')
+    if (confirmDelete) {
+
+      axios.delete(`/api/supply/${props.supplyId}?hobbyId=${props.hobbyId}`)
+        .then((res) => {
+          props.setSupplies(res.data)
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.error('Error deleting supply:', error);
+        })
+    }
+  }
+
+  const handleChecked = () => {
+    axios.put(`/api/supply/${props.supplyId}`, { optional: !optional })
       .then((res) => {
-        props.setSupplies(res.data)
-        console.log(res.data);
-      })
-      .catch((error) => {
-        console.error('Error deleting supply:', error);
+        const newSupply = [...props.supplies]
+        for (let supply of newSupply) {
+          if (supply.supplyId === res.data.supplyId) {
+            supply.optional = res.data.optional
+            break
+          }
+        }
+        props.setSupplies(newSupply)
+        setOptional(!optional)
       })
   }
-}
 
   return (
     <>
       <div>
-      {props.supplyName}
-      {props.optional ? ": Optional" : ""}
-      {props.isEditing && <button onClick={deleteSupply} >Delete</button>}
+        {props.supplyName}
+        {optional ? ": Optional" : ""}
+        {props.isEditing && <input type='checkbox' value={optional} checked={optional} onChange={handleChecked} />}
+        {props.isEditing && <button onClick={deleteSupply} >Delete</button>}
       </div>
     </>
   )

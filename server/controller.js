@@ -198,6 +198,34 @@ const handlerFunctions = {
 
         const hobby = await Hobby.findByPk(hobbyId, {include: [{model: Supply}, {model: Tutorial}]})
         res.send(hobby)
+    },
+
+    editSupply: async (req, res) => {
+        const {supplyId} = req.params
+        const {optional} = req.body
+
+        const editSupply = await Supply.findByPk(supplyId)
+
+        editSupply.optional = optional
+
+        await editSupply.save()
+
+        const supply = await Supply.findByPk(supplyId)
+        res.send(supply)
+    },
+
+    editTutorial: async (req, res) => {
+        const {tutorialId} = req.params
+        const {paid} = req.body
+
+        const editTutorial = await Tutorial.findByPk(tutorialId)
+
+        editTutorial.paid = paid
+
+        await editTutorial.save()
+
+        const tutorial = await Tutorial.findByPk(tutorialId)
+        res.send(tutorial)
     }
 }
 
