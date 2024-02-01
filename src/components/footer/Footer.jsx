@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className='bg-light text-center py-3 fixed-bottom'>
             <button className='btn btn-link' onClick={() => setShowModal(true)}>Suggest a hobby</button>
-            <HobbySuggestion 
+            <HobbySuggestion
                 showModal={showModal}
                 setShowModal={setShowModal}
             />

@@ -19,23 +19,23 @@
     padding-top: 10px
   }
 
-
-  .ADCbutton {
+  .S-button {
     border-radius: 8px;
     border: 1px solid #c4c4c4;
+    color: #ffffff;
     padding: 0.4em 1.2em;
     font-size: 1em;
     font-weight: 400;
     font-family: inherit;
-    background-color: #ffffff;
+    background-color: #5f9ea0;
     cursor: pointer;
     transition: border-color 0.25s;
     display: inline-block;
-    margin: 15px;
+    margin: 5px;
     justify-content: center;
   }
 
-  .ADCbutton:hover {
+  .S-button:hover {
     font-weight: 700;
-    border: 1.25px solid #252525;
+    border: 1px solid #c4c4c4;
   }

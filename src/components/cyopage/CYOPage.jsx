@@ -10,10 +10,10 @@ const CYOPage = () => {
     const [currentData, setCurrentData] = useState([])          // Creating 'currentData' useState
     const [artList, setArtList] = useState([])                  // Creating useState for Art category    
     const [athleticsList, setAthleticsList] = useState([])      // ...
-    const [craftsList, setCraftsList] = useState([])            
-    const [fashionList, setFashionList] = useState([])         
-    const [foodList, setFoodList] = useState([])                
-    const [outdoorsList, setOutdoorsList] = useState([])        
+    const [craftsList, setCraftsList] = useState([])
+    const [fashionList, setFashionList] = useState([])
+    const [foodList, setFoodList] = useState([])
+    const [outdoorsList, setOutdoorsList] = useState([])
 
     // Utilizing useEffect to execute artlist, fashionlist and other functions when page is loaded
     // Each of those functions renders a HobbyCard component(setArtList & setFashionList)
@@ -39,10 +39,10 @@ const CYOPage = () => {
     const categoryMap = () => {
         const artCopy = [...artList]                            // Creating array called 'artCopy'. Utilizes spread operator to enable array to be added to
         const athleticsCopy = [...athleticsList]                // ...
-        const craftsCopy = [...craftsList]                      
-        const fashionCopy = [...fashionList]                    
-        const foodCopy = [...foodList]                          
-        const outdoorsCopy = [...outdoorsList]                  
+        const craftsCopy = [...craftsList]
+        const fashionCopy = [...fashionList]
+        const foodCopy = [...foodList]
+        const outdoorsCopy = [...outdoorsList]
 
         currentData.forEach((hobby) => {                        // Loops over each element, 'hobby', in the currentData variable
             if (hobby.category === 'Arts') {                    // If statement, that checks if the 'category' property is 'Arts'
@@ -108,10 +108,10 @@ const CYOPage = () => {
         })
         setArtList(artCopy)                                         // Executes 'setArtlist' function with artCopy variable (variable has all 'Art' HobbyCards)  ?????
         setAthleticsList(athleticsCopy)                             // ...
-        setCraftsList(craftsCopy)                                   
-        setFashionList(fashionCopy)                                 
-        setFoodList(foodCopy)                                       
-        setOutdoorsList(outdoorsCopy)                                      
+        setCraftsList(craftsCopy)
+        setFashionList(fashionCopy)
+        setFoodList(foodCopy)
+        setOutdoorsList(outdoorsCopy)
     }
 
     const scrollToSection = (sectionId) => {
@@ -144,7 +144,7 @@ const CYOPage = () => {
             </nav>
             <br></br>
             <br></br>
-            <SearchBar/>
+            <SearchBar />
             <br></br>
             <br></br>
             <div id="Arts" style={{ height: '40px', backgroundColor: 'lightred' }}>Art Section</div>

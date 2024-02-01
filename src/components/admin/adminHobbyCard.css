@@ -1,0 +1,127 @@
+.supply-tutorial-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .supply-section, .tutorial-section {
+    width: 45%; 
+  }
+
+  .list-align {
+    text-align: left;
+  }
+
+  .section {
+    font-size: 24px; 
+    text-align: left;
+    text-decoration: underline;
+  }
+
+
+  .hobby-details {
+    text-align: left;
+  }
+
+
+  .textAndInput2 {
+    text-align: left;
+  
+  }
+
+
+  .ADCbutton {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: inherit;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    display: inline-block;
+    margin: 5px;
+    justify-content: center;
+  }
+
+  .ADCbutton:hover {
+    font-weight: 700;
+    border: 1.25px solid #252525;
+  }
+
+  .D-button {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    color: #ffffff;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: inherit;
+    background-color: #7a221d;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    display: inline-block;
+    margin: 5px;
+    justify-content: center;
+  }
+
+  .D-button:hover {
+    font-weight: 700;
+    border: 1px solid #c4c4c4;
+  }
+
+
+
+  .E-button {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    color: #ffffff;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: inherit;
+    background-color: #998100;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    display: inline-block;
+    margin: 5px;
+    justify-content: center;
+  }
+
+  .E-button:hover {
+    font-weight: 700;
+    border: 1px solid #c4c4c4;
+  }
+
+
+  .S-button {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    color: #ffffff;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: inherit;
+    background-color: #5f9ea0;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    display: inline-block;
+    margin: 5px;
+    justify-content: center;
+  }
+
+  .S-button:hover {
+    font-weight: 700;
+    border: 1px solid #c4c4c4;
+  }
+
+
+
+  .input-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-container p {
+    margin-right: 10px;
+  }

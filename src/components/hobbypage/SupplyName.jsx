@@ -1,10 +1,10 @@
 import React from 'react'
 
-const SupplyName = ({supplyName}) => {
+const SupplyName = ({ supplyName }) => {
 
   return (
     <div>
-        {supplyName}
+      {supplyName}
     </div>
   )
 }
