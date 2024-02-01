@@ -1,6 +1,3 @@
-
-
-
 .dropdown {
     background-color: white;
     display: flex;
@@ -12,13 +9,11 @@
     border: none;
 }
 
-
 .dropwdown-row {
     cursor: pointer;
     text-align: start;
     margin: 2px 0;
 }
-
 
 #search {
     font: 20px

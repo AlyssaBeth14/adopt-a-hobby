@@ -7,10 +7,11 @@ import './admin.css'
 const Admin = () => {
     const [hobbyData, setHobbyData] = useState([])
     const [showModal, setShowModal] = useState(false)
-    const [hobbyName, setHobbyName] = useState('')                 // Add hobby
+    const [hobbyName, setHobbyName] = useState('')
     const [hobbyImg, setHobbyImg] = useState('')
     const [hobbyCategory, setHobbyCategory] = useState('')
     const [mapQuery, setMapQuery] = useState('')
+
     // Getting hobby data & making it avaialable for 'AdminHobbyCard' component
     useEffect(() => {
         axios.get(`/api/hobbies`)
@@ -64,10 +65,6 @@ const Admin = () => {
             <button class="ADCbutton" onClick={addHobby}>Add Hobby</button>
             <div>{hobbies}</div>
             <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
 
             <AddHobbyModal
                 showModal={showModal}
@@ -77,11 +74,6 @@ const Admin = () => {
                 setHobbyCategory={setHobbyCategory}
                 setMapQuery={setMapQuery}
                 handleSubmit={handleSubmit}
-            // hobbyName={hobbyName}
-            // hobbyImg={hobbyImg}
-            // category={hobbyCategory}
-            // mapQuery={mapQuery}
-
             />
         </>
     )

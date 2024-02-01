@@ -3,9 +3,9 @@ import HobbySuggestion from './HobbySuggestion.jsx'
 import AdminLogin from './AdminLogin.jsx'
 
 const Footer = () => {
-
     const [showSuggestModal, setShowSuggestModal] = useState(false)
     const [showAdminModal, setShowAdminModal] = useState(false)
+    const [showModal, setShowModal] = useState(false)
 
     return (
         <footer className='bg-light text-center py-3 fixed-bottom'>
@@ -21,7 +21,6 @@ const Footer = () => {
                 setShowModal={setShowAdminModal}
             />
         </footer>
-
     )
 }
 
