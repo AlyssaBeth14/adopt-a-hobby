@@ -3,6 +3,7 @@ import axios from 'axios'
 
 const TutorialsCard = (props) => {
 
+  const [paid, setPaid] = useState(props.paid)
 
 // Delete supply function
 const deleteSupply = () => {
@@ -20,11 +21,27 @@ const deleteSupply = () => {
   }
 }
 
+const handleChecked = () => {
+  axios.put(`/api/tutorial/${props.tutorialId}`, { paid: !paid })
+    .then((res) => {
+      const newTutorials = [...props.tutorials]
+      for (let tutorial of newTutorials) {
+        if (tutorial.tutorialId === res.data.tutorialId) {
+          tutorial.paid = res.data.paid
+          break
+        }
+      }
+      props.setTutorials(newTutorials)
+      setPaid(!paid)
+    })
+}
+
   return (
     <>
       <div>
         {props.tutorialName}
-        {props.paid ? ": payment required" : ""}
+        {paid ? ": payment required" : ""}
+        {props.isEditing && <input type='checkbox' value={paid} checked={paid} onChange={handleChecked}/>}
         {props.isEditing && <button onClick={deleteSupply}>Delete</button>}
       </div>
     </>
