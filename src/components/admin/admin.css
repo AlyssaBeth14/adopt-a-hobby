@@ -1,0 +1,41 @@
+.full-width-line-top {
+    border-top: 1px solid #c4c4c4;
+    width: 100%;
+    margin-top: 20px; 
+  }
+
+  .textAndInput {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 20px;
+  }
+
+
+  .full-width-line-account {
+    border-top: 1px solid #b9b9b9;
+    width: 40%;
+    margin-top: 40px; 
+    padding-top: 10px
+  }
+
+  .S-button {
+    border-radius: 8px;
+    border: 1px solid #c4c4c4;
+    color: #ffffff;
+    padding: 0.4em 1.2em;
+    font-size: 1em;
+    font-weight: 400;
+    font-family: inherit;
+    background-color: #5f9ea0;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    display: inline-block;
+    margin: 5px;
+    justify-content: center;
+  }
+
+  .S-button:hover {
+    font-weight: 700;
+    border: 1px solid #c4c4c4;
+  }

@@ -6,6 +6,7 @@ import SupplyName from './SupplyName.jsx'
 
 const Supplies = () => {
 
+
 const location = useLocation()
 const {hobbyId, Supplies} = location.state.hobby
 
@@ -55,14 +56,23 @@ const supplyMap = () => {
             <h4>Basic Supplies Needed:</h4>
             {basicSupplies}
         </div>
+
         <div>
-            <h4>Optional Supplies:</h4>
-            {optionalSupplies}
+            <div>
+                <h4>Basic Supplies Needed:</h4>
+                {basicSupplies}
+            </div>
+            <div>
+                <h4>Optional Supplies:</h4>
+                {optionalSupplies}
+            </div>
         </div>
+
         <div>
         </div>
     </div>
   )
+
 }
 
 export default Supplies

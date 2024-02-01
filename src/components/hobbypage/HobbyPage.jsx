@@ -7,6 +7,7 @@ import axios from 'axios'
 
 const HobbyPage = () => {
 
+
 const location = useLocation()
 const {hobbyId, hobbyImg, hobbyName, cost, Buys} = location.state.hobby
 
@@ -40,9 +41,9 @@ const handleClick = () => {
         <h2>Classes Near You</h2>
         <hr />
         <Map />
+
     </div>
   )
-
 }
 
 export default HobbyPage

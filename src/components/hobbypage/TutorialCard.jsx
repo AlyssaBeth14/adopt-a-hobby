@@ -1,10 +1,10 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
-import axios from 'axios'
 import TutorialButton from './TutorialButton.jsx'
 import { useLocation } from 'react-router-dom'
 
 const TutorialCard = () => {
+
 
 const location = useLocation()
 const {hobbyId, Tutorials} = location.state.hobby
@@ -69,6 +69,7 @@ const tutorialMap = () => {
             </div>
          </div>
   )
+
 }
 
 export default TutorialCard

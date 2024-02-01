@@ -1,9 +1,10 @@
 import React from 'react'
 
-const TutorialButton = ({tutorialLink, tutorialImg, tutorialName}) => {
+const TutorialButton = ({ tutorialLink, tutorialImg, tutorialName }) => {
 
   return (
     <div>
+
         <a href={tutorialLink} target='_blank'>
             <button style={{backgroundColor: '#998100'}}>
                 <img src={tutorialImg} style={{ width: '18rem' }}/>
@@ -11,6 +12,7 @@ const TutorialButton = ({tutorialLink, tutorialImg, tutorialName}) => {
                 {tutorialName}
             </button>
         </a>
+
     </div>
   )
 }
