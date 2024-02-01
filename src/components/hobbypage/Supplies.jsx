@@ -56,18 +56,10 @@ const supplyMap = () => {
             <h4>Basic Supplies Needed:</h4>
             {basicSupplies}
         </div>
-
-        <div>
-            <div>
-                <h4>Basic Supplies Needed:</h4>
-                {basicSupplies}
-            </div>
-            <div>
-                <h4>Optional Supplies:</h4>
-                {optionalSupplies}
-            </div>
+        <div>  
+            <h4>Optional Supplies:</h4>
+            {optionalSupplies}
         </div>
-
         <div>
         </div>
     </div>
