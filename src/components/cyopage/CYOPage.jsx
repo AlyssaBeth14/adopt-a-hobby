@@ -6,17 +6,14 @@ import './CYOPage.css'
 import SearchBar from '../hobbypage/searchBar.jsx';
 
 const CYOPage = () => {
-
-    // Creating useStates
+    // Creating currentData useState & different category useStates
     const [currentData, setCurrentData] = useState([])          // Creating 'currentData' useState
-
-    // Creating different category useStates
     const [artList, setArtList] = useState([])                  // Creating useState for Art category    
-    const [athleticsList, setAthleticsList] = useState([])      // Creating useState for Athletics category
-    const [craftsList, setCraftsList] = useState([])            // Creating useState for Crafts category
-    const [fashionList, setFashionList] = useState([])          // Creating useState for Fashion category
-    const [foodList, setFoodList] = useState([])                // Creating useState for Food category
-    const [outdoorsList, setOutdoorsList] = useState([])        // Creating useState for Outdoors category
+    const [athleticsList, setAthleticsList] = useState([])      // ...
+    const [craftsList, setCraftsList] = useState([])            
+    const [fashionList, setFashionList] = useState([])         
+    const [foodList, setFoodList] = useState([])                
+    const [outdoorsList, setOutdoorsList] = useState([])        
 
     // Utilizing useEffect to execute artlist, fashionlist and other functions when page is loaded
     // Each of those functions renders a HobbyCard component(setArtList & setFashionList)
@@ -24,8 +21,8 @@ const CYOPage = () => {
         axios.get(`/api/hobbies`)
             .then((res) => {
                 setCurrentData(res.data)
-                setArtList([])                                   // Executes the setArtList when the page loads (using useEffect)
-                setAthleticsList([])
+                setArtList([])                                   // Executes setArtList when page loads (using useEffect)
+                setAthleticsList([])                             // ...
                 setCraftsList([])
                 setFashionList([])
                 setFoodList([])
@@ -42,15 +39,12 @@ const CYOPage = () => {
     const categoryMap = () => {
         const artCopy = [...artList]                            // Creating array called 'artCopy'. Utilizes spread operator to enable array to be added to
         const athleticsCopy = [...athleticsList]                // ...
-        const craftsCopy = [...craftsList]                      // ...
-        const fashionCopy = [...fashionList]                    // ...
-        const foodCopy = [...foodList]                          // ...
-        const outdoorsCopy = [...outdoorsList]                  // ...
+        const craftsCopy = [...craftsList]                      
+        const fashionCopy = [...fashionList]                    
+        const foodCopy = [...foodList]                          
+        const outdoorsCopy = [...outdoorsList]                  
 
         currentData.forEach((hobby) => {                        // Loops over each element, 'hobby', in the currentData variable
-
-            // console.log(hobby);
-
             if (hobby.category === 'Arts') {                    // If statement, that checks if the 'category' property is 'Arts'
                 artCopy.push(                                   // Adds(pushes) additional HobbyCards to 'artCopy' variable'
                     <HobbyCard                                  // HobbyCard from HobbyCard component
@@ -114,10 +108,10 @@ const CYOPage = () => {
         })
         setArtList(artCopy)                                         // Executes 'setArtlist' function with artCopy variable (variable has all 'Art' HobbyCards)  ?????
         setAthleticsList(athleticsCopy)                             // ...
-        setCraftsList(craftsCopy)                                   // ...
-        setFashionList(fashionCopy)                                 // ...
-        setFoodList(foodCopy)                                       // ...
-        setOutdoorsList(outdoorsCopy)                               // ...         
+        setCraftsList(craftsCopy)                                   
+        setFashionList(fashionCopy)                                 
+        setFoodList(foodCopy)                                       
+        setOutdoorsList(outdoorsCopy)                                      
     }
 
     const scrollToSection = (sectionId) => {
@@ -130,7 +124,6 @@ const CYOPage = () => {
             });
         }
     };
-
 
     return (
         <>
@@ -149,13 +142,9 @@ const CYOPage = () => {
                 <button onClick={() => scrollToSection('Food')}>Food</button>
                 <button onClick={() => scrollToSection('Outdoors')}>Outdoors</button>
             </nav>
-
             <br></br>
             <br></br>
-
             <SearchBar/>
-
-
             <br></br>
             <br></br>
             <div id="Arts" style={{ height: '40px', backgroundColor: 'lightred' }}>Art Section</div>

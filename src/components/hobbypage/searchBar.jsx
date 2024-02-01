@@ -11,14 +11,12 @@ function SearchBar() {
         setValue(event.target.value)
     }
     const navigate = useNavigate()                                          // Bringing in useNavigate                              
-    const onSearch = (searchTerm) => {                                      // Defining on Search function w/ 'searchTerm' parameter
+    const onSearch = (searchTerm) => {                                      // Defining onSearch function w/ 'searchTerm' parameter
         axios.get(`/api/hobby/?hobbyName=${searchTerm}`)                    // Axios get to pull in data from endpoint
-            .then((res) => {    
-                console.log(res.data)                                      
+            .then((res) => {
                 const hobby = res.data                                      // Creating 'hobby' variable that is the data results (res.data)
                 navigate(`/hobby/${hobby.hobbyId}`, { state: { hobby } })   // Utilizing navigate to send to....
-            }
-            )
+            })
     }
 
     return (
