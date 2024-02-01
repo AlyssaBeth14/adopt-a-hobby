@@ -1,4 +1,4 @@
-import { Hobby, Supply, Tutorial, Suggestion, Admin } from './db/models.js'
+import { Hobby, Supply, Tutorial, Suggestion, Buy, Admin } from './db/models.js'
 
 const handlerFunctions = {
 
