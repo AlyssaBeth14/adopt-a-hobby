@@ -2,7 +2,6 @@ import { useState } from 'react'
 import HobbySuggestion from './HobbySuggestion.jsx'
 
 const Footer = () => {
-
     const [showModal, setShowModal] = useState(false)
 
     return (
@@ -13,7 +12,6 @@ const Footer = () => {
                 setShowModal={setShowModal}
             />
         </footer>
-
     )
 }
 
