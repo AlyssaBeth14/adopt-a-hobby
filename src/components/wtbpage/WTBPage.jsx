@@ -18,6 +18,7 @@ const wtbMap = () => {
     const wtbCopy = []
 
     currentData.forEach((el) => {
+    
         wtbCopy.push(
             <WTBCard 
             key={el.hobbyId}
@@ -26,17 +27,24 @@ const wtbMap = () => {
             buyName={el.buyName}
             buyLink={el.buyLink}
             buyImg={el.buyImg}
+            owned={el.owned}
             />
         )
     })
-    setWtbCards(wtbCopy)
+    setWtbCards(wtbCopy.sort(() => Math.random() - 0.5))
 }
 
   return (
-    <div>
-        <h3>Where to Buy:</h3>
-        <hr />
-        {wtbCards}
+    <div className="container">
+        <div className="heading">
+            <h1 style={{marginTop: '40px'}}>WHERE TO BUY</h1>
+            <hr />
+        </div>
+        <div className="column">
+            <div className="dream">
+                {wtbCards}
+            </div>
+        </div>
     </div>
   )
 }

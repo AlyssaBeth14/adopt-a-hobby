@@ -8,6 +8,7 @@ import MyComponent from './components/hobbypage/textScroll.jsx'
 import SearchBar from './components/hobbypage/searchBar.jsx'
 import WTBPage from './components/wtbpage/WTBPage.jsx'
 
+
 function App() {
   return (
     <Router>

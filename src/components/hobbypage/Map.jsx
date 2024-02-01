@@ -10,9 +10,9 @@ const src = `https://www.google.com/maps/embed/v1/search?key=AIzaSyBrcfC_wydzdEy
 
 
   return (
-    <div style={{marginBottom:'60px'}}>
+    <div style={{marginBottom:'80px', marginTop: '7px'}}>
         <iframe
-        width="600"
+        width="50%"
         height="450"
         src={src} allowFullScreen
         >

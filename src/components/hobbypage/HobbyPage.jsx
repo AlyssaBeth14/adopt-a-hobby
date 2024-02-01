@@ -17,8 +17,8 @@ const handleClick = () => {
 
 
   return (
-    <div>
-        <img src={hobbyImg} style={{width: '60%'}}/>
+    <div style={{marginTop: '20px'}}>
+        <img src={hobbyImg} style={{width: '50%', maxHeight: '250px', objectFit: 'cover'}}/>
 
         <h1>{hobbyName}</h1>
         <h5>Cost: {cost}</h5>
@@ -30,7 +30,13 @@ const handleClick = () => {
         <h2>Tutorials</h2>
         <hr />
         <TutorialCard />
-
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <h2>Classes Near You</h2>
         <hr />
         <Map />

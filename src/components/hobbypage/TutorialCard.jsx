@@ -54,13 +54,20 @@ const tutorialMap = () => {
 
 
   return (
-    <div>
-        <h4>Free</h4>
-        {freeTutorials}
-
-        <h4>Paid</h4>
-        {paidTutorials}
-     </div>
+        <div className='two-columns'>
+            <div>
+            </div>
+            <div>
+                <h4>Free</h4>
+                {freeTutorials}
+            </div>
+            <div>
+                <h4>Paid</h4>
+                {paidTutorials}
+            </div>
+            <div>
+            </div>
+         </div>
   )
 }
 

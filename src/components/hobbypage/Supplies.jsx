@@ -48,7 +48,9 @@ const supplyMap = () => {
 
 
   return (
-    <div>
+    <div className='two-columns'>
+        <div>
+        </div>
         <div>
             <h4>Basic Supplies Needed:</h4>
             {basicSupplies}
@@ -56,6 +58,8 @@ const supplyMap = () => {
         <div>
             <h4>Optional Supplies:</h4>
             {optionalSupplies}
+        </div>
+        <div>
         </div>
     </div>
   )
