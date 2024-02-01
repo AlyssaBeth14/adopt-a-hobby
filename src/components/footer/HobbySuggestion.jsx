@@ -3,9 +3,7 @@ import { Modal } from 'react-bootstrap'
 import { useState } from 'react'
 
 const HobbySuggestion = (props) => {
-
-    const {showModal, setShowModal} = props
-
+    const { showModal, setShowModal } = props
     const [hobbyName, setHobbyName] = useState('')
     const [basicSupplies, setBasicSupplies] = useState('')
     const [optionalSupplies, setOptionalSupplies] = useState('')
@@ -13,19 +11,17 @@ const HobbySuggestion = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-
         const newSuggestion = {
             hobbyName: hobbyName,
             basicSupplies: basicSupplies,
             optionalSupplies: optionalSupplies,
             tutorials: tutorials
         }
-
         axios.post('/api/suggestion', newSuggestion)
-        .then((res) => {
-            console.log(res.data)
-            setShowModal(false)
-        })
+            .then((res) => {
+                console.log(res.data)
+                setShowModal(false)
+            })
     }
 
     return (
@@ -43,7 +39,7 @@ const HobbySuggestion = (props) => {
                             onChange={(e) => setHobbyName(e.target.value)}
                         />
                     </label>
-                    <br/>
+                    <br />
                     <label className='form-label'>
                         Basic Supplies
                         <input
@@ -52,7 +48,7 @@ const HobbySuggestion = (props) => {
                             onChange={(e) => setBasicSupplies(e.target.value)}
                         />
                     </label>
-                    <br/>
+                    <br />
                     <label className='form-label'>
                         Optional Supplies
                         <input
@@ -61,7 +57,7 @@ const HobbySuggestion = (props) => {
                             onChange={(e) => setOptionalSupplies(e.target.value)}
                         />
                     </label>
-                    <br/>
+                    <br />
                     <label className='form-label'>
                         Tutorials
                         <input
@@ -70,12 +66,11 @@ const HobbySuggestion = (props) => {
                             onChange={(e) => setTutorials(e.target.value)}
                         />
                     </label>
-                    <br/>
+                    <br />
                     <button type='submit' className='btn btn-dark'>Submit</button>
                 </form>
             </Modal.Body>
         </Modal>
     )
 }
-
 export default HobbySuggestion
