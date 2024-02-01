@@ -1,11 +1,12 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
-import './admin.css'
 import SuppliesCard from './suppliesCard.jsx'
 import TutorialsCard from './tutorialsCard.jsx'
+import './admin.css'
+import './adminHobbyCard.css'
 
 function AdminHobbyCard(props) {
-  const {setHobbyData} = props                                              
+  const { setHobbyData } = props
   const [isEditing, setIsEditing] = useState(false)                         // Edit mode
   const [hobbyId, setHobbyId] = useState(props.hobbyId)                     // Hobby: hobbyId field
   const [currentHobby, setCurrentHobby] = useState()
@@ -15,7 +16,7 @@ function AdminHobbyCard(props) {
   const [hobbyImg, setHobbyImg] = useState(props.hobbyImg)                  // Hobby: hobbyImg field
   const [supplyName, setSupplyName] = useState('')                          // Supply: optional field
   const [optional, setOptional] = useState(props.supplies.optional)         // Supply: optional field         (not being used)
-  const [tutorialImg, setTutorialImg] = useState('')                        // Tutorial: tutorialImg field    (not being used)
+  const [tutorialImg, setTutorialImg] = useState('')                        // Tutorial: tutorialImg field   
   const [tutorialName, setTutorialName] = useState('')                      // Tutorial: tutorialName field
   const [tutorialLink, setTutorialLink] = useState('')                      // Tutorial: tutorialLink field
   const [paid, setPaid] = useState('')                                      // Tutorial: paid field           (not being used)
@@ -54,7 +55,7 @@ function AdminHobbyCard(props) {
     }
   }
 
- // Add Supply function: bodyObj & axios post request
+  // Add Supply function: bodyObj & axios post request
   const addSupply = () => {
     const bodyObj = {
       hobbyId: hobbyId,
@@ -70,7 +71,7 @@ function AdminHobbyCard(props) {
       })
   };
 
-// Add Tutorial function: bodyObj & axios post request
+  // Add Tutorial function: bodyObj & axios post request
   const addTutorial = () => {
     const bodyObj = {
       hobbyId: hobbyId,
@@ -84,7 +85,7 @@ function AdminHobbyCard(props) {
     axios.post(`/api/tutorial`, bodyObj)
       .then((res) => {
         setTutorials(res.data)
-      // console.log(res.data);
+        // console.log(res.data);
       })
   };
 
@@ -120,11 +121,22 @@ function AdminHobbyCard(props) {
   // Return statement
   return (isEditing) ? (
     <>
+      <br></br>
+
+      <div class="full-width-line-top"></div>
+      <button class="S-button" onClick={saveFunction}>Save</button>
+
+      <br></br>
+      <br></br>
+
       <img src={hobbyImg} alt={hobbyName} />
+
       <br></br>
       <br></br>
-      <br></br>
-      <div className='textAndInput'>
+
+      <p className="section">Hobby Details</p>
+
+      <div className="input-container">
         <p>Name:</p>
         <input
           type="text"
@@ -133,7 +145,7 @@ function AdminHobbyCard(props) {
         />
       </div>
 
-      <div className='textAndInput'>
+      <div className="input-container">
         <p>Category:</p>
         <input
           type="text"
@@ -142,7 +154,7 @@ function AdminHobbyCard(props) {
         />
       </div>
 
-      <div className='textAndInput'>
+      <div className="input-container">
         <p>May query:</p>
         <input
           type="text"
@@ -151,7 +163,7 @@ function AdminHobbyCard(props) {
         />
       </div>
 
-      <div className='textAndInput'>
+      <div className="input-container">
         <p>Image Address Link:</p>
         <input
           type="text"
@@ -160,52 +172,75 @@ function AdminHobbyCard(props) {
         />
       </div>
 
-      <p>Supplies</p>
-      {supply}
-      <div className='textAndInput'>
+      <br></br>
+
+      <div className="list-align">
+        <p className="section">Supplies</p>
+        {supply}
+      </div>
+
+      <div className='textAndInput2'>
         <input
           type="text"
           onChange={(e) => setSupplyName(e.target.value)}
           placeholder="New Supply"
         />
-        <button onClick={addSupply}>Add Supply</button>
+        <button className="S-button" onClick={addSupply}>Add Supply</button>
       </div>
 
-      <p>Turtorials</p>
-      {tutorial}
-      <div className='textAndInput'>
+      <br></br>
+
+      <div className="list-align">
+        <p className="section">Tutorials</p>
+        {tutorial}
+      </div>
+
+      <div className='textAndInput2'>
         <input
           type="text"
           value={tutorialName}
           onChange={(e) => setTutorialName(e.target.value)}
           placeholder="New Tutorial"
         />
-        <button onClick={addTutorial}>Add Tutorial</button>
+        <button className="S-button" onClick={addTutorial}>Add Tutorial</button>
       </div>
-      <button class="ADCbutton" onClick={saveFunction}>Save</button>
     </>
   ) : (
     <>
-
       <br></br>
       <div class="full-width-line-top"></div>
-      <button class="ADCbutton" onClick={() => { setIsEditing(true) }}>Edit</button>
-      <button class="ADCbutton" onClick={() => deleteHobby()}>Delete</button>
+      <button class="E-button" onClick={() => { setIsEditing(true) }}>Edit</button>
+      <button class="D-button" onClick={() => deleteHobby()}>Delete</button>
       <br></br>
       <br></br>
       <img src={hobbyImg} alt={hobbyName} />
       <br></br>
       <br></br>
-      <p>Name: {hobbyName}</p>
-      <p>Category: {hobbyCategory}</p>
-      <p>Map query: {hobbyMapQuery}</p>
+
+      <p className="section">Hobby Details</p>
+
+      <div className="hobby-details">
+        <p>Name: {hobbyName}</p>
+        <p>Category: {hobbyCategory}</p>
+        <p>Map query: {hobbyMapQuery}</p>
+        <p>Image Address Link: {hobbyImg}</p>
+      </div>
+
       <br></br>
-      <p>Supplies</p>
-      {supply}
+
+      <div className="list-align">
+        <p className="section">Supplies</p>
+        {supply}
+      </div>
+
       <br></br>
       <br></br>
-      <p>Turtorials</p>
-      {tutorial}
+
+      <div className="list-align">
+        <p className="section">Tutorials</p>
+        {tutorial}
+      </div>
+
       <br></br>
     </>
   )

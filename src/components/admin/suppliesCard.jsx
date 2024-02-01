@@ -1,15 +1,17 @@
 import { React, useState, useEffect } from 'react'
 import axios from 'axios'
+import './adminHobbyCard.css'
+
 
 const SuppliesCard = (props) => {
 
   const [optional, setOptional] = useState(props.optional)
 
+
   // Delete supply function
   const deleteSupply = () => {
     const confirmDelete = window.confirm('Sure want to delete supply?')
     if (confirmDelete) {
-
       axios.delete(`/api/supply/${props.supplyId}?hobbyId=${props.hobbyId}`)
         .then((res) => {
           props.setSupplies(res.data)
@@ -42,7 +44,7 @@ const SuppliesCard = (props) => {
         {props.supplyName}
         {optional ? ": Optional" : ""}
         {props.isEditing && <input type='checkbox' value={optional} checked={optional} onChange={handleChecked} />}
-        {props.isEditing && <button onClick={deleteSupply} >Delete</button>}
+        {props.isEditing && <button className="D-button" onClick={deleteSupply} >Delete</button>}
       </div>
     </>
   )

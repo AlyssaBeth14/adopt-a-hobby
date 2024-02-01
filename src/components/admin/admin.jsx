@@ -3,6 +3,7 @@ import axios from 'axios'
 import AdminHobbyCard from './adminHobbyCard.jsx'
 import AddHobbyModal from './addHobbyModal.jsx'
 import './admin.css'
+import './adminHobbyCard.css'
 
 const Admin = () => {
     const [hobbyData, setHobbyData] = useState([])
@@ -62,7 +63,7 @@ const Admin = () => {
             <div>Admin Page</div>
             <br></br>
             <div class="full-width-line-top"></div>
-            <button class="ADCbutton" onClick={addHobby}>Add Hobby</button>
+            <button class="S-button" onClick={addHobby}>Add Hobby</button>
             <div>{hobbies}</div>
             <br></br>
 

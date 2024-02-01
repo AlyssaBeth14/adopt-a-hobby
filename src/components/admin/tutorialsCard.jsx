@@ -19,7 +19,6 @@ const deleteSupply = () => {
         console.error('Error deleting supply:', error);
       })
   }
-}
 
 const handleChecked = () => {
   axios.put(`/api/tutorial/${props.tutorialId}`, { paid: !paid })
@@ -42,7 +41,7 @@ const handleChecked = () => {
         {props.tutorialName}
         {paid ? ": payment required" : ""}
         {props.isEditing && <input type='checkbox' value={paid} checked={paid} onChange={handleChecked}/>}
-        {props.isEditing && <button onClick={deleteSupply}>Delete</button>}
+        {props.isEditing && <button className="D-button" onClick={deleteSupply}>Delete</button>}
       </div>
     </>
   )
