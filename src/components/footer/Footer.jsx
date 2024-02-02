@@ -8,7 +8,7 @@ const Footer = () => {
     const [showModal, setShowModal] = useState(false)
 
     return (
-        <footer className='bg-light text-center py-3 fixed-bottom'>
+        <footer className='bg-light text-center py-3' style={{marginTop: 'auto', width: '100%'}}>
             <button className='btn btn-link' onClick={() => setShowSuggestModal(true)}>Suggest a hobby</button>
             <button className='btn btn-link' onClick={() => setShowAdminModal(true)}>Admin</button>
 

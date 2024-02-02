@@ -47,14 +47,16 @@ const WheelSpinner = () => {
                 <>
                     <CYOButton />
                     <h3>Or</h3>
-                    <div>
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <Wheel
                             mustStartSpinning={mustSpin}
                             spinDuration={0.25}
                             prizeNumber={prizeNumber}
                             data={data}
-                            backgroundColors={['#0066ff', '#33ccff']}
-                            textColors={['black']}
+                            backgroundColors={['#7a221d', '#998100', '#953195', '#5f9ea0']}
+                            outerBorderColor={'#242424'}
+                            radiusLineColor={'#242424'}
+                            textColors={['white']}
                             fontSize={15}
                             pointerProps={{
                                 src: '\Paint-Brush-PNG.png',
