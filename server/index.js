@@ -15,6 +15,7 @@ const {
     getSupply,
     getTutorials,
     getSuggestions,
+    postAdmin,
     addHobby,
     addSupply,
     addTutorial,
@@ -34,6 +35,7 @@ app.get('/api/hobby', getHobby)
 app.get('/api/supply', getSupply)
 app.get('/api/tutorials', getTutorials)
 app.get('/api/suggestions', getSuggestions)
+app.post('/api/admin', postAdmin)
 app.post('/api/hobby', addHobby)
 app.post('/api/supply', addSupply)
 app.post('/api/tutorial', addTutorial)

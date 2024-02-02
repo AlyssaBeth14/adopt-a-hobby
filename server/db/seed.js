@@ -1,3 +1,5 @@
+import bcrypt from 'bcrypt'
+import adminData from './data/admin.json' assert {type: 'json'}
 import {Hobby, Supply, Tutorial, Buy, Admin, db} from './models.js'
 import hobbyData from './data/hobby.json' assert {type: 'json'}
 import supplyData from './data/supply.json' assert {type: 'json'}
@@ -7,6 +9,20 @@ import buyData from './data/buy.json' assert {type: 'json'}
 console.log('Syncing database...')
 await db.sync({force: true})
 console.log('Seeding database');
+
+const adminsInDB = await Promise.all(
+    adminData.map(async (admin) => {
+        const {adminName, adminPass} = admin
+
+        const hashedPassword = await bcrypt.hash(adminPass, 10)
+
+        const newAdmin = await Admin.create({
+            adminName,
+            adminPass: hashedPassword
+        })
+        return newAdmin
+    })
+)
 
 const hobbiesInDB = await Promise.all(
     hobbyData.map(async (hobby) => {
