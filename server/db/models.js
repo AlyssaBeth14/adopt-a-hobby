@@ -20,7 +20,7 @@ Admin.init (
             unique: true
         },
         adminPass: {
-            type: DataTypes.STRING(30)
+            type: DataTypes.STRING
         }
     }, {
         sequelize: db

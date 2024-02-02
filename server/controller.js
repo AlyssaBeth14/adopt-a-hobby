@@ -1,3 +1,4 @@
+import bcrypt from 'bcrypt'
 import { Hobby, Supply, Tutorial, Suggestion, Admin } from './db/models.js'
 
 const handlerFunctions = {
@@ -75,6 +76,29 @@ const handlerFunctions = {
         const suggestions = await Suggestion.findAll()
 
         res.send(suggestions)
+    },
+
+    postAdmin: async (req, res) => {
+        const {adminName, adminPass} = req.body
+
+        const admin = await Admin.findOne({where: {adminName: adminName}})
+
+        if (admin) {
+            bcrypt.compare(adminPass, admin.adminPass, (err, result) => {
+                if (err) {
+                    console.error('Error comparing passwords:', err)
+                    res.status(500).json({message: 'Internal server error'})
+                } else {
+                    if (result) {
+                        res.status(200).json({admin})
+                    } else {
+                        res.status(401).json({message: 'Invalid credentials'})
+                    }
+                }
+            })
+        } else {
+            res.status(404).json({message: 'Admin not found'})
+        }
     },
 
     addHobby: async (req, res) => {
