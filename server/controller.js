@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt'
-import { Hobby, Supply, Tutorial, Suggestion, Admin } from './db/models.js'
+import { Hobby, Supply, Tutorial, Suggestion, Buy, Admin } from './db/models.js'
 
 const handlerFunctions = {
 
@@ -12,7 +12,7 @@ const handlerFunctions = {
         }
         const hobbies = await Hobby.findAll({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
 
         res.send(hobbies)
@@ -23,14 +23,14 @@ const handlerFunctions = {
 
         const query = {}
         if (hobbyId) {
-            query.hobbyId = hobbyId
+            query.hobbyId = +hobbyId
         }
         if (hobbyName) {
             query.hobbyName = hobbyName
         }
         const hobby = await Hobby.findOne({
             where: query,
-            include: [{model: Supply}, {model: Tutorial}]
+            include: [{model: Supply}, {model: Tutorial}, {model: Buy}]
         })
         
         res.send(hobby)

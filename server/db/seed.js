@@ -1,9 +1,10 @@
 import bcrypt from 'bcrypt'
-import {Hobby, Supply, Tutorial, Admin, db} from './models.js'
 import adminData from './data/admin.json' assert {type: 'json'}
+import {Hobby, Supply, Tutorial, Buy, Admin, db} from './models.js'
 import hobbyData from './data/hobby.json' assert {type: 'json'}
 import supplyData from './data/supply.json' assert {type: 'json'}
 import tutorialData from './data/tutorial.json' assert {type: 'json'}
+import buyData from './data/buy.json' assert {type: 'json'}
 
 console.log('Syncing database...')
 await db.sync({force: true})
@@ -25,12 +26,13 @@ const adminsInDB = await Promise.all(
 
 const hobbiesInDB = await Promise.all(
     hobbyData.map(async (hobby) => {
-        const {hobbyName, hobbyImg, category, mapQuery} = hobby
+        const {hobbyName, hobbyImg, category, mapQuery, cost} = hobby
         const newHobby = await Hobby.create({
             hobbyName,
             hobbyImg,
             category,
-            mapQuery
+            mapQuery,
+            cost
         })
         return newHobby
     })
@@ -58,6 +60,20 @@ const tutorialsInDB = await Promise.all(
             paid
         })
         return newTutorial
+    })
+)
+
+const buyInDB = await Promise.all(
+    buyData.map(async (buy) => {
+        const {hobbyId, buyImg, buyName, buyLink, owned} = buy
+        const newBuy = await Buy.create({
+            hobbyId,
+            buyImg,
+            buyName,
+            buyLink,
+            owned
+        })
+        return newBuy
     })
 )
 
