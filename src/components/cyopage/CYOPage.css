@@ -1,8 +1,8 @@
 .full-width-line-top {
     border-top: 1px solid #c4c4c4;
-    width: 100%;
+    width: auto;
     margin-bottom: 30px; 
-    /* background-color: rgb(203, 255, 203); */
+    /* background-color: rgb(149, 255, 149); */
   }
 
 .hobby-list-container {
@@ -10,18 +10,17 @@
   flex-wrap: wrap; 
   justify-content:center; 
   gap: 4%;
-  /* margin-left: 15%;
-  margin-right: 15%; */
-  margin-top: 2%;
-  margin-bottom: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 1%;
+  margin-bottom: 1%;
   /* background-color: grey; */
 }
-
 
 .section-title-category {
   font-size: 48px; 
   text-align: left;
-  margin-left: 15%;
+  margin-left: 10%;
   /* background-color: rgb(255, 212, 212); */
 }
 
@@ -49,6 +48,7 @@
   margin: 10px 4px 1px;
   cursor: pointer;
   gap: 15px;
+  
 }
 
 .myButton:hover {
