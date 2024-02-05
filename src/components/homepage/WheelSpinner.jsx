@@ -40,12 +40,13 @@ const WheelSpinner = () => {
     const prizeNumber = mustSpin ? Math.floor(Math.random() * data.length) : null
 
     return (
-        <div>
+        <div className='moveDown'>
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
                 <>
                     <CYOButton />
+                    <br/>
                     <h3>Or</h3>
                     <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <Wheel
@@ -74,12 +75,13 @@ const WheelSpinner = () => {
                             }}
                         />
                     </div>
-                    <button className='btn btn-primary' onClick={handleSpin} disabled={mustSpin}>
+                    <br/>
+                    <button className='btn redButton' onClick={handleSpin} disabled={mustSpin}>
                         {mustSpin ? 'Spinning...' : 'Spin the Wheel'}
                     </button>
 
                     <Modal show={showModal} onHide={() => setShowModal(false)} centered>
-                        <Modal.Header closeButton>
+                        <Modal.Header closeButton className='modalHeader'>
                             <Modal.Title>Your Hobby:</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>

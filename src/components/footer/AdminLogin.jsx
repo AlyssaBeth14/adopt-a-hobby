@@ -41,7 +41,7 @@ const AdminLogin = (props) => {
 
     return (
         <Modal show={showModal} onHide={() => setShowModal(false)}>
-            <Modal.Header closeButton>
+            <Modal.Header closeButton className='modalHeader'>
                 <Modal.Title>Admin Login</Modal.Title>
             </Modal.Header>
             <Modal.Body>
@@ -66,7 +66,7 @@ const AdminLogin = (props) => {
                         />
                     </label>
                     <br/>
-                    <button type='submit' className='btn btn-dark'>Login</button>
+                    <button type='submit' className='btn yellowButton'>Login</button>
                 </form>
             </Modal.Body>
         </Modal>
