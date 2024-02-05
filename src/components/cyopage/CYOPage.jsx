@@ -7,7 +7,6 @@ import './CYOPage.css'
 
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHome, faSearch, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faPaintBrush, faRunning, faScissors, faTshirt, faUtensils, faTree } from '@fortawesome/free-solid-svg-icons';
 
 
@@ -43,14 +42,15 @@ const CYOPage = () => {
 
     // categoryMap function that conducts different if statements. 
     const categoryMap = () => {
-        const artCopy = [...artList]                            // Creating array called 'artCopy'. Utilizes spread operator to enable array to be added to
-        const athleticsCopy = [...athleticsList]                // ...
-        const craftsCopy = [...craftsList]
-        const fashionCopy = [...fashionList]
-        const foodCopy = [...foodList]
-        const outdoorsCopy = [...outdoorsList]
+        const sortedData = [...currentData].sort((a, b) => a.hobbyName.localeCompare(b.hobbyName));
+        const artCopy = [];
+        const athleticsCopy = [];
+        const craftsCopy = [];
+        const fashionCopy = [];
+        const foodCopy = [];
+        const outdoorsCopy = [];
 
-        currentData.forEach((hobby) => {                        // Loops over each element, 'hobby', in the currentData variable
+        sortedData.forEach((hobby) => {                        // Loops over each element, 'hobby', in the currentData variable
             if (hobby.category === 'Arts') {                    // If statement, that checks if the 'category' property is 'Arts'
                 artCopy.push(                                   // Adds(pushes) additional HobbyCards to 'artCopy' variable'
                     <HobbyCard                                  // HobbyCard from HobbyCard component
@@ -146,30 +146,41 @@ const CYOPage = () => {
                     <button className="myButton" onClick={() => scrollToSection('Outdoors')}><FontAwesomeIcon icon={faTree} className="custom-icon-size" />Outdoors</button>
                 </div>
             </div>
-            <div class="full-width-line-top"></div>
+
             <div id='Arts' className='section-title-category'>Arts</div>
-            <div className='hobby-list-container'>{artList}</div>
+            <div className='hobby-list-container'>
+                {artList}
+                <div class="full-width-line-top"></div>
+            </div>
 
-            <div class="full-width-line-top"></div>
             <div id='Athletics' className='section-title-category'>Athletics</div>
-            <div className='hobby-list-container'>{athleticsList}</div>
+            <div className='hobby-list-container'>
+                {athleticsList}
+                <div class="full-width-line-top"></div>
+            </div>
 
-            <div class="full-width-line-top"></div>
             <div id='Crafts' className='section-title-category'>Crafts</div>
-            <div className='hobby-list-container'>{craftsList}</div>
+            <div className='hobby-list-container'>
+                {craftsList}
+                <div class="full-width-line-top"></div>
+            </div>
 
-            <div class="full-width-line-top"></div>
             <div id='Fashion' className='section-title-category' >Fashion</div>
-            <div className='hobby-list-container'>{fashionList}</div>
+            <div className='hobby-list-container'>
+                {fashionList}
+                <div class="full-width-line-top"></div>
+            </div>
 
-            <div class="full-width-line-top"></div>
             <div id='Food' className='section-title-category' >Food</div>
-            <div className='hobby-list-container'>{foodList}</div>
+            <div className='hobby-list-container'>
+                {foodList}
+                <div class="full-width-line-top"></div></div>
 
-            <div class="full-width-line-top"></div>
             <div id='Outdoors' className='section-title-category'>Outdoors</div>
-            <div className='hobby-list-container'>{outdoorsList}</div>
-
+            <div className='hobby-list-container'>
+                {outdoorsList}
+                <div class="full-width-line-top"></div>
+            </div>
 
             <br></br>
             <br></br>

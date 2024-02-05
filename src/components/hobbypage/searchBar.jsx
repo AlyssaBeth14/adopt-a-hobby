@@ -22,20 +22,35 @@ function SearchBar() {
     return (
         <>
             <div className="text-input-button" >
-                <h1 id="search" >Find a Hobby</h1>
-                <input className="input-box" type="text" value={value} onChange={onChange} />
-                <button className="search-button" onClick={() => onSearch(value)}>Search</button>
-                <div className="dropdown">
-                    {data.filter(item => {
-                        const searchTerm = value.toLowerCase()
-                        const fullName = item.hobbyName.toLowerCase()
-                        return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm
-                    })
-                        .map((item) => (
-                            <div onClick={() => setValue(item.hobbyName)} searchclassName="dropdown-row" key={item.hobbyName}>
-                                {item.hobbyName}
-                            </div>
-                        ))}
+
+                <div id="search-container">
+
+                    <h1 id="search" >Find a Hobby</h1>
+
+                    <div className="input-container">
+
+                        <input className="input-box" type="text" value={value} onChange={onChange} />
+                        <button className="search-button" onClick={() => onSearch(value)}>Search</button>
+
+                        </div>
+
+
+                        <div className="dropdown">
+                            {data.filter(item => {
+                                const searchTerm = value.toLowerCase()
+                                const fullName = item.hobbyName.toLowerCase()
+                                return searchTerm && fullName.startsWith(searchTerm) && fullName !== searchTerm
+                            })
+                                .map((item) => (
+                                    <div onClick={() => setValue(item.hobbyName)} searchclassName="dropdown-row" key={item.hobbyName}>
+                                        {item.hobbyName}
+                                    </div>
+                                ))}
+
+                     
+
+                    </div>
+
                 </div>
             </div>
         </>
