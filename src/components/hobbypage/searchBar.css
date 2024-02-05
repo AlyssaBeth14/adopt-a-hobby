@@ -1,20 +1,63 @@
 .dropdown {
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    border: 1px solid grey;
+    /* position: absolute; */
+    /* border: 1px solid rgb(0, 0, 0);
+    text-align: left; */
+   
 }
 
 .dropdown:empty {
-    border: none;
+    border: 1px black;
 }
 
 .dropwdown-row {
     cursor: pointer;
-    text-align: start;
+    text-align: left;
     margin: 2px 0;
+    border: 1px black;
 }
 
 #search {
-    font: 20px
+    font: 10px;
+    margin-right: 20px;
+    /* background-color: grey; */
+}
+
+.input-box {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+    /* background-color: pink; */
+}
+
+.search-button {
+    font: 10px;
+    background-color: rgb(122, 34, 29);
+    color: white;
+    height: 40px;
+    line-height: 30px; /* Set line-height equal to the height of the button */
+    padding: 0 10px; /* Add padding if needed to give some space around the text */
+}
+
+.text-input-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+}
+
+
+#search-container {
+    /* display: flex;
+    align-items: center;  */
+    position: relative;
+}
+
+
+
+
+.input-container {
+    display: flex;
 }

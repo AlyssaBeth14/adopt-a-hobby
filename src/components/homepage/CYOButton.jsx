@@ -7,7 +7,7 @@ const CYOButton = () => {
         navigate('/cyo-hobby')
     }
 
-    return <button className='btn btn-primary' onClick={handleCYO}>Choose Your Own</button>
+    return <button className='btn purpleButton' onClick={handleCYO}>Choose Your Own Hobby</button>
 }
 
 export default CYOButton
