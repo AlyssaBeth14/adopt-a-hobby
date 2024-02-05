@@ -118,3 +118,50 @@ hr {
   border: 1.25px solid #252525;
 }
 
+.moveDown {
+  padding-top: 3%;
+}
+
+.modalHeader {
+  background-color: cadetblue;
+}
+
+.redButton {
+  background-color: #7a221d;
+  color: white
+}
+
+.redButton:hover {
+  background-color: #a93226;
+  color: white
+}
+
+.redButton:disabled {
+  background-color: #a93226;
+  color: white
+}
+
+.purpleButton {
+  background-color: #953195;
+  color: white
+}
+
+.purpleButton:hover {
+  background-color: #bb3ebb;
+  color: white
+}
+
+.purpleButton:disabled {
+  background-color: #e74ee7;
+  color: white
+}
+
+.yellowButton {
+  background-color: #998100;
+  color: white
+}
+
+.yellowButton:hover {
+  background-color: #c3a601;
+  color: white;
+}

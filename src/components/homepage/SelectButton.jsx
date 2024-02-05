@@ -11,6 +11,6 @@ const SelectButton = (props) => {
             navigate(`/hobby/${hobby.hobbyId}`, {state: {hobby}})
         })
     }
-    return <button className='btn btn-primary' onClick={handleSelect}>Select</button>
+    return <button className='btn yellowButton' onClick={handleSelect}>Select</button>
 }
 export default SelectButton

@@ -3,7 +3,7 @@ import { Modal } from 'react-bootstrap'
 const AddHobbyModal = (props) => {
     return (
         <Modal show={props.showModal} onHide={() => props.setShowModal(false)}>
-            <Modal.Header closeButton>
+            <Modal.Header closeButton className='modalHeader'>
                 <Modal.Title>Add Hobby</Modal.Title>
             </Modal.Header>
             <Modal.Body>
