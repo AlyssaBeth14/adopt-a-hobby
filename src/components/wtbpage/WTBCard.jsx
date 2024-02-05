@@ -5,7 +5,7 @@ const WTBCard = ({buyLink, buyName, buyImg, owned}) => {
   return (
 <div className='btn'>
     <a href={buyLink} target='_blank'>
-        <button style={{backgroundColor: '#7a221d'}}>
+        <button style={{backgroundColor: '#ad9a32', fontWeight: 'bold', width: '100%', padding: '1rem'}}>
             <div style={{backgroundColor: 'white', padding: '5px', borderRadius: '5px'}}>
             <img src={buyImg} style={{ width: '18rem' }}/>
             </div>

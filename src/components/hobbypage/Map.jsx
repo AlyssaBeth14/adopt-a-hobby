@@ -8,14 +8,12 @@ const Map = (props) => {
 
   return (
 
-    <div style={{marginBottom:'80px', marginTop: '7px'}}>
+    <div >
         <iframe
-        width="50%"
-
         height="450"
         src={src} allowFullScreen
-      >
-      </iframe>
+        >
+        </iframe>
     </div>
   )
 }

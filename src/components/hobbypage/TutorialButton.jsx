@@ -1,4 +1,5 @@
 import React from 'react'
+import './hobbypg.css'
 
 const TutorialButton = ({ tutorialLink, tutorialImg, tutorialName }) => {
 
@@ -6,8 +7,8 @@ const TutorialButton = ({ tutorialLink, tutorialImg, tutorialName }) => {
     <div>
 
         <a href={tutorialLink} target='_blank'>
-            <button style={{backgroundColor: '#998100'}}>
-                <img src={tutorialImg} style={{ width: '18rem' }}/>
+            <button className='tutor-button'>
+                <img src={tutorialImg} style={{ width: '100%' }}/>
                 <br/>
                 {tutorialName}
             </button>
