@@ -2,8 +2,14 @@ import { React, useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, animateScroll as scroll } from 'react-scroll';
 import HobbyCard from './HobbyCard.jsx'
-import './CYOPage.css'
 import SearchBar from '../hobbypage/searchBar.jsx';
+import './CYOPage.css'
+
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faSearch, faHeart, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faPaintBrush, faRunning, faScissors, faTshirt, faUtensils, faTree } from '@fortawesome/free-solid-svg-icons';
+
 
 const CYOPage = () => {
     // Creating currentData useState & different category useStates
@@ -117,7 +123,7 @@ const CYOPage = () => {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            const position = element.offsetTop;
+            const position = element.getBoundingClientRect().top + window.scrollY - 300;
             scroll.scrollTo(position, {
                 duration: 300,
                 smooth: 'easeInOutQuart',
@@ -127,64 +133,44 @@ const CYOPage = () => {
 
     return (
         <>
-            <nav style={{
-                position: 'fixed',
-                top: '0',
-                width: '40%',
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'row'
-            }}>
-                <button onClick={() => scrollToSection('Arts')}>Arts</button>
-                <button onClick={() => scrollToSection('Athletics')}>Athletics</button>
-                <button onClick={() => scrollToSection('Crafts')}>Crafts</button>
-                <button onClick={() => scrollToSection('Fashion')}>Fashion</button>
-                <button onClick={() => scrollToSection('Food')}>Food</button>
-                <button onClick={() => scrollToSection('Outdoors')}>Outdoors</button>
-            </nav>
             <br></br>
             <br></br>
-            <SearchBar />
-            <br></br>
-            <br></br>
-            <div id="Arts" style={{ height: '40px', backgroundColor: 'lightred' }}>Art Section</div>
+            <div className="sticky-container">
+                <SearchBar />
+                <div className="icon-button-container">
+                    <button className="myButton" onClick={() => scrollToSection('Arts')}><FontAwesomeIcon icon={faPaintBrush} className="custom-icon-size" />Arts</button>
+                    <button className="myButton" onClick={() => scrollToSection('Athletics')}><FontAwesomeIcon icon={faRunning} className="custom-icon-size" />Athletics</button>
+                    <button className="myButton" onClick={() => scrollToSection('Crafts')}><FontAwesomeIcon icon={faScissors} className="custom-icon-size" />Crafts</button>
+                    <button className="myButton" onClick={() => scrollToSection('Fashion')}><FontAwesomeIcon icon={faTshirt} className="custom-icon-size" />Fashion</button>
+                    <button className="myButton" onClick={() => scrollToSection('Food')}><FontAwesomeIcon icon={faUtensils} className="custom-icon-size" />Food</button>
+                    <button className="myButton" onClick={() => scrollToSection('Outdoors')}><FontAwesomeIcon icon={faTree} className="custom-icon-size" />Outdoors</button>
+                </div>
+            </div>
             <div class="full-width-line-top"></div>
-            <div>{artList}</div>
+            <div id='Arts' className='section-title-category'>Arts</div>
+            <div className='hobby-list-container'>{artList}</div>
 
-            <div id="Athletics" style={{ height: '40px' }}>Athletics Section</div>
             <div class="full-width-line-top"></div>
-            <div>{athleticsList}</div>
+            <div id='Athletics' className='section-title-category'>Athletics</div>
+            <div className='hobby-list-container'>{athleticsList}</div>
 
-            <div id="Crafts" style={{ height: '40px' }}>Crafts Section</div>
             <div class="full-width-line-top"></div>
-            <div>{craftsList}</div>
+            <div id='Crafts' className='section-title-category'>Crafts</div>
+            <div className='hobby-list-container'>{craftsList}</div>
 
-            <div id="Fashion" style={{ height: '40px' }}>Fashion Section</div>
             <div class="full-width-line-top"></div>
-            <div>{fashionList}</div>
+            <div id='Fashion' className='section-title-category' >Fashion</div>
+            <div className='hobby-list-container'>{fashionList}</div>
 
-            <div id="Food" style={{ height: '40px' }}>Food Section</div>
             <div class="full-width-line-top"></div>
-            <div>{foodList}</div>
+            <div id='Food' className='section-title-category' >Food</div>
+            <div className='hobby-list-container'>{foodList}</div>
 
-            <div id="Outdoors" style={{ height: '40px' }}>Outdoors Section</div>
             <div class="full-width-line-top"></div>
-            <div>{outdoorsList}</div>
+            <div id='Outdoors' className='section-title-category'>Outdoors</div>
+            <div className='hobby-list-container'>{outdoorsList}</div>
 
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
-            <br></br>
+
             <br></br>
             <br></br>
             <br></br>
