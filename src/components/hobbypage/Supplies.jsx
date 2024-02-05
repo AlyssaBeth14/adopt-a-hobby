@@ -1,18 +1,23 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import axios from 'axios'
-import { useLocation } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 import SupplyName from './SupplyName.jsx'
 
 const Supplies = () => {
 
 
 const location = useLocation()
-const {hobbyId, Supplies} = location.state.hobby
+const {hobbyId, Supplies, Buys} = location.state.hobby
 
 const [basicSupplies, setBasicSupplies] = useState([])
 const [optionalSupplies, setOptionalSupplies] = useState([])
 const [currentData, setCurrentData] = useState(Supplies)
+
+const navigate = useNavigate()
+const handleClick = () => {
+  navigate(`/hobby/${hobbyId}/where-to-buy`, {state: {Buys, hobbyId}})
+}
 
 useEffect(() => {
     supplyMap()}, [currentData])
@@ -52,13 +57,15 @@ const supplyMap = () => {
     <div className='two-columns'>
         <div>
         </div>
-        <div>
+        <div className='supplies'>
             <h4>Basic Supplies Needed:</h4>
             {basicSupplies}
         </div>
-        <div>  
+        <div className='supplies'>  
             <h4>Optional Supplies:</h4>
             {optionalSupplies}
+            <br />
+            <button className='btn btn-link' onClick={handleClick}>Where to Buy</button>
         </div>
         <div>
         </div>

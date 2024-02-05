@@ -58,11 +58,11 @@ const tutorialMap = () => {
             <div>
             </div>
             <div>
-                <h4>Free</h4>
+                <h4>FREE</h4>
                 {freeTutorials}
             </div>
             <div>
-                <h4>Paid</h4>
+                <h4>PAID</h4>
                 {paidTutorials}
             </div>
             <div>

@@ -1,0 +1,79 @@
+@media screen and (min-width: 1000px){
+    .two-columns {
+        display: flex
+      }
+      
+      .two-columns > * {
+        width: 25%;
+        padding: 1rem;
+        align-items: center;
+      }
+
+      .tutor-button {
+        background-color: #7a221d;
+        font-weight: bold;
+        color: white;
+        width: 100%;
+      }
+
+      iframe {
+        width: 50%;
+        margin-bottom: 80px;
+        margin-top: 7px;
+      }
+
+      .hobby-image {
+        width: 50%;
+        max-height: 250px;
+        object-fit: cover;
+      }
+}
+
+@media screen and (max-width: 999px){
+      .tutor-button {
+        background-color: #7a221d;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5%;
+        width: 40%;
+      }
+
+      iframe {
+        width: 50%;
+        margin-bottom: 80px;
+        margin-top: 7px;
+      }
+
+      .supplies {
+        margin-bottom: 5%;
+      }
+
+      .hobby-image {
+        width: 50%;
+        max-height: 250px;
+        object-fit: cover;
+      }
+}
+
+@media screen and (max-width: 540px){
+      .tutor-button {
+        background-color: #7a221d;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5%;
+        width: 90%;
+      }
+
+      iframe {
+        width: 90%;
+        margin-bottom: 80px;
+        margin-top: 7px;
+      }
+
+      .hobby-image {
+        width: 90%;
+        max-height: 250px;
+        object-fit: cover;
+      }
+}
+

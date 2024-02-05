@@ -1,0 +1,73 @@
+@media screen and (min-width: 1200px) {
+  .wtb {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear
+  }
+  
+  .container {
+    padding: 2rem 5%;
+    width: 50
+  }
+  
+  .container .button-container {
+    columns: 15rem 3;
+    gap: 1.4rem;
+  }
+
+  hr {
+    width: 75%;
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .wtb {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear
+  }
+  
+  .container {
+    padding: 2rem 5%;
+    width: 50
+  }
+  
+  .container .button-container {
+    columns: 15rem 2;
+    gap: 1.4rem;
+  }
+
+  hr {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wtb {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear
+  }
+  
+  .container {
+    padding: 2rem 5%;
+    width: 50
+  }
+  
+  .container .button-container {
+    columns: 15rem 1;
+    gap: 1.4rem;
+  }
+
+  hr {
+    width: 75%;
+  }
+
+  .wtb .heading {
+    font-size: xx-large;
+    }
+  }

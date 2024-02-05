@@ -2,6 +2,7 @@ import WTBCard from "./WTBCard.jsx";
 import React from 'react'
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
+import './wtb.css'
 
 const WTBPage = () => {
 
@@ -35,13 +36,13 @@ const wtbMap = () => {
 }
 
   return (
-    <div className="container">
+    <div className="wtb">
         <div className="heading">
-            <h1 style={{marginTop: '40px'}}>WHERE TO BUY</h1>
+            <h1 style={{marginTop: '40px'}}>Where to Buy</h1>
             <hr />
         </div>
-        <div className="column">
-            <div className="dream">
+        <div className="container">
+            <div className="button-container">
                 {wtbCards}
             </div>
         </div>
