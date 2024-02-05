@@ -60,14 +60,15 @@ function AdminHobbyCard(props) {
     const bodyObj = {
       hobbyId: hobbyId,
       supplyName: supplyName,
-      optional: true
+      optional: false
     }
 
     // Axios put request to insert supply data into database
     axios.post(`/api/supply`, bodyObj)
       .then((res) => {
         setSupplies(res.data)
-        // console.log(res.data);
+        setSupplyName('')
+        console.log(supplyName);
       })
   };
 
@@ -78,14 +79,16 @@ function AdminHobbyCard(props) {
       tutorialImg: tutorialImg,
       tutorialName: tutorialName,
       tutorialLink: tutorialLink,
-      paid: true
+      paid: false
     }
 
     // Axios put request to insert turorial data into database
     axios.post(`/api/tutorial`, bodyObj)
       .then((res) => {
         setTutorials(res.data)
-        // console.log(res.data);
+        setTutorialName('')
+        setTutorialLink('')
+        console.log(tutorialName);
       })
   };
 
@@ -133,23 +136,31 @@ function AdminHobbyCard(props) {
 
         <p className="section-title">Hobby Details</p>
         <div className="input-container">
-          <p>Name:</p>
-          <input type="text" value={hobbyName} onChange={(e) => setHobbyName(e.target.value)} />
+          <label className='form-control-label'>
+            Name:
+            <input type="text" className='form-control' value={hobbyName} onChange={(e) => setHobbyName(e.target.value)} />
+          </label>
         </div>
 
         <div className="input-container">
-          <p>Category:</p>
-          <input type="text" value={hobbyCategory} onChange={(e) => setHobbyCategory(e.target.value)} />
+          <label className='form-control-label'>
+            Category:
+            <input type="text" className='form-control' value={hobbyCategory} onChange={(e) => setHobbyCategory(e.target.value)} />
+          </label>
         </div>
 
         <div className="input-container">
-          <p>May query:</p>
-          <input type="text" value={hobbyMapQuery} onChange={(e) => setHobbyMapQuery(e.target.value)} />
+          <label className='form-control-label'>
+            May query:
+            <input type="text" className='form-control' value={hobbyMapQuery} onChange={(e) => setHobbyMapQuery(e.target.value)} />
+          </label>
         </div>
 
         <div className="input-container">
-          <p>Image Address Link:</p>
-          <input type="text" value={hobbyImg} onChange={(e) => setHobbyImg(e.target.value)} />
+          <label className='form-control-label'>
+            Image Address Link:
+            <input type="text" className='form-control' value={hobbyImg} onChange={(e) => setHobbyImg(e.target.value)} />
+          </label>
         </div>
 
 
@@ -157,7 +168,7 @@ function AdminHobbyCard(props) {
         {supply}
 
         <div className='textAndInput2'>
-          <input type="text" onChange={(e) => setSupplyName(e.target.value)} placeholder="New Supply" />
+          <input type="text" className='form-control' value={supplyName} onChange={(e) => setSupplyName(e.target.value)} placeholder="New Supply" />
           <button className="S-button" onClick={addSupply}>Add Supply</button>
         </div>
 
@@ -165,7 +176,8 @@ function AdminHobbyCard(props) {
         {tutorial}
 
         <div className='textAndInput2'>
-          <input type="text" value={tutorialName} onChange={(e) => setTutorialName(e.target.value)} placeholder="New Tutorial" />
+          <input type="text" className='form-control' value={tutorialName} onChange={(e) => setTutorialName(e.target.value)} placeholder="New Tutorial" />
+          <input type="text" className='form-control' value={tutorialLink} onChange={(e) => setTutorialLink(e.target.value)} placeholder="Tutorial Link" />
           <button className="S-button" onClick={addTutorial}>Add Tutorial</button>
         </div>
 
