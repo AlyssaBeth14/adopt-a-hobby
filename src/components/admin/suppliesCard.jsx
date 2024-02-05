@@ -42,8 +42,19 @@ const SuppliesCard = (props) => {
     <>
       <div>
         {props.supplyName}
-        {optional ? ": Optional" : ""}
-        {props.isEditing && <input type='checkbox' value={optional} checked={optional} onChange={handleChecked} />}
+        {!props.isEditing && optional ? ": Optional" : ""}
+        <br/>
+        {props.isEditing && 
+        <label className='form-check-label'>
+          Optional:
+          <input 
+            type='checkbox'
+            className='form-check-input'
+            value={optional} 
+            checked={optional} 
+            onChange={handleChecked} 
+          />
+        </label>}
         {props.isEditing && <button className="D-button" onClick={deleteSupply} >Delete</button>}
       </div>
     </>
