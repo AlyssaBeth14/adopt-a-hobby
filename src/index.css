@@ -49,9 +49,9 @@ button {
 
 }
 
-button:hover {
+/* button:hover {
   border-color: #953195;
-}
+} */
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -167,4 +167,8 @@ hr {
 .yellowButton:hover {
   background-color: #c3a601;
   color: white;
+}
+
+.blueButton {
+  background-color: cadetblue;
 }
