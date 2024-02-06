@@ -18,7 +18,7 @@ const HobbyCard = (props) => {
 
     return (
         <Card style={{ width: '25rem', marginBottom: '5rem', padding: '20px', border: '2px solid' }}>
-            <Card.Img variant="top" src={props.hobbyImg} className="hobby-card-img" style={{ height: '300px' }} />
+            <Card.Img variant="top" src={props.hobbyImg} className="hobby-card-img" style={{ height: '300px', objectFit: 'cover' }} />
             <Card.Body>
                 <div className='title'>{props.hobbyName}</div>
                 <button className='viewButton' onClick={handleClick} >View Hobby</button>
