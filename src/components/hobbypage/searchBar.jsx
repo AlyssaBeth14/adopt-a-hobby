@@ -4,6 +4,7 @@ import axios from 'axios';
 import data from '../../../server/db/data/search.json'
 import './searchBar.css'
 
+
 function SearchBar() {
     const [value, setValue] = useState('')                                  // Creating value and setValue useStates
     const onChange = (event) => {                                           // Defining onChange function

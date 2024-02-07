@@ -6,9 +6,9 @@ const Header = () => {
   const navigate = useNavigate()
 
   return (
-    <header>
+    <header >
       <button onClick={() => navigate('/cyo-hobby')} className='blueButton'>
-        <img src='sale-removebg-preview.png' />
+        <img src='sale-removebg-preview.png' id='logo'/>
       </button>
     </header>
   )
