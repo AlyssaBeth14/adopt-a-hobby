@@ -40,21 +40,24 @@ const WheelSpinner = () => {
     const prizeNumber = mustSpin ? Math.floor(Math.random() * data.length) : null
 
     return (
-        <div>
+        <div className='moveDown'>
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
                 <>
                     <CYOButton />
+                    <br/>
                     <h3>Or</h3>
-                    <div>
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
                         <Wheel
                             mustStartSpinning={mustSpin}
                             spinDuration={0.25}
                             prizeNumber={prizeNumber}
                             data={data}
-                            backgroundColors={['#0066ff', '#33ccff']}
-                            textColors={['black']}
+                            backgroundColors={['#7a221d', '#998100', '#953195', '#5f9ea0']}
+                            outerBorderColor={'#242424'}
+                            radiusLineColor={'#242424'}
+                            textColors={['white']}
                             fontSize={15}
                             pointerProps={{
                                 src: '\Paint-Brush-PNG.png',
@@ -72,12 +75,13 @@ const WheelSpinner = () => {
                             }}
                         />
                     </div>
-                    <button className='btn btn-primary' onClick={handleSpin} disabled={mustSpin}>
+                    <br/>
+                    <button className='btn redButton' onClick={handleSpin} disabled={mustSpin}>
                         {mustSpin ? 'Spinning...' : 'Spin the Wheel'}
                     </button>
 
                     <Modal show={showModal} onHide={() => setShowModal(false)} centered>
-                        <Modal.Header closeButton>
+                        <Modal.Header closeButton className='modalHeader'>
                             <Modal.Title>Your Hobby:</Modal.Title>
                         </Modal.Header>
                         <Modal.Body>

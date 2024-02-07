@@ -6,11 +6,11 @@ const TutorialsCard = (props) => {
   const [paid, setPaid] = useState(props.paid)
 
   // Delete supply function
-  const deleteSupply = () => {
+  const deleteTutorial = () => {
     const confirmDelete = window.confirm('Sure want to delete supply?')
     if (confirmDelete) {
 
-      axios.delete(`/api/tutorial/${props.tutroialId}?hobbyId=${props.hobbyId}`)
+      axios.delete(`/api/tutorial/${props.tutorialId}?hobbyId=${props.hobbyId}`)
         .then((res) => {
           props.setTutorials(res.data)
           console.log(res.data);
@@ -40,9 +40,22 @@ const TutorialsCard = (props) => {
     <>
       <div>
         {props.tutorialName}
-        {paid ? ": payment required" : ""}
-        {props.isEditing && <input type='checkbox' value={paid} checked={paid} onChange={handleChecked} />}
-        {props.isEditing && <button className="D-button" onClick={deleteSupply}>Delete</button>}
+        {!props.isEditing && paid ? ": Paid" : ""}
+        <br/>
+        {props.tutorialLink}
+        <br/>
+        {props.isEditing && 
+          <label className='form-check-label'>
+            Paid:
+            <input 
+              type='checkbox'
+              className='form-check-input'
+              value={paid} 
+              checked={paid} 
+              onChange={handleChecked} 
+            />
+          </label>}
+        {props.isEditing && <button className="D-button" onClick={deleteTutorial}>Delete</button>}
       </div>
     </>
   )

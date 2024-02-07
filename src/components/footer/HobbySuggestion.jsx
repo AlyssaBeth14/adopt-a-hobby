@@ -26,8 +26,8 @@ const HobbySuggestion = (props) => {
 
     return (
         <Modal show={showModal} onHide={() => setShowModal(false)}>
-            <Modal.Header closeButton>
-                <Modal.Title>Hobby Suggestion</Modal.Title>
+            <Modal.Header closeButton className='modalHeader'>
+                <Modal.Title>Suggest a Hobby:</Modal.Title>
             </Modal.Header>
             <Modal.Body>
                 <form onSubmit={handleSubmit}>
@@ -67,7 +67,7 @@ const HobbySuggestion = (props) => {
                         />
                     </label>
                     <br />
-                    <button type='submit' className='btn btn-dark'>Submit</button>
+                    <button type='submit' className='btn yellowButton'>Submit</button>
                 </form>
             </Modal.Body>
         </Modal>
