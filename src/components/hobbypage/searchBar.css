@@ -1,3 +1,29 @@
+
+
+
+@media screen and (width <= 430px) {          /* Phone - iPhone XR */
+
+    #search {
+        font-size: 30px;
+        margin-right: 20px;
+        /* background-color: grey; */
+    }
+
+}
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
 .dropdown {
     background-color: rgb(255, 255, 255);
     display: flex;
@@ -5,7 +31,6 @@
     /* position: absolute; */
     /* border: 1px solid rgb(0, 0, 0);
     text-align: left; */
-   
 }
 
 .dropdown:empty {

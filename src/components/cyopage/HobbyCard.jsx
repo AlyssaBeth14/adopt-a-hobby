@@ -4,27 +4,33 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router';
 import './CYOPage.css'
 
-const HobbyCard = (props) => {
-    const navigate = useNavigate()
-    const handleClick = () => {
-        axios.get(`/api/hobby?hobbyId=${props.hobbyId}`)
-        .then((res) => {
-            console.log(res.data)
-            const hobby = res.data
-            navigate(`/hobby/${props.hobbyId}`, {state:{hobby}})
-        }
-        )
+const HobbyCard = (props) => {                                      // HobbyCard function. Takes in 'props' from parent component 
+    const navigate = useNavigate()                                  // useNavigate hook used to access navigation object      
+    const handleClick = () => {                                     // handleClick function that executes when function is called (button is clicked)
+        axios.get(`/api/hobby?hobbyId=${props.hobbyId}`)            // Axios get request from endpoint
+            .then((res) => {
+                // console.log(res.data)                                // Good location to console log data from axios get request from endpoint
+                const hobby = res.data                                  // Defining hobby as the incoming res.data (response)
+                navigate(`/hobby/${props.hobbyId}`, { state: { hobby } })    // navigate function used to navigate to specific route
+            }
+            )
     }
 
     return (
-        <Card style={{ width: '25rem', marginBottom: '5rem', padding: '20px', border: '2px solid' }}>
-            <Card.Img variant="top" src={props.hobbyImg} className="hobby-card-img" style={{ height: '300px' }} />
-            <Card.Body>
+        <div className='card'>
+            <img className="hobby-card-img" variant="top" src={props.hobbyImg} />
+            <div>
                 <div className='title'>{props.hobbyName}</div>
                 <button className='viewButton' onClick={handleClick} >View Hobby</button>
-            </Card.Body>
-
-        </Card>
+            </div>
+     
+        </div >
     );
 }
 export default HobbyCard
+
+
+
+
+
+

@@ -1,9 +1,257 @@
-.full-width-line-top {
-    border-top: 1px solid #c4c4c4;
-    width: auto;
-    margin-bottom: 30px; 
-    /* background-color: rgb(149, 255, 149); */
+
+@media screen and ( width >= 1281px) {     /* Desktop  */
+
+ 
+
+
+  .hobby-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    gap: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* background-color: grey; */
   }
+
+  .card {
+    width: 20%;
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 2px solid;
+  }
+
+  .myButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    color: rgb(78, 78, 78);
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px 4px 1px;
+    cursor: pointer;
+    gap: 15px;
+    
+  }
+
+  .hobby-card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+}
+
+
+@media screen and (1024px < width <= 1280px) {          /* Small Computer - Nest Hub Max*/
+
+  .hobby-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    gap: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* background-color: grey; */
+  }
+
+  .card {
+    width: 30%;
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 2px solid;
+  }
+
+  .myButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    color: rgb(78, 78, 78);
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px 4px 1px;
+    cursor: pointer;
+    gap: 15px;
+    
+  }
+  .hobby-card-img {
+    height: 300px;
+    object-fit: cover;
+  }
+
+}
+
+@media screen and (820px < width <= 1024px) {          /* Laptop - Nest Hub*/
+
+  .hobby-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    gap: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* background-color: grey; */
+  }
+
+  .card {
+    width: 40%;
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 2px solid;
+  }
+
+  .myButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    color: rgb(78, 78, 78);
+    padding: 15px 60px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 10px 4px 1px;
+    cursor: pointer;
+    gap: 15px;
+    width: 10%
+  }
+
+  .hobby-card-img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+}
+
+
+@media screen and (539px < width <= 820px) {          /* Tablet - iPad Mini */
+
+  .hobby-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    gap: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* background-color: grey; */
+  }
+
+  .card {
+    width: 40%;
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 2px solid;
+  }
+
+  .myButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    color: rgb(78, 78, 78);
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 15px 15px 15px;
+    cursor: pointer;
+    gap: 15px;
+    width: 10%;
+    /* border: 1px solid red */
+  }
+
+  .hobby-card-img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+}
+
+
+
+
+@media screen and (width <= 541px) {          /* Phone - iPhone XR */
+
+  .hobby-list-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content:center; 
+    gap: 4%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /* background-color: grey; */
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 5rem;
+    padding: 20px;
+    border: 2px solid;
+  }
+
+  .myButton {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff; 
+    color: rgb(78, 78, 78);
+    padding: 0px 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0px;
+    margin: 10px 4px 1px;
+    cursor: pointer;
+    gap: 15px;
+    width: 40px;
+    height: 40px;
+    width: min-content;
+  }
+  .custom-icon-size {
+    /* font-size: 5px;  */
+    width: 30px;
+    height: 30px;
+  }
+  .hobby-card-img {
+    height: 200px;
+    object-fit: cover;
+  }
+  #logo {
+    width: 80%;
+  }
+  .icon-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+  }
+
+}
+
+
+
+
+
 
 .hobby-list-container {
   display: flex;
@@ -16,6 +264,17 @@
   margin-bottom: 1%;
   /* background-color: grey; */
 }
+
+
+
+.full-width-line-top {
+    border-top: 1px solid #c4c4c4;
+    width: auto;
+    margin-bottom: 30px; 
+    /* background-color: rgb(149, 255, 149); */
+  }
+
+
 
 .section-title-category {
   font-size: 48px; 
@@ -34,7 +293,7 @@
   font-size: 36px; /* Adjust the size according to your preference */
 }
 
-.myButton {
+/* .myButton {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,24 +308,21 @@
   cursor: pointer;
   gap: 15px;
   
-}
+} */
 
 .myButton:hover {
   text-decoration: underline; 
   font-weight: dark bold;
 }
 
-
 .viewButton {
   background-color: rgb(122, 34, 29);
   color: rgb(255, 255, 255);
 }
 
-
 .viewButton:hover {
   font-weight: bold;
 }
-
 
 .title {
   color: rgb(0, 0, 0);
@@ -74,7 +330,6 @@
   font-weight: bold;
   padding-bottom: 7%
 }
-
 
 .sticky-container {
   position: sticky;
