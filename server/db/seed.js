@@ -36,11 +36,12 @@ const suppliesInDB = await Promise.all(
 
 const tutorialsInDB = await Promise.all(
     tutorialData.map(async (tutorial) => {
-        const {hobbyId, tutorialName, tutorialLink, paid} = tutorial
+        const {hobbyId, tutorialName, tutorialLink, tutorialImg, paid} = tutorial
         const newTutorial = await Tutorial.create({
             hobbyId,
             tutorialName,
             tutorialLink,
+            tutorialImg,
             paid
         })
         return newTutorial

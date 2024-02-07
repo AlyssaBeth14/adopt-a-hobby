@@ -8,7 +8,7 @@ const TutorialButton = ({ tutorialLink, tutorialImg, tutorialName }) => {
 
         <a href={tutorialLink} target='_blank'>
             <button className='tutor-button'>
-                <img src={tutorialImg} style={{ width: '100%' }}/>
+                <img src={tutorialImg} style={{ width: '175px', height: '175px', objectFit: 'cover', borderRadius: '5px'}}/>
                 <br/>
                 {tutorialName}
             </button>

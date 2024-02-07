@@ -36,7 +36,7 @@ const wtbMap = () => {
 }
 
   return (
-    <div className="wtb">
+    <div id='wtb-body' className="wtb">
         <div className="heading">
             <h1 style={{marginTop: '40px'}}>Where to Buy</h1>
             <hr />
