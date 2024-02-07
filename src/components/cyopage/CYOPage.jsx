@@ -125,7 +125,7 @@ const CYOPage = () => {
         if (element) {
             const position = element.getBoundingClientRect().top + window.scrollY - 300;
             scroll.scrollTo(position, {
-                duration: 300,
+                duration: 0,
                 smooth: 'easeInOutQuart',
             });
         }
