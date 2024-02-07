@@ -75,5 +75,15 @@
         max-height: 250px;
         object-fit: cover;
       }
+
+
+      #search {
+        font: 8px;
+        margin-right: 20px;
+        /* background-color: grey; */
+    }
+
+
+
 }
 
