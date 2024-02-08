@@ -7,11 +7,13 @@ import Homepage from './components/homepage/Homepage.jsx'
 import SearchBar from './components/hobbypage/searchBar.jsx'
 import WTBPage from './components/wtbpage/WTBPage.jsx'
 import Admin from './components/admin/admin.jsx'
+import Header from './components/Header.jsx'
 
 
 function App() {
   return (
     <Router>
+      <Header />
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/hobby/:id' element={<HobbyPage />} />

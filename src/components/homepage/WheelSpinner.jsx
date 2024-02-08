@@ -40,15 +40,20 @@ const WheelSpinner = () => {
     const prizeNumber = mustSpin ? Math.floor(Math.random() * data.length) : null
 
     return (
-        <div className='moveDown'>
+        <div className='moveDown homeGutters background-fill'>
             {loading ? (
                 <h1>Loading...</h1>
             ) : (
                 <>
                     <CYOButton />
-                    <br/>
+                    {/* <br/> */}
                     <h3>Or</h3>
-                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                    {/* <br/> */}
+                    <button className='btn redButton' onClick={handleSpin} disabled={mustSpin}>
+                        {mustSpin ? 'Spinning...' : 'Spin the Wheel'}
+                    </button>
+                    {/* <br/> */}
+                    <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}} className='moveDown'>
                         <Wheel
                             mustStartSpinning={mustSpin}
                             spinDuration={0.25}
@@ -76,9 +81,6 @@ const WheelSpinner = () => {
                         />
                     </div>
                     <br/>
-                    <button className='btn redButton' onClick={handleSpin} disabled={mustSpin}>
-                        {mustSpin ? 'Spinning...' : 'Spin the Wheel'}
-                    </button>
 
                     <Modal show={showModal} onHide={() => setShowModal(false)} centered>
                         <Modal.Header closeButton className='modalHeader'>

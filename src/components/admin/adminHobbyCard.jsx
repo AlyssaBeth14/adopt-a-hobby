@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from 'react'
+import { Modal } from 'react-bootstrap'
 import axios from 'axios'
 import SuppliesCard from './suppliesCard.jsx'
 import TutorialsCard from './tutorialsCard.jsx'
@@ -8,6 +9,7 @@ import './adminHobbyCard.css'
 function AdminHobbyCard(props) {
   const { setHobbyData } = props
   const [isEditing, setIsEditing] = useState(false)                         // Edit mode
+  const [showDeleteModal, setShowDeleteModal] = useState(false)
   const [hobbyId, setHobbyId] = useState(props.hobbyId)                     // Hobby: hobbyId field
   const [currentHobby, setCurrentHobby] = useState()
   const [hobbyName, setHobbyName] = useState(props.hobbyName)               // Hobby: hobbyName field
@@ -42,17 +44,15 @@ function AdminHobbyCard(props) {
 
   // Delete hobby function
   const deleteHobby = () => {
-    const confirmDelete = window.confirm('Sure want to delete Hobby?')
-    if (confirmDelete) {
-      axios.delete(`/api/hobby/${hobbyId}`)
-        .then((res) => {
-          setHobbyData(res.data)
-          console.log(res.data)
-        })
-        .catch((error) => {
-          console.error('Error deleting hobby:', error);
-        })
-    }
+    axios.delete(`/api/hobby/${hobbyId}`)
+      .then((res) => {
+        setHobbyData(res.data)
+        setShowDeleteModal(false)
+        console.log(res.data)
+      })
+      .catch((error) => {
+        console.error('Error deleting hobby:', error);
+      })
   }
 
   // Add Supply function: bodyObj & axios post request
@@ -192,8 +192,20 @@ function AdminHobbyCard(props) {
     <>
       <div class="full-width-line-top"></div>
       <button class="E-button" onClick={() => { setIsEditing(true) }}>Edit</button>
-      <button class="D-button" onClick={() => deleteHobby()}>Delete</button>
+      <button class="D-button" onClick={() => setShowDeleteModal(true)}>Delete</button>
 
+      <Modal show={showDeleteModal} onHide={() => setShowDeleteModal(false)}>
+        <Modal.Header className='modalHeader' closeButton>
+          <Modal.Title>Delete Hobby</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <h4>Do you want to delete {hobbyName}?</h4>
+        </Modal.Body>
+        <Modal.Footer>
+          <button className='btn btn-dark' onClick={() => setShowDeleteModal(false)}>Cancel</button>
+          <button className='btn redButton' onClick={deleteHobby}>Delete</button>
+        </Modal.Footer>
+      </Modal>
 
       <div className="container">
 
