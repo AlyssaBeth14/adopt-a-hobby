@@ -12,7 +12,7 @@ const location = useLocation()
 const {hobbyId, hobbyImg, hobbyName, cost} = location.state.hobby
 
   return (
-    <div style={{marginTop: '20px'}}>
+    <div id='hobby-body' style={{marginTop: '20px'}}>
         <img src={hobbyImg} className='hobby-image'/>
         <br />
         <h1 style={{margin: '10px'}}>{hobbyName}</h1>

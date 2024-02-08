@@ -1,4 +1,10 @@
 @media screen and (min-width: 1000px){
+    #hobby-body {
+        background-image: url('/paint-splatter.png');
+        background-repeat: repeat-y;
+        background-size: 30% 60%;
+        background-position: right top;
+    }
     .two-columns {
         display: flex
       }
@@ -14,6 +20,7 @@
         font-weight: bold;
         color: white;
         width: 100%;
+        margin-bottom: 15px;
       }
 
       iframe {
@@ -27,6 +34,33 @@
         max-height: 250px;
         object-fit: cover;
       }
+}
+
+@media screen and (max-width: 1280px){
+    #hobby-body {
+        background-image: url('/paint-splatter.png');
+        background-repeat: repeat-y;
+        background-size: 40% 60%;
+        background-position: right top;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #hobby-body {
+        background-image: url('/paint-splatter.png');
+        background-repeat: repeat-y;
+        background-size: 50% 60%;
+        background-position: right top;
+    }
+}
+
+@media screen and (max-width: 912px){
+    #hobby-body {
+        background-image: url('/paint-splatter.png');
+        background-repeat: repeat-y;
+        background-size: 60% 60%;
+        background-position: right top;
+    }
 }
 
 @media screen and (max-width: 999px){
@@ -55,7 +89,39 @@
       }
 }
 
+@media screen and (max-width: 820px){
+     #hobby-body {
+        background-image: none
+     }
+      .tutor-button {
+        background-color: #7a221d;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5%;
+        width: 75%;
+      }
+
+      iframe {
+        width: 75%;
+        margin-bottom: 80px;
+        margin-top: 7px;
+      }
+
+      .supplies {
+        margin-bottom: 5%;
+      }
+
+      .hobby-image {
+        width: 75%;
+        max-height: 250px;
+        object-fit: cover;
+      }
+}
+
 @media screen and (max-width: 540px){
+        #hobby-body {
+            background-image: none
+        }
       .tutor-button {
         background-color: #7a221d;
         font-weight: bold;
@@ -76,12 +142,14 @@
         object-fit: cover;
       }
 
+      #logo {
+        width: 80%
+      }
 
-      #search {
-        font: 8px;
-        margin-right: 20px;
-        /* background-color: grey; */
-    }
+
+
+
+
 
 
 
