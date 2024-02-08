@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 
 const AdminLogin = (props) => {
 
-    const { showModal, setShowModal } = props
+    const { showModal, setShowModal, setAdminButton } = props
     const [showErrorModal, setShowErrorModal] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
     const [adminName, setAdminName] = useState('')
@@ -25,6 +25,7 @@ const AdminLogin = (props) => {
             .then((res) => {
                 if (res.status === 200) {
                     navigate('/admin')
+                    setAdminButton(false)
                     setShowModal(false)
                 }
             })
@@ -45,7 +46,7 @@ const AdminLogin = (props) => {
 
     return (
         <div>
-            <Modal show={showModal} onHide={() => setShowModal(false)}>
+            <Modal show={showModal} onHide={() => {setShowModal(false); setAdminButton(false)}}>
                 <Modal.Header closeButton className='modalHeader'>
                     <Modal.Title>Admin Login</Modal.Title>
                 </Modal.Header>
